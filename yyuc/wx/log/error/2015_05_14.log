@@ -1,0 +1,1 @@
+10:50:49: Duplicate entry '127' for key 'PRIMARY'：insert into `heka` (`t`,`b`,`f`,`c`,`0`) values ('1','/res/xheka/1/t1.gif','兔子','贺卡把年拜，收到笑颜开；马年好运来，保准你发财；健康又实在，做人有情怀；亲情友情在；异性更喜爱；祝福都爱戴，保准你乐坏。祝你新年愉快！!','presend')

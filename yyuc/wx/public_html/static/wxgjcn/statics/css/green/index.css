@@ -1,0 +1,44 @@
+#banner{min-width:1000px;height:533px}
+	#focus{height:500px;background:#7ac943;overflow:hidden}
+		#focus li{height:500px}
+		#focus li a{display:block;height:500px;width:100%}
+	#ftrigger{width:84px;height:22px;margin:0 auto;padding:11px 11px 0}
+		#ftrigger a{display:inline-block;float:left;width:12px;height: 12px;background:url(../../images/green/btn-ftrigger.png) 0 0 no-repeat;cursor: pointer;margin:4px 8px;font-size:0;text-indent:-9999px;overflow:hidden}
+		#ftrigger a.current{background-position:0 -12px}
+#info{height:40px;line-height:30px;position:relative;font-size:17px;overflow:hidden}
+	#info li{padding:5px 0}
+	.infoBtn{position:absolute;right:0;top:5px}
+	.infoBtn a{display:inline-block;float:left;height:30px;width:40px;cursor:pointer;text-indent:-9999px;background:url(../../images/green/infoBtn_bg.png) 0 0}
+	.infoBtn #infoBtnR{background-position:right 0}
+	.infoBtn #infoBtnL:hover{background-position:0 -30px}
+	.infoBtn #infoBtnR:hover{background-position:right -30px}
+	#info .onec strong{color:#44af35}
+	#info .announ{background:url(../../images/green/speaker.png) no-repeat 0 center;padding-left:40px}
+	.announ span{color:#999}
+#highlight{overflow:visible;margin-top:10px;height:630px}
+	#highlight li{float:left;height:200px;width:188px;margin:0 15px 10px 0;position:relative;z-index:0}
+		#highlight li.hover{background:url(../../images/green/block_bg.png) no-repeat;cursor:pointer}
+	#highlight li h3{font-size:20px;font-weight:normal;height:140px;line-height:28px}
+	#highlight li h3 a{padding-top:15px;display:block;height:185px;z-index:100;position:absolute;width:188px;text-align:center;top:0;left:0}
+	#highlight li h3 img{background:#ccc;border-radius:43px;height:86px;width:86px}
+	#highlight li h3 span{display:block;_padding-top:7px}
+	#highlight li p{font-size:13px;text-align:center;color:#888;line-height:22px;z-index:10}
+		#highlight li.mr0{margin-right:0}
+.moreBtn{height:40px;width:220px;margin:0 auto 20px;text-align:center;line-height:40px}
+	.moreBtn a{display:block;height:40px;width:220px;background:#3fa9f5 url(../../images/green/moreBtn_bg.png) no-repeat 30px -40px;font-size:17px;border-radius:5px;text-indent:26px;color:#fff}
+	.moreBtn a:hover{background-color:#76cbff;box-shadow: 0 0 15px #3fa9f5;color:#fff}
+	.moreBtn a.moreCaseBtn{background-position:30px -120px}
+#caseBox{height:300px;width:1066px;margin:0 auto 15px}
+	.scrollable{width:1000px;height:300px;overflow:hidden;position:relative;float:left}
+		.scrollable .items{width:20000em;position:absolute;clear:both}
+		.items div{height:300px;float:left;width:1000px;_width:1005px;white-space:nowrap;overflow:hidden}
+		.items div .a{margin-right:15px;display:inline-block;float:left;border:1px solid #e6e6e6;border-radius:3px}
+			.items div .a:hover{background:#3fa9f5;border:1px solid #3fa9f5}
+		.items div .a.mr0{margin-right:0}
+		.scrollable img{float:left;width:178px;height:290px;padding:4px}
+			a.btn {height:300px;width:33px;font-size:0;text-indent:-9999px;background:url(../../images/green/caseBtn_bg.png) no-repeat 0 center;cursor:pointer;display:block}
+			a.prev{background-position:0 center}
+			a.prev:hover{background-position:-33px center}
+			a.next{background-position:right center}
+			a.next:hover{background-position:-66px center}
+

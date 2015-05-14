@@ -1,0 +1,80 @@
+/*重置*/
+*{padding:0;margin:0}
+a{color:#555;text-decoration:none;outline:none}
+a:hover{color:#3fa9f5}
+a{blr:expression(this.onFocus=this.blur())}
+ul{list-style:none}
+h4,h3,h2,h1{font-weight:normal}
+img{border:none}
+html, body{font:14px/24px "微软雅黑 Light", "微软雅黑",arial,sans-serif;color:#666;height:100%;min-width:1000px;background:#fff}
+/* 原子类 */
+.l{float:left}
+.r{float:right}
+.g{width:1000px;margin:0 auto}
+
+/*结构类*/
+/*头部*/
+#header{height:100px;background:#fff url(../../images/green/header_bg.png) repeat-x}
+	#header .g{height:100px}
+	#logo a{display:block;height:100px;width:290px;background:url(../../images/green/logo.png) no-repeat}
+	#area{width:110px;height:100px}
+		#areaBtn{font-size:22px;color:#b3b3b3;padding-top:42px;display:block;width:110px;text-align:center;background:url(../../images/green/areaArrow.png) right 0 no-repeat;cursor:pointer}
+		#areaBtn:hover{color:#3fa9f5;background-position:right -100px}
+	#nav{height:40px;padding:40px 0 0 0}
+		#nav li{height:40px;float:left;font-size:18px}
+		#nav li a{padding:0 30px}
+		#nav li a.on{color:#44af35}
+	#loginBox{height:36px;padding-top:35px;width:142px}
+		#loginBox a{display:inline-block;height:36px;width:70px;float:left;margin-right:1px;text-indent:-9999px;background:url(../../images/green/loginBox_bg.png) no-repeat}
+		#loginBox a.loginBtn:hover{background-position:0 -36px}
+		#loginBox a.regBtn{background-position:right 0}
+		#loginBox a.regBtn:hover{background-position:right -36px}
+#crumbs{padding:3px 0;font-size:12px;width:990px}
+#catfocus{display:none;position:relative;overflow:hidden;height:160px}
+.catfocus{height:160px;width:2000em;position:absolute}
+	.catfocus li{height:160px;width:1000px;float:left}
+.filterBox{height:40px;background:url(../../images/green/filter_bg.png) no-repeat;position:relative;line-height:40px;padding:2px 0}
+	.filterBox h1{position:absolute;left:15px;top:2px;font-size:17px;font-weight:normal;}
+	.filterBtn{margin:0 auto;height:40px;width:280px}
+		.filterBtn li{float:left;width:70px;text-align:center;cursor:pointer}
+		.filterBtn li.active{background:url(../../images/green/filterBtn_bg.png) 0 0 no-repeat;color:#fff}
+	.listType{position:absolute;right:15px;top:2px;width:80px;height:40px;text-align:right}
+#footer{height:200px;background:#44af35;color:#fff;border-top:1px solid #3ea02d}
+	#footer .g{overflow:auto}
+	.ftNav{width:520px;text-align:center;padding-top:40px}
+	.ftNav a{color:#fff}
+		.copyright{height:120px;background:url(../../images/green/copyright.png) center no-repeat}
+	.code{padding:37px 0 0}
+
+.close {background-image:url(../../images/green/close.png);position:absolute;right:10px;top:10px;cursor:pointer;height:50px;width:50px}
+	.close:hover{background-position:0 -50px}
+
+/*AJAX-功能展示*/
+#overlay {background-image:url(../../images/green/transparent.png);height:560px;overflow:hidden;display:none;width:800px;padding:20px}
+div.overlayTool{height:60px}
+	.oImgBox{margin-right:10px;height:60px}
+	.oImgBox img{height:60px;width:60px;border-radius:30px;background:#ccc}
+	.oTitle h3{font-size:26px;line-height:28px;padding:5px 0 0}
+	.oTitle p{color:#aaa}
+	.oLink{padding-right:35px}
+	.oLink a{display:inline-block;float:left;margin-right:10px;line-height:30px;padding-left:30px;background:url(../../images/green/oLink.png) no-repeat;color:#c3c4c0}
+	.oLink a:hover{color:#3fa9f5}
+	.oLink a.allM:hover{background-position:0 -30px}
+	.oLink a.newW{background-position:0 -60px}
+	.oLink a.newW:hover{background-position:0 -90px}
+div.contentWrap{height:484px;overflow-y:auto;width:800px;background:#f5f5f5;margin-top:15px;border-radius:5px}
+
+#layout {background-image:url(../../images/green/transparent.png);height:560px;overflow:hidden;display:none;width:800px;padding:20px}
+div.ooverlayTool{height:60px}
+	.ooTitle h3{font-size:26px;line-height:28px;padding:5px 0 0}
+	.ooTitle p{color:#aaa}
+
+div.contentWrap{height:484px;overflow-y:auto;width:800px;background:#f5f5f5;margin-top:15px;border-radius:5px}
+
+/*客服按钮*/
+#service{margin-top:-67px;position:fixed; _position:absolute;right:0;top:50%;width:36px;height:216px}
+	#service a{float:left;display:block;width:36px;height:108px;text-indent:-9999px;background:url(../../images/green/service.png) no-repeat}
+	#service .srvLog{}
+	#service .srvLog:hover{background-position:-36px 0}
+	#service .srvCns{background-position:0 -108px}
+	#service .srvCns:hover{background-position:-36px -108px}

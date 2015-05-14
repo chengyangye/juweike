@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>填写资料</title>
+<link type="text/css" rel="stylesheet" href="style/vote.css" />
+<script type="text/javascript">
+	var checkId="";
+	function divClick(imgId){
+		if(checkId==""){//全是未被选时
+			var tempClassName=document.getElementById(imgId).className;
+			document.getElementById(imgId).className=document.getElementById(imgId+1).className;
+			document.getElementById(imgId+1).className=tempClassName;
+			checkId=imgId;
+		}else{//有一个被选中时
+			if(imgId==checkId){
+				var tempClassName=document.getElementById(imgId).className;
+				document.getElementById(imgId).className=document.getElementById(imgId+1).className;
+				document.getElementById(imgId+1).className=tempClassName;
+				checkId="";
+			}else{
+				for(var i=1;i<6;i++){
+					var tempId="img"+i;
+					if(tempId==checkId){
+						var tempClassName=document.getElementById(tempId).className;
+						document.getElementById(tempId).className=document.getElementById(tempId+1).className;
+						document.getElementById(tempId+1).className=tempClassName;
+					}
+					if(tempId==imgId){
+						var tempClassName=document.getElementById(tempId).className;
+						document.getElementById(tempId).className=document.getElementById(tempId+1).className;
+						document.getElementById(tempId+1).className=tempClassName;
+					}					
+				}
+				checkId=imgId;
+			}	
+		}
+	}
+</script>
+</head>
+<body>
+<div class="wrapper" style="margin-top:-8px;">
+	<img class="bg" src="images/bg.jpg">
+	<div class="top fn-clear">
+		<div class="count-cont">
+			<h3>参与人数</h3>
+			<div class="count">22</div>
+		</div>
+		<div class="title-cont">
+			<p class="title">IOS7是颠覆还是妥协？</p>
+			<p class="timeout"><img class="clock" src="images/clock.png"><span class="text">距离投票结束还有2天15小时18分15秒</span></p>
+		</div>
+	</div>
+	<div class="cover">
+		<img class="line" src="images/ctline.jpg">
+		<img class="cimg" src="images/3a39b324-fa6f-4483-8cb0-a52413e91b9b.jpg">
+		<img class="line" src="images/cbline.jpg">
+	</div>
+	<div class="summary">苹果2013年全球开发者大会(WWDC)在美国旧金山召开，发布iOS&nbsp;7系统，新系统几乎重新设计了所有用户界面(UI)，采用"扁平化设计"。这种极简主义的设计，你怎么看？</div>
+	<div class="tip-cont">
+		<img class="icon" src="images/tip_icon.png">
+		投票后才能看到结果 | 最多选1项
+	</div>
+	<div class="option-cont">
+        <div class="option" data-value="1" onclick="divClick('img1')">
+			<img id="img1" class="oimg" src="images/checkimg.png">
+			<img id="img11" class="oimg-sel" src="images/checkimg_check.png">
+			<div>扁平化的风格很好，我喜欢</div>	
+		</div>
+		<img class="sep" src="images/option_sep.jpg">
+		<div class="option" data-value="2"  onclick="divClick('img2')">
+			<img id="img2" class="oimg" src="images/checkimg.png">
+			<img id="img21" class="oimg-sel" src="images/checkimg_check.png">
+			<div>居然山寨安卓界面，不喜欢</div>	
+		</div>
+		<img class="sep" src="images/option_sep.jpg">
+		<div class="option" data-value="3" onclick="divClick('img3')">
+			<img id="img3" class="oimg" src="images/checkimg.png">
+			<img id="img31" class="oimg-sel" src="images/checkimg_check.png">
+			<div>系统稳定好用就欧了，无所谓</div>
+		</div>
+		<img class="sep" src="images/option_sep.jpg">
+	</div>
+	<div class="vote-cont">
+		<div style="height: 10px;"></div>
+		<img class="vote-btn" id="submit" src="images/vote.png">
+		<div style="height: 10px;"></div>
+	</div>
+ 	<p class="page-url">
+		<a href="http://www.weijuju.com" target="_blank" class="page-url-link">此功能由"微俱聚（原微信加）"平台提供</a>
+	</p>
+</div>
+</body>
+</html>

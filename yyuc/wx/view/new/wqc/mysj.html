@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>我的预约试驾</title>
+    <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="{$CSS}mwm/hotel/hotels.css" media="all" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <meta name="Keywords" content="" />
+        <meta name="Description" content="" />
+        <!-- Mobile Devices Support @begin -->
+            <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+            <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+            <meta content="no-cache" http-equiv="pragma">
+            <meta content="0" http-equiv="expires">
+            <meta content="telephone=no, address=no" name="format-detection">
+            <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <!-- Mobile Devices Support @end -->
+        <style>
+            img{ width:100%!important;}
+        </style>
+    </head>
+        <body id="hotels" ondragstart="return false;" onselectstart="return false;" >
+
+    <section class="body">
+        
+        <div class="cardexplain">
+            
+        <!--普通用户登录时显示-->
+        <!--商家房价及类型-->
+        <div class="qiandaobanner"> 
+            <a href="javascript:;">
+                <img src="{$h->headpic}" />
+            </a>
+        </div>
+            <ul class="round">
+            {loop $ddres as $r}
+            <li class="title">
+					<a href="#">
+						<span>{date('m月d日 H时i分',strtotime($r->ctime))}订单详情<!-- <em class="no">确认</em> --></span>
+					</a>
+			</li>
+			<li>
+				<div class="text">
+					{loop $r->nr as $n}
+					<p>{$n->name}：{$n->val}</p>
+					{/loop}
+			    </div>
+			</li>
+			{/loop}        
+            </ul>        
+        </div>
+
+        <div class="plugback">
+            <a href="javascript:history.back(-1)">
+                <div class="plugbg themeStyle">
+                    <span class="plugback"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+<script type="text/javascript">
+
+</script> 
+{T /_wf}
+</body>        		
+</html>

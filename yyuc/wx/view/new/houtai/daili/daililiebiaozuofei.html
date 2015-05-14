@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系统首页</title>
+<link rel="stylesheet" href="{$CSS}ht/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="{$CSS}ht/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="{$CSS}ht/invalid.css" type="text/css" media="screen" />	
+</head>
+<BODY>
+<div class="content-box role">
+	<div class="content-box-header">
+		<h3>代理用户管理</h3>
+		<div class="clear"></div>
+	</div>
+	<div class="content-box-content">
+		<div class="default-tab" >
+            
+			<!-- <div class="top_dep">
+                <a href="xinzengdaili.html" class="add_dep">新增代理 </a>
+			</div> -->
+			<div class="searchgrid">
+			<form method="get" action="daililiebiaozuofei.html" name="Form" id="Form1">
+			<label>姓名</label>{$tj->text('name')}
+			<label>帐号</label>{$tj->text('un')}
+			{if $mu->isyg || $mu->isadmin}
+			<label>类型</label>{$tj->select($dl_arr,'level')}
+			{/if}	
+			<input type="submit" class="button" value="查询" />	
+			<button type="button" class="button"  onclick="tostart('a',this)" id="del">启用</button>
+			<button type="button" class="button"  onclick="todel('a',this)" id="del">删除</button>
+			</form>
+
+		</div>
+		<div class="tab-content default-tab" >
+			<table>
+				<thead>
+					<tr>
+			<th style="padding-left:5px;border-left:1px solid #C1DAD7">序号</th><th>账号</th><th>名称</th><th>类型</th><th>开户时间</th><th>余额(￥)</th><th>手机</th><th>QQ</th><th>所属员工(代理)</th><th>状态</th><th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+				{loop $res as $r}
+					<TR>
+					<td style='padding-left:5px;'>
+					<input type='checkbox' name='checkbox' value='{$r->id}' />{$r->id}
+					</td>
+					<td>
+					<a href="xinzengdaili-{$r->id}.html">{$r->un}</a>
+					</td>
+					<td>
+					{$r->name}
+					</td>
+					<td>
+					{$dl_arr[$r->level]}
+					</td>
+					<td>
+					{$r->rtime}
+					</td>
+					<td>
+					{$r->yue}
+					</td>
+					<td>
+					{$r->telephone}
+					</td>
+					<td>
+					{$r->qq}
+					</td>
+					<td>
+					{$agency_arr[$r->pid]}
+					</td>
+					<td>
+					<span style="color:red;">作废</span>
+					</td>
+					<td>
+					<a href="javascript:tochongzhi({$r->id});">充值</a>&nbsp;|&nbsp;					
+					<a href="lowerAgency-{$r->id}-{md5($r->id.$mu->pwd)}.html">下级代理</a>&nbsp;|&nbsp;
+					<a href="/houtai/yonghu/lowerUser-{$r->id}-{md5($r->id.$mu->pwd)}.html">下级用户</a>&nbsp;|&nbsp;
+					<a href="xinzengdaili-{$r->id}.html">编辑【查看】</a>
+					</td>
+					</TR>
+				{/loop}
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="13">
+							<div class="pagination">
+								<a>共有 <B>{$p->totalnum}条/{$p->totalpage}页</B> </a>
+								{P houtai}
+							</div>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+			
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+</BODY>
+</html>
+<script type="text/javascript">
+function tostart(id,o){
+	if(id=='a'){
+		var ids = [];
+		$('td').find('input[type="checkbox"]:checked').each(function(){
+			ids[ids.length] = $(this).val();
+		});
+		if(ids.length == 0){
+			tusi('请选择！');
+			return false;
+		}
+		if(confirm('确定启用这些代理吗？')){
+			ajax('dailicaozuo-start.html',{ id:ids.join(',')},function(data){
+				if(data == 'ok'){
+					tusi('操作成功');
+					setTimeout(function(){
+						goto(location.href);
+					},500);
+				}
+			});	
+		}
+	}
+}
+
+function todel(id,o){
+	if(id=='a'){
+		var ids = [];
+		$('td').find('input[type="checkbox"]:checked').each(function(){
+			ids[ids.length] = $(this).val();
+		});
+		if(ids.length == 0){
+			tusi('请选择！');
+			return false;
+		}
+		if(confirm('确定彻底删除这些代理吗？')){
+			ajax('dailicaozuo-reldel.html',{ id:ids.join(',')},function(data){
+				if(data == 'ok'){
+					tusi('操作成功');
+					setTimeout(function(){
+						goto(location.href);
+					},500);
+				}
+			});	
+		}
+	}
+}
+function tochongzhi(id){
+	pophtml('<iframe id="jd_iframe" src="dailichongzhi-'+id+'.html" scrolling="auto" frameborder="0" width="370" height="185"></iframe>',410,265,null,0,1);
+}
+</script>

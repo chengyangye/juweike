@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="{$CSS}admin/bootstrap.min.css">
+<link rel="stylesheet" href="{$CSS}admin/admin.css">
+<title>我的活动</title>
+
+</head>
+<body>
+	<div class="main-title">
+		<h3>{$lbs->name}微会员卡活动</h3>
+	</div>
+
+<div class="pagination">
+  <ul>
+    {P}
+  </ul>  
+</div>
+<div>
+<form action="">
+手机号：
+{$tj->text('tel','style="margin-top: 10px;width:100px;"')}
+会员卡号：
+{$tj->text('sn','style="margin-top: 10px;width:100px;"')}
+开始时间：
+{$tj->datetime('kssj','style="margin-top: 10px;width:140px;"')}
+结束时间：
+{$tj->datetime('jssj','style="margin-top: 10px;width:140px;"')}
+<button type="submit" class="btn">检索</button>
+</form>
+
+</div>
+<div>总计：<B>{$p->totalnum}条/{$p->totalpage}页</B></div>
+	<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>会员名称</th>
+					<th>电话</th>
+					<th>生日</th>
+					<th>地址</th>
+					<th>参与时间</th>
+					<th>会员卡号</th>
+					<th>余额</th>
+					<th>积分</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+			{loop $res as $r}			 
+			      <tr>
+						<td>{$r->un}</td>
+						<td>{$r->tel}</td>
+						<td>{$r->sr}</td>
+						<td>{$r->dz}</td>
+						<td>
+						{$r->ctime}
+						</td>
+						<td>{$r->sn}</td>
+						<td>￥{$r->ye}</td>
+						<td>{$r->jf}</td>
+						<td>
+						<span>
+						[<a href="javascript:;" onclick="toused({$r->id},this)">操作</a>]&nbsp;			
+						[<a href="microMemberCardListList-{$r->id}.html">记录</a>]					
+						</span>
+						</td>
+				  </tr>
+			{/loop}
+			</tbody>
+		</table>
+	<div class="tb-toolbar">
+	</div>
+
+<div class="pagination">
+  <ul>
+{P}
+  </ul>
+  
+</div>
+
+<script type="text/javascript">
+function fyjs(){
+	var fs = $('.zcsel').val();
+	var je = $('.je').val();
+	var bz = $('.bz').val();
+	var md = $('.mdlb').val();
+	ajax('microMemberCardListset.html',{ fs:fs,je:je,id:window.yjsid,bz:bz,md:md},function(m){
+		tusi('操作成功');
+		setTimeout(function(){
+			location.href =location.href; 
+		},1000);
+		
+	});
+}
+function toused(id,o){
+	if(!window.pophtm){
+		window.pophtm = $('#jfczarea').html();
+		$('#jfczarea').remove();
+	}
+	window.yjsid = id;
+	pophtml(window.pophtm,360,180);
+	
+	/**
+	if(confirm('确定标记微会员卡已使用吗？')){
+		ajax('microMemberCardList-used.html',{ id:id},function(m){
+			if(m=='ok'){
+				$(o).parent().html('已使用');
+			}
+		});
+	}
+	*/
+}
+</script>
+<div id="jfczarea" style="display: none;">
+	<table>
+		<tr>
+			<td style="line-height: 30px;" valign="top">方式：</td>
+			<td><select style="width: 120px;" class="zcsel">
+					<option value="cz">充值</option>
+					<option value="xf">消费</option>
+					<option value="jfa">积分累加</option>
+					<option value="jfd">积分消费</option>
+			</select></td>
+			<td style="line-height: 30px;" valign="top">数额：</td>
+			<td><input type="text" class="je" style="width: 50px;"></td>
+			</tr>
+		<tr>
+			<td style="line-height: 30px;" valign="top">门店：</td>
+			<td colspan="3"><select style="width: 228px;" class="mdlb">
+					<option value="0">--不标记--</option>
+					{loop $mdlb as $k=>$v}
+					<option value="{$k}">{$v}</option>
+					{/loop}
+			</select></td>
+			</tr>
+			<tr>
+			<td style="line-height: 30px;" valign="top">备注：</td>
+			<td colspan="2"><input type="text" class="bz" style="width: 150px;"></td>
+			<td valign="top" align="right">
+			<button onclick="fyjs()" class="btn">确定</button>
+			</td>
+		</tr>
+	</table>
+</div>
+<br/><br/><br/></body></html>

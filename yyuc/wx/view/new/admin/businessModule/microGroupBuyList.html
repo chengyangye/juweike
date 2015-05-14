@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="{$CSS}admin/bootstrap.min.css">
+<link rel="stylesheet" href="{$CSS}admin/admin.css">
+<title>我的活动</title>
+
+</head>
+<body>
+	<div class="main-title">
+		<h3>{$lbs->name}微团购活动</h3>
+	</div>
+
+<div class="pagination">
+  <ul>
+    {P}
+  </ul>  
+</div>
+<div>
+<form action="">
+手机号：
+{$tj->text('tel','style="margin-top: 10px;width:100px;"')}
+开始时间：
+{$tj->datetime('kssj','style="margin-top: 10px;width:140px;"')}
+结束时间：
+{$tj->datetime('jssj','style="margin-top: 10px;width:140px;"')}
+领取状态：
+{$tj->select($isused_arr,'isused','style="margin-top: 10px;width:140px;"')}
+消费门店：
+{$tj->select($mdlb_arr,'mdid','style="margin-top: 10px;width:300px;"')}
+<button type="submit" class="btn">检索</button>
+</form>
+
+</div>
+<div>总计：<B>{$p->totalnum}条/{$p->totalpage}页</B></div>
+	<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>用户名称</th>
+					<th>用户电话</th>
+					<th>团购数量</th>
+					<th>参与时间</th>
+					<th>消费门店</th>
+					<th>备注</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+			{loop $res as $r}			 
+			      <tr>
+						<td>{$r->un}</td>
+						<td>{$r->tel}</td>
+						<td>{$r->sl}</td>
+						<td>
+						{$r->ctime}
+						</td>
+						<td>
+						{$mdlb[$r->mdid]}
+						</td>
+						<td>
+						{$r->bz}
+						</td>
+						<td>
+						<span>
+						{if $r->isused=='1'}
+						已使用
+						{else}
+						[
+						<a href="javascript:;" onclick="toused({$r->id},this)">未使用</a>
+						]
+						{/if}						
+						</span>
+						</td>
+				  </tr>
+			{/loop}
+			</tbody>
+		</table>
+	<div class="tb-toolbar">
+	</div>
+
+<div class="pagination">
+  <ul>
+{P}
+  </ul>
+  
+</div>
+
+<script type="text/javascript">
+
+function toused(id,o){
+	if(!window.pophtm){
+		window.pophtm = $('#jfczarea').html();
+		$('#jfczarea').remove();
+	}
+	window.yjsid = id;
+	pophtml(window.pophtm,360,150);
+}
+
+function fyjs(){
+	var bz = $('.bz').val();
+	var md = $('.mdlb').val();
+	ajax('microGroupBuyList-used.html',{ id:window.yjsid,md:md,bz:bz},function(m){
+		tusi('操作成功');
+		setTimeout(function(){
+			location.href =location.href; 
+		},1000);
+	});
+}
+</script>
+
+
+<div id="jfczarea" style="display:none">
+	<table>
+		<tr>
+			<td style="line-height: 30px;" valign="top">门店：</td>
+			<td colspan="3"><select style="width: 228px;" class="mdlb">
+					<option value="0">--不标记--</option>
+					{loop $mdlb as $k=>$v}
+					<option value="{$k}">{$v}</option>
+					{/loop}
+			</select></td>
+			</tr>
+			<tr>
+			<td style="line-height: 30px;" valign="top">备注：</td>
+			<td colspan="2"><input type="text" class="bz" style="width: 150px;"></td>
+			<td valign="top" align="right">
+			<button onclick="fyjs()" class="btn">确定</button>
+			</td>
+		</tr>
+	</table>
+</div>
+<br/><br/><br/></body></html>

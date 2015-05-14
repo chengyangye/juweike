@@ -1,0 +1,28 @@
+
+<!DOCTYPE>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="{$CSS}mwm/card/card.css" media="all" />
+<title>适用门店</title>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+</head>
+
+<body id="cardaddr" ondragstart="return false;" onselectstart="return false;">
+<section class="body">
+<div class="qiandaobanner">
+    <img src="/res/symd.jpg">
+</div>
+<div class="cardexplain">
+{loop $mdres as $r}
+<h2>{$r->name}</h2>
+        <ul class="round">
+            <li class="addr"><a href="http://api.map.baidu.com/marker?location={$r->wd},{$r->jd}&title={$r->name}&name={$r->address}&content={$r->address}&output=html&src=weiba|weiweb" /><span>{$r->address}</span></a></li>
+            <li class="tel"><a href="tel:{$r->tel}"><span>{$r->tel}</span></a></li>
+        </ul>
+{/loop}
+</div>
+</section>
+</body>
+</html>

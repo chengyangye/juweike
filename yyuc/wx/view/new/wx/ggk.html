@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="微信">
+<title></title>
+<link rel="stylesheet" type="text/css" href="/res/page.css" />
+<link href="/res/xym.css" rel="stylesheet" type="text/css">
+<link href="/res/zwj.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<div class="m_ggl">
+
+<div class="m_ylzjxx">
+<table class="ggltb">
+<tr>
+<td class="ggltd"></td>
+<td><h1>{$hd->name}</h1></td>
+<td class="ggltd"></td>
+</tr>
+</table>
+</div>
+<br/>
+<div class="m_ylzjxx">
+{if $hdlog->has_id()}
+{_ $jjj = 'j'.$hdlog->jx.'ms'}
+恭喜{$hdlog->tel}获得{$hd->$jjj}
+{else}
+目前还没人中奖，快来刮一刮。
+{/if}
+</div>
+<div class="m_gglmain">
+<img src="/res/w/ggl.png"/>
+<div class="m_gglgjqs"  style="display: none;">{$jxmc}</div>
+<div class="m_gglgjq" id="scratchpad" style="color: #333;"></div>
+</div>
+
+<div class="m_yljpsm">
+<div class="m_yljpsms">
+<h2 style="background: url('/res/stitle.png') no-repeat; color: white;">奖项设置：</h2>
+{if trim($hd->j1mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j1mc}： {$hd->j1ms}。{if $hd->isshowsl == 1}数量：{$hd->j1sl}{/if}</div>
+{/if}
+{if trim($hd->j2mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j2mc}： {$hd->j2ms}。{if $hd->isshowsl == 1}数量：{$hd->j2sl}{/if}</div>
+{/if}
+{if trim($hd->j3mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j3mc}： {$hd->j3ms}。{if $hd->isshowsl == 1}数量：{$hd->j3sl}{/if}</div>
+{/if}
+{if trim($hd->j4mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j4mc}： {$hd->j4ms}。{if $hd->isshowsl == 1}数量：{$hd->j4sl}{/if}</div>
+{/if}
+{if trim($hd->j5mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j5mc}： {$hd->j5ms}。{if $hd->isshowsl == 1}数量：{$hd->j5sl}{/if}</div>
+{/if}
+{if trim($hd->j6mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j6mc}： {$hd->j6ms}。{if $hd->isshowsl == 1}数量：{$hd->j6sl}{/if}</div>
+{/if}
+{if trim($hd->j7mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j7mc}： {$hd->j7ms}。{if $hd->isshowsl == 1}数量：{$hd->j7sl}{/if}</div>
+{/if}
+{if trim($hd->j8mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j8mc}： {$hd->j8ms}。{if $hd->isshowsl == 1}数量：{$hd->j8sl}{/if}</div>
+{/if}
+</div>
+</div>
+<div class="m_yljpsm">
+<div class="m_yljpsms">
+<h2 style="background: url('/res/stitle.png') no-repeat; color: white;">活动说明：</h2>
+<div class="m_yljpsmnr">您今天还有 <span id="syjhspan">{$sycs}</span> 次参与机会</div>
+<div class="m_yljpsmnr">{$hd->ms}</div>
+</div>
+</div>
+</div>
+{if $sycs >0}
+<script type="text/javascript" src="/res/wScratchPad.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(window).on('touchmove',function(){
+		if ($("#scratchpad").css("color").indexOf("51") > 0) {	    		
+            $("#scratchpad").css("color", "rgb(50,50,50)");
+        } else if ($("#scratchpad").css("color").indexOf("50") > 0) {
+            $("#scratchpad").css("color", "rgb(51,51,51)");
+        }
+	});
+	var useragent = window.navigator.userAgent.toLowerCase();
+	$('#scratchpad').wScratchPad({
+	    width           : 130,
+	    height          : 35,
+	    color: "#a9a9a7",
+	    scratchUp:function(i,ii){
+	    	if(ii>10 && !window.iscyggldeduijing){
+	    		window.iscyggldeduijing = true;
+	    		tellcjok('ggk');
+	    	}
+	    },
+	    scratchMove:function(i){
+	    	tusi($("#scratchpad").css("color"));
+	    	if ($("#scratchpad").css("color").indexOf("51") > 0) {	    		
+                $("#scratchpad").css("color", "rgb(50,50,50)");
+            } else if ($("#scratchpad").css("color").indexOf("50") > 0) {
+                $("#scratchpad").css("color", "rgb(51,51,51)");
+            }
+	    }
+	});
+	$('.m_gglgjqs').show();
+});
+
+</script>
+<input type="hidden" id="hdid" value="{$hd->id}"/>
+<input type="hidden" id="hdjx" value="{$jx}"/>
+<input type="hidden" id="hdjxmc" value="{$jxmc}"/>
+{/if}
+<script src="/res/hammer.js"></script>
+<script src="/res/wx.js"></script>
+<div id="zjtzdiv" style="display: none;position: fixed;width: 100%; bottom:0px;z-index:9999;">
+<div class="Pop-upbox" id="usermsg" >
+        <div class="upbox_top">
+            <h1>恭喜中奖：</h1>
+            <a href=""><div class="close" style="display: none;"></div></a>
+        </div>
+        <div class="upbox_cens">
+        <div>
+恭喜获得奖品:{$jxmc}。
+请留下你的手机号码作为领奖依据。<br/>
+姓名：<input type="text" id="un" value="{h $op->un}" class="sinput">
+        </div>
+     <div style="margin-top: 5px;">
+ 电话：<input type="text" id="tel" value="{h $op->tel}" class="sinput">
+     </div>
+      <div style="margin-top: 5px;">
+ 微信用户名：<input type="text" id="wxun" value="{h $op->wxun}" class="sinput">
+     </div>
+        
+        </div>
+        <div class="upbox_cen">
+            <a href="javascript:tellcjxxok('ggk')"><div class="button_1"><span>确认信息</span></div></a>
+        </div>
+</div>
+</div>
+{T /_wf}
+</body></html>

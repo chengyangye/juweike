@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+body, article, section, h1, h2, hgroup, p, a, ul, li, em, div, small, span, footer, canvas, figure, figcaption, input {margin: 0;padding: 0;}
+abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, figcaption, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, small, time, video {display: block;}
+img {border: none;}
+
+/*会员卡*/
+body {background-color: #E5E5E5;text-align: center;font-family: 'Helvetica Neue',sans-serif;overflow-x: hidden;}
+#card_ctn {position: relative;}
+#card_ctn .bk1 {height: 155px;background: #4b5359 url(../images/wei_shop_bk2.jpg) repeat-x 0 0;}
+#card_ctn .cont {min-height: 160px;width: 320px;margin: -155px auto 0 auto;padding-top: 28px;background:url(../images/wei_shop_bg1.jpg) no-repeat 0 0;}
+#card_ctn .card {width: 236px;height: 143px;margin: 0 auto;}
+.cont {position: relative;-webkit-perspective: 300;-moz-perspective: 300;-ms-perspective: 300;perspective: 300;}
+
+.card {
+width:100%;
+height:100%;
+-webkit-transform-style:preserve-3d;
+-webkit-transition:all 1s linear;
+}
+.cardfz{
+	-webkit-transform:rotateY(180deg);
+}
+
+.cardcard{
+position:absolute;
+height:100%;
+width:100%;
+-webkit-backface-visibility:hidden;
+-ms-backface-visibility:hidden;
+}
+.front{
+	z-index: 1;
+}
+.back{
+	-webkit-transform:rotateY(180deg);
+	-ms-transform:rotateY(180deg);
+	z-index: 0;
+}
+
+
+.fg {margin: 0 auto;position: relative;width: 236px;height: 143px;-webkit-background-size: 236px 143px;background-size: 236px 143px;background-position: 0 0;background-repeat: no-repeat;}
+.fg img:nth-child(1) {margin-top: 22px;width: 196px;height: 92px;}
+.fg img:nth-child(2) {width: 234px;margin-left: 1px;}
+.fc {width: 210px;height: 125px;line-height: 20px;padding: 8px 7px 0 9px;overflow: hidden;position: absolute;top: 0;left: 4px;border-radius: 0 0 4px 4px;font-size: 13px;text-align: left;}
+.fc .cname {width: 222px;height: 16px;margin: 0 0 89px 0;line-height: 16px;font-size: 10px;font-weight: bold;}
+.fc .cname, .fc .t, .fc .n {display: inline-block;height: 20px;overflow: hidden;white-space: nowrap;}
+.fc .t {width: 106px;font-size: 12px;display: none;}
+.fc .n {width: 82px;float: right;text-align: right;font-size: 10px;}
+#card_ctn .backtag, #card_ctn .backtag p, #card_ctn .backtag canvas {width: 54px;height: 24px;}
+#card_ctn .backtag {position: relative;margin: 0 0 -24px 168px;}
+#card_ctn .backtag canvas {height: 30px;}
+#card_ctn .backtag p, #card_ctn .backtag canvas {position: absolute;top: 0;left: 0;}
+#card_ctn .backtag p {line-height: 20px;text-align: center;font-size: 9px;}
+.fg .info {height: 83px;padding-top: 28px;}
+.fg .info .addr {background-image:url(../images/icon_addr.png);}
+.fg .info .addr, .fg .info .tel {display: block;text-align: left;color: #666;font-size: 14px;margin-left: 12px;padding: 0 20px 12px 23px;line-height: 18px;background-position: 0 2px;background-repeat: no-repeat;-webkit-background-size: 13px 13px;background-size: 13px 13px;}
+.fg .info .tel {background-image:url(../images/icon_tel.png);}
+.fg .keywords {height: 25px;line-height: 25px;text-align: center;color: #fff;font-size: 10px;}
+a.autotel {text-decoration: none;color: inherit;}
+a {text-decoration: none;cursor: pointer;}
+.cc_shop2 h1, .cc_shop2 h1 a {color: #486d02;}
+.cc_shop2 h1 {line-height: 44px;height: 44px;font-size: 18px;}
+ul {list-style-type: none;}
+.footFix {width: 100%;text-align: center;position: fixed;left: 0;bottom: 0;z-index: 4;}
+#footBtn a, #applyBtn a, #backPrivDetailBtn a, #backIndexBtn a, a#back_btn, #codeBtn a {height: 38px;line-height: 38px;margin: 10px 10px 0 10px;}
+a#back_btn, #footBtn a, #applyBtn a, #backPrivDetailBtn a, #backIndexBtn a, #codeBtn a, .err_sub, .kkyl_frm input[type=submit], .popup .ok, #pwr_footFrm input[type=submit], #poBtn {display: block;border: 1px solid #646464;color: #fff;font-size: 18px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-image: -webkit-gradient(linear,0% 0,0% 100%,from(#00c600),to(#00a200));background-image: -webkit-linear-gradient(top,#00a200,#00c600);background-image: -moz-linear-gradient(top,#00a200,#00c600);background-image: -ms-linear-gradient(top,#00a200,#00c600);background-image: -o-linear-gradient(top,#00a200,#00c600);box-shadow: inset 0 0 2px #fff;text-decoration: none;}
+.shoptype {padding: 5px 0 12px 0;text-align: left;}
+.shoptype h1 {height: 22px;line-height: 22px;color: #655744;font-size: 16px;font-weight: bold;margin-bottom: 15px;margin-left: 12px;}
+.shoptype .lst {margin: 4px 10px 0 10px;border: 1px solid #d8d8d8;box-shadow: 0 0 5px #eae7e0;background-color: #fff;border-radius: 5px;}
+.shoptype li, .shoptype li a {color: #483e28;font-size: 14px;display: block;}
+.shoptype li {line-height: 40px;border-bottom: 1px solid #ede7db;padding-left: 10px;cursor: pointer;-webkit-background-size: 25px 500px;background-size: 25px; position: relative;}
+.shoptype li .arraow{
+	position: absolute;
+	right: 6px;
+	top: 12px;
+	width: 9px;
+	height: 16px;
+}
+.shoptype li, .shoptype li a {color: #483e28;font-size: 14px;display: block;}
+.shoptype li a em {font-style: normal;display: inline-block;}
+#footBtn, #applyBtn, #backPrivDetailBtn, #codeBtn, #backIndexBtn {width: 100%;height: 60px;background-color: #4f4f4f;text-align: center;}
+.page-url {margin-top: 30px;border-top: 1px solid gray;text-align: center;}
+.page-url-link {font-size: 14px;line-height: 2.5;text-decoration: none;text-shadow: 0 1px white;-webkit-text-shadow: 0 1px #fff;-moz-text-shadow: 0 1px #fff;color: gray;}
+

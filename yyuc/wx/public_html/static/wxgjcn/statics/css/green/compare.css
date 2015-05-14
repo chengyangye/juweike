@@ -1,0 +1,13 @@
+#compare{border-radius:8px;overflow:hidden;margin-bottom:30px}
+table{border-collapse:collapse}
+tr.even{background:#e7ffe3}
+tr.onhover{background:#fff4c5}
+th{font-size:16px;padding:20px 0 15px}
+td{line-height:40px}
+td.yes{background:url(../../images/green/yes.gif) center no-repeat}
+td.no{background:url(../../images/green/no.gif) center no-repeat}
+tr.top{border-bottom:5px solid #8cc63f;background:#f0f7f7}
+td h3{padding:0 0 0 30px}
+h1{color:#44af35;line-height:50px;font-size:26px}
+h1 span{font-size:16px;padding-left:10px;color:#aaa}
+.price{font-weight:bold}

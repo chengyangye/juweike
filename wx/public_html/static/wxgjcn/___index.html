@@ -1,0 +1,633 @@
+﻿<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8"><title>聚微客 - 微信公众平台自助引擎 -  Powered by </title>
+<meta name="keywords" content="聚微客,微信,微信公众平台">
+<meta name="description" content="微信公众平台自助引擎，简称聚微客，聚微客是一款免费开源的微信公众平台管理系统。">
+<link type="text/css" rel="stylesheet" href="/static/wxgjcn/weiqin/bootstrap.css">
+<link type="text/css" rel="stylesheet" href="/static/wxgjcn/weiqin/font-awesome.css">
+<link type="text/css" rel="stylesheet" href="/static/wxgjcn/weiqin/common.css">
+<link href="/static/wxgjcn/statics/css/green/base.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/static/wxgjcn/statics/js/green/jquery.tools.min.js"></script>
+<script type="text/javascript" src="/static/wxgjcn/weiqin/bootstrap.js"></script>
+<script type="text/javascript" src="/static/wxgjcn/weiqin/common.js"></script>
+<script type="text/javascript" src="/static/wxgjcn/weiqin/emotions.js"></script>
+<script type="text/javascript" src="/static/wxgjcn/statics/js/green/newsScroll.js"></script>
+<script type="text/javascript">
+cookie.prefix = 'e23f_';
+</script>
+<!--[if IE 7]>
+<link rel="stylesheet" href="./resource/style/font-awesome-ie7.min.css">
+<![endif]-->
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="./resource/style/bootstrap-ie6.min.css">
+<link rel="stylesheet" type="text/css" href="./resource/style/ie.css">
+<![endif]-->
+<!--<script src="/static/wxgjcn/weiqin/heatmap.js"></script><script src="/static/wxgjcn/weiqin/heatmap-bmaps.js"></script><style type="text/css">.BMap_mask{background:transparent url(about:blank);}.BMap_noscreen{display:none;}.BMap_button{cursor:pointer;}.BMap_zoomer{background-image:url(http://api.map.baidu.com/images/mapctrls1d3.gif);background-repeat:no-repeat;overflow:hidden;font-size:1px;position:absolute;width:7px;height:7px;}.BMap_stdMpCtrl div{position:absolute;}.BMap_stdMpPan{width:44px;height:44px;overflow:hidden;background:url(http://api.map.baidu.com/images/mapctrls2d0.png) no-repeat;}.BMap_ie6 .BMap_stdMpPan{background:none;}.BMap_ie6 .BMap_smcbg{left:0;width:44px;height:464px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://api.map.baidu.com/images/mapctrls2d0.png');}.BMap_ie6 .BMap_stdMpPanBg{z-index:-1;}.BMap_stdMpPan .BMap_button{height:15px;width:15px;}.BMap_panN,.BMap_panW,.BMap_panE,.BMap_panS{overflow:hidden;}.BMap_panN{left:14px;top:0;}.BMap_panW{left:1px;top:12px;}.BMap_panE{left:27px;top:12px;}.BMap_panS{left:14px;top:25px;}.BMap_stdMpZoom{top:45px;overflow:hidden;}.BMap_stdMpZoom .BMap_button{width:22px;height:21px;left:12px;overflow:hidden;background-image:url(http://api.map.baidu.com/images/mapctrls2d0.png);background-repeat:no-repeat;z-index:10;}.BMap_ie6 .BMap_stdMpZoom .BMap_button{background:none;}.BMap_stdMpZoomIn{background-position:0 -221px;}.BMap_stdMpZoomOut{background-position:0 -265px;}.BMap_ie6 .BMap_stdMpZoomIn div{left:0;top:-221px;}.BMap_ie6 .BMap_stdMpZoomOut div{left:0;top:-265px;}.BMap_stdMpType4 .BMap_stdMpZoom .BMap_button{left:0;overflow:hidden;background:-webkit-gradient(linear,50% 0,50% 100%,from(rgba(255,255,255,0.85)),to(rgba(217,217,217,0.85)));z-index:10;-webkit-border-radius:22px;width:34px;height:34px;border:1px solid rgba(255,255,255,0.5);-webkit-box-shadow:0 2px 3.6px #CCC;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;-webkit-box-sizing:border-box;}.BMap_stdMpType4 .BMap_smcbg{position:static;background:url(http://api.map.baidu.com/images/mapctrls2d0_mb.png) 0 0 no-repeat;-webkit-background-size:24px 32px;}.BMap_stdMpType4 .BMap_stdMpZoomIn{background-position:0 0;}.BMap_stdMpType4 .BMap_stdMpZoomIn .BMap_smcbg{width:24px;height:24px;background-position:0 0;}.BMap_stdMpType4 .BMap_stdMpZoomOut{background-position:0 0;}.BMap_stdMpType4 .BMap_stdMpZoomOut .BMap_smcbg{width:24px;height:6px;background-position:0 -25px;}.BMap_stdMpSlider{width:37px;top:18px;}.BMap_stdMpSliderBgTop{left:18px;width:10px;overflow:hidden;background:url(http://api.map.baidu.com/images/mapctrls2d0.png) no-repeat -23px -226px;}.BMap_stdMpSliderBgBot{left:19px;height:8px;width:10px;top:124px;overflow:hidden;background:url(http://api.map.baidu.com/images/mapctrls2d0.png) no-repeat -33px bottom;}.BMap_ie6 .BMap_stdMpSliderBgTop,.BMap_ie6 .BMap_stdMpSliderBgBot{background:none;}.BMap_ie6 .BMap_stdMpSliderBgTop div{left:-23px;top:-226px;}.BMap_ie6 .BMap_stdMpSliderBgBot div{left:-33px;bottom:0;}.BMap_stdMpSliderMask{height:100%;width:24px;left:10px;cursor:pointer;}.BMap_stdMpSliderBar{height:11px;width:19px;left:13px;top:80px;overflow:hidden;background:url(http://api.map.baidu.com/images/mapctrls2d0.png) no-repeat 0 -309px;}.BMap_stdMpSliderBar.h{background:url(http://api.map.baidu.com/images/mapctrls2d0.png) no-repeat 0 -320px;}.BMap_ie6 .BMap_stdMpSliderBar,.BMap_ie6 .BMap_stdMpSliderBar.h{background:none;}.BMap_ie6 .BMap_stdMpSliderBar div{top:-309px;}.BMap_ie6 .BMap_stdMpSliderBar.h div{top:-320px;}.BMap_zlSt,.BMap_zlCity,.BMap_zlProv,.BMap_zlCountry{position:absolute;left:34px;height:21px;width:28px;background-image:url(http://api.map.baidu.com/images/mapctrls2d0.png);background-repeat:no-repeat;font-size:0;cursor:pointer;}.BMap_ie6 .BMap_zlSt,.BMap_ie6 .BMap_zlCity,.BMap_ie6 .BMap_zlProv,.BMap_ie6 .BMap_zlCountry{background:none;overflow:hidden;}.BMap_zlHolder{display:none;position:absolute;top:0;}.BMap_zlHolder.hvr{display:block;}.BMap_zlSt{background-position:0 -380px;top:21px;}.BMap_zlCity{background-position:0 -401px;top:57px;}.BMap_zlProv{background-position:0 -422px;top:81px;}.BMap_zlCountry{background-position:0 -443px;top:105px;}.BMap_ie6 .BMap_zlSt div{top:-380px;}.BMap_ie6 .BMap_zlCity div{top:-401px;}.BMap_ie6 .BMap_zlProv div{top:-422px;}.BMap_ie6 .BMap_zlCountry div{top:-443px;}.BMap_stdMpType1 .BMap_stdMpSlider,.BMap_stdMpType2 .BMap_stdMpSlider,.BMap_stdMpType3 .BMap_stdMpSlider,.BMap_stdMpType4 .BMap_stdMpSlider,.BMap_stdMpType2 .BMap_stdMpZoom,.BMap_stdMpType3 .BMap_stdMpPan,.BMap_stdMpType4 .BMap_stdMpPan{display:none;}.BMap_stdMpType3 .BMap_stdMpZoom{top:0;}.BMap_stdMpType4 .BMap_stdMpZoom{top:0;}.BMap_cpyCtrl a{font-size:11px;color:#7979CC;}.BMap_scaleCtrl{height:23px;overflow:hidden;}.BMap_scaleCtrl div.BMap_scaleTxt{font-size:11px;font-family:Arial,sans-serif;}.BMap_scaleCtrl div{position:absolute;overflow:hidden;}.BMap_scaleHBar img,.BMap_scaleLBar img,.BMap_scaleRBar img{position:absolute;width:37px;height:442px;left:0;}.BMap_scaleHBar{width:100%;height:5px;font-size:0;bottom:0;}.BMap_scaleHBar img{top:-437px;width:100%;}.BMap_scaleLBar,.BMap_scaleRBar{width:3px;height:9px;bottom:0;font-size:0;z-index:1;}.BMap_scaleLBar img{top:-427px;left:0;}.BMap_scaleRBar img{top:-427px;left:-5px;}.BMap_scaleLBar{left:0;}.BMap_scaleRBar{right:0;}.BMap_scaleTxt{text-align:center;width:100%;cursor:default;line-height:18px;}.BMap_omCtrl{background-color:#fff;overflow:hidden;}.BMap_omOutFrame{position:absolute;width:100%;height:100%;left:0;top:0;}.BMap_omInnFrame{position:absolute;border:1px solid #999;background-color:#ccc;overflow:hidden;}.BMap_omMapContainer{position:absolute;overflow:hidden;width:100%;height:100%;left:0;top:0;}.BMap_omViewMv{border-width:1px;border-style:solid;border-left-color:#84b0df;border-top-color:#adcff4;border-right-color:#274b8b;border-bottom-color:#274b8b;position:absolute;z-index:600;}.BMap_omViewInnFrame{border:1px solid #3e6bb8;}.BMap_omViewMask{width:1000px;height:1000px;position:absolute;left:0;top:0;background-color:#68c;opacity:.2;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=20);}.BMap_omBtn{height:13px;width:13px;position:absolute;cursor:pointer;overflow:hidden;background:url(http://api.map.baidu.com/images/mapctrls1d3.gif) no-repeat;z-index:1210;}.anchorBR .BMap_omOutFrame{border-top:1px solid #999;border-left:1px solid #999;}.quad4 .BMap_omBtn{background-position:-26px -27px;}.quad4 .BMap_omBtn.hover{background-position:0 -27px;}.quad4 .BMap_omBtn.BMap_omBtnClosed{background-position:-39px -27px;}.quad4 .BMap_omBtn.BMap_omBtnClosed.hover{background-position:-13px -27px;}.anchorTR .BMap_omOutFrame{border-bottom:1px solid #999;border-left:1px solid #999;}.quad1 .BMap_omBtn{background-position:-39px -41px;}.quad1 .BMap_omBtn.hover{background-position:-13px -41px;}.quad1 .BMap_omBtn.BMap_omBtnClosed{background-position:-26px -41px;}.quad1 .BMap_omBtn.BMap_omBtnClosed.hover{background-position:0 -41px;}.anchorBL .BMap_omOutFrame{border-top:1px solid #999;border-right:1px solid #999;}.quad3 .BMap_omBtn{background-position:-27px -40px;}.quad3 .BMap_omBtn.hover{background-position:-1px -40px;}.quad3 .BMap_omBtn.BMap_omBtnClosed{background-position:-40px -40px;}.quad3 .BMap_omBtn.BMap_omBtnClosed.hover{background-position:-14px -40px;}.anchorTL .BMap_omOutFrame{border-bottom:1px solid #999;border-right:1px solid #999;}.quad2 .BMap_omBtn{background-position:-40px -28px;}.quad2 .BMap_omBtn.hover{background-position:-14px -28px;}.quad2 .BMap_omBtn.BMap_omBtnClosed{background-position:-27px -28px;}.quad2 .BMap_omBtn.BMap_omBtnClosed.hover{background-position:-1px -28px;}.anchorR .BMap_omOutFrame{border-bottom:1px solid #999;border-left:1px solid #999;border-top:1px solid #999;}.anchorL .BMap_omOutFrame{border-bottom:1px solid #999;border-right:1px solid #999;border-top:1px solid #999;}.anchorB .BMap_omOutFrame{border-top:1px solid #999;border-left:1px solid #999;border-right:1px solid #999;}.anchorT .BMap_omOutFrame{border-bottom:1px solid #999;border-right:1px solid #999;border-left:1px solid #999;}.anchorNon .BMap_omOutFrame,.withOffset .BMap_omOutFrame{border:1px solid #999;}.BMap_zoomMask0,.BMap_zoomMask1{position:absolute;left:0;top:0;width:100%;height:100%;background:transparent url(http://api.map.baidu.com/images/blank.gif);z-index:1000;}.BMap_contextMenu{position:absolute;border-top:1px solid #adbfe4;border-left:1px solid #adbfe4;border-right:1px solid #8ba4d8;border-bottom:1px solid #8ba4d8;padding:0;margin:0;width:auto;visibility:hidden;background:#fff;z-index:10000000;}.BMap_cmShadow{position:absolute;background:#000;opacity:.3;filter:alpha(opacity=30);visibility:hidden;z-index:9000000;}div.BMap_cmDivider{border-bottom:1px solid #adbfe4;font-size:0;padding:1px;margin:0 6px;}div.BMap_cmFstItem{margin-top:2px;}div.BMap_cmLstItem{margin-bottom:2px;}.BMap_shadow img{border:0 none;margin:0;padding:0;position:absolute;height:370px;width:1144px;}.BMap_pop .BMap_top{border-top:1px solid #ababab;background-color:#fff;}.BMap_pop .BMap_center{border-left:1px solid #ababab;border-right:1px solid #ababab;background-color:#fff;}.BMap_pop .BMap_bottom{border-bottom:1px solid #ababab;background-color:#fff;}.BMap_shadow,.BMap_shadow img,.BMap_shadow div{-moz-user-select:none;-webkit-user-select:none;}.BMap_checkbox{background:url(http://api.map.baidu.com/images/mapctrls1d3.gif);vertical-align:middle;display:inline-block;width:11px;height:11px;margin-right:4px;background-position:-14px 90px;}.BMap_checkbox.checked{background-position:-2px 90px;}.BMap_pop .BMap_top img,.BMap_pop .BMap_center img,.BMap_pop .BMap_bottom img{display:none;}@media print{.BMap_noprint{display:none;}.BMap_noscreen{display:block;}.BMap_mask{background:none;}.BMap_pop .BMap_top img,.BMap_pop .BMap_center img,.BMap_pop .BMap_bottom img{display:block;}}.BMap_vectex{cursor:pointer;width:11px;height:11px;position:absolute;background-repeat:no-repeat;background-position:0 0;}.BMap_vectex_nodeT{background-image:url(http://api.map.baidu.com/images/nodeT.gif);}.BMap_vectex_node{background-image:url(http://api.map.baidu.com/images/node.gif);}</style>-->
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+<body style="height: 4050px; ">
+<link href="/static/wxgjcn/weiqin/style.css" rel="stylesheet" type="text/css">
+<script src="/static/wxgjcn/weiqin/parallax.js"></script>
+<!--[if IE 6]><script type="text/javascript" src="./resource/skin/js/dd_belatedpng.js"></script><![endif]-->
+<!--[if IE 6]>
+<script type="text/javascript">
+	DD_belatedPNG.fix("img");
+</script>
+<![endif]-->
+<!--[if lte IE 6]>
+<style>
+/*ie6提示*/
+#ie6-warning{width:100%;background:#ffffe1;padding:5px 0;font-size:12px}
+#ie6-warning p{width:1100px;margin:0 auto;}
+</style>
+<div id="ie6-warning" class="cl wp"><p>您正在使用 Internet Explorer 6，您的IE浏览器版本过低，在本页面的显示效果可能有差异。建议您升级到 <a href="#" target="_blank">Internet Explorer 8</a> 或以下浏览器：
+<a href="#">Firefox</a> / <a href="#">Chrome</a> / <a href="#">Safari</a> / <a href="#">Opera</a></p></div>
+<![endif]-->
+<div class="wrapHeader">
+	<div class="header">
+		<!--<h1 class="logo_m"><a href="login.html"><img style="width:200px; height:65px;" src="/static/wxgjcn/weiqin/logo.png" alt="" title=""></a></h1>-->
+		<h1 class="logo_m"><img style="width:200px; height:65px;" src="/static/wxgjcn/weiqin/logo.png" alt="" title=""></h1>
+		<ul class="nav">
+			<li><a href="javascript:void(0)" class="cur">首页</a></li>
+			<li><a href="javascript:void(0)" class="">行业方案</a></li>
+			<li><a href="javascript:void(0)" class="">六大优势</a></li>
+			<li><a href="javascript:void(0)" class="">特色功能</a></li>
+			<li><a href="javascript:void(0)" class="">技术特点</a></li>
+			<li><a href="javascript:void(0)" class="">联系我们</a></li>
+<!--			<li><a href="reg.html" class="">注册</a></li>		-->
+		</ul>
+		<ul class="unstyled nav_m">
+			<li><a href="login.html" class="btn">登录</a></li>
+		</ul>
+	</div>
+</div>
+<ul class="fixedNav" style="margin-left: 640px; display: block; ">
+	<li class="cur">
+		<em class="icon"></em>
+		<span class="txt">首&nbsp;&nbsp;&nbsp;&nbsp;页</span>
+	</li>
+	<li class="">
+		<em class="icon"></em>
+		<span class="txt">行业方案</span>
+	</li>
+	<li class="">
+		<em class="icon"></em>
+		<span class="txt">六大优势</span>
+	</li>
+	<li class="">
+		<em class="icon"></em>
+		<span class="txt">特色功能</span>
+	</li>
+	<li class="">
+		<em class="icon"></em>
+		<span class="txt">技术特点</span>
+	</li>
+	<li class="">
+		<em class="icon"></em>
+		<span class="txt">联系我们</span>
+	</li>
+</ul>
+<div class="wrapBox" id="wrapBox" style="top: 60px; ">
+	<div class="box b1_bg" style="height: 570px; ">
+		<div class="load" style="display: none; ">
+			<p><img src="/static/wxgjcn/weiqin/loading.gif" alt=""></p>
+			<div class="load_bg"></div>
+		</div>
+		<div class="box_bg box1_bg zIndex40" style="top: 0px; "><img src="/static/wxgjcn/weiqin/b1_bg.jpg" alt=""></div>
+		<div class="box_fixed b1_fixed" style="top: 0px; ">
+			<div class="b1_01 zIndex50" style="opacity: 1; top: 285px; "><img src="/static/wxgjcn/weiqin/b1_01.png" alt=""></div>
+			<div class="b1_02" style="left: 365px; opacity: 1; "><img src="/static/wxgjcn/weiqin/b1_02.png" alt=""></div>
+			<div class="b1_03" style="top: 235px; opacity: 1; ">
+				<img src="/static/wxgjcn/weiqin/b1_03.png" alt="">
+				<!--<a href="javascript:login();" title="开始体验" class="b1_03_btn anima"><img src="/static/wxgjcn/weiqin/b1_03_btn.png" alt=""></a>-->
+				<img src="/static/wxgjcn/weiqin/b1_03_btn.png" alt="">
+			</div>
+		</div>
+		<div class="b1_04 zIndex40" style="top: 470px; "><img src="/static/wxgjcn/weiqin/b1_04.png" alt=""></div>
+	</div>
+	<div class="box b2_bg" style="height: 570px; ">
+		<div class="load" style="display: none; ">
+			<p><img src="/static/wxgjcn/weiqin/loading.gif" alt=""></p>
+			<div class="load_bg"></div>
+		</div>
+		<div class="box_bg box2_bg" style="top: 0px; "><img src="/static/wxgjcn/weiqin/b2_bg.jpg" alt=""></div>
+		<div class="box_fixed b2_fixed" style="top: 0px; ">
+			<div class="b2_01" style="top: 800px; left: -200px; opacity: 0; "><img src="/static/wxgjcn/weiqin/b2_01.png" alt=""></div>
+			<h2 class="b2_02" style="left: 1100px; opacity: 0; ">4亿人都在用手机浏览网页，<br>您的网站准备好了吗?&nbsp;&nbsp;<span style="color:red;" id="showtime"></span></h2>
+			<p class="b2_07" style="left: 860px; opacity: 0; ">中国11.46亿网民中，78%在使用手机上网<br>
+				现有的网站在手机上打开字太小、速度慢、导航复杂<br>
+				糟糕的手机浏览体验可能导致79%的用户流失<br>
+				抓住11亿手机用户，特色城马上创建您的手机网站
+			</p>
+			<div class="b2_03 zIndex40" style="top: -400px; "><img src="/static/wxgjcn/weiqin/b2_03.png" alt=""></div>
+			<div class="b2_04 zIndex40" style="top: -100px; "><img src="/static/wxgjcn/weiqin/b2_04.png" alt=""></div>
+			<div class="b2_05 zIndex40"><img src="/static/wxgjcn/weiqin/b2_05.png" alt=""></div>
+			<div class="b2_06 zIndex50" style="top: -200px; "><img src="/static/wxgjcn/weiqin/b2_06.png" alt=""></div>
+		</div>
+	</div>
+	<div class="box b3_bg" style="height: 570px; ">
+		<div class="load" style="display: none; ">
+			<p><img src="/static/wxgjcn/weiqin/loading.gif" alt=""></p>
+			<div class="load_bg"></div>
+		</div>
+		<div class="box_bg box3_bg" style="top: 0px; "><img src="/static/wxgjcn/weiqin/b3_bg.jpg" alt=""></div>
+		<div class="box_fixed b3_fixed" style="top: 0px; ">
+			<div class="b3_tl box_tl" style="opacity: 1; ">
+				<h2>九大移动应用行业<span class="clfea005">解决方案</span>，未来触手可及！</h2>
+				<p>Nine mobile application industry solutions, the future at your fingertips!</p>
+			</div>
+			<!--<div class="b3_img" style="opacity: 0; "><img src="/static/wxgjcn/weiqin/b3_01.png" alt=""></div>-->
+			
+			<div class="b3_01 b3_txt" style="left: 670px; top: 275px; opacity: 0; ">
+				<strong><a href="/static/wxgjcn/standard/2014/0401/youhuiquan.html" title="优惠券" rel="#overlay">
+					<span>餐饮外卖</span>
+				</a></strong>
+				<p>餐馆介绍|菜品介绍|预定桌位|点餐|外卖下单<br>移动互联网方式管理，提升服务档次，增加用户体验，与用户沟通互动，提升菜品及服务质量。</p>
+			</div>
+			<div class="b3_02 b3_txt" style="left: 963px; top: 293px; opacity: 0; ">
+				<strong>酒店住宿</strong>
+				<p>酒店介绍|客房预订|客房展示|位置定位|电话预约<br>向用户展示酒店自身形象和实力，提升用户的活跃度、参与度、满意度。</p>
+			</div>
+			<div class="b3_03 b3_txt" style="left: 963px; opacity: 0; ">
+				<strong>房地产</strong>
+				<p>楼盘介绍|户型展示|全景展示|定位导航<br>深度挖掘客户内在、隐性购房需求，与用户形成长期依存关系，形成好口碑与知名度。</p>
+			</div>
+			<div class="b3_04 b3_txt" style="left: 963px; top: 353px; opacity: 0; ">
+				<strong>商超零售</strong>
+				<p>商品展示|最新活动|会员卡|分享商品<br>即是购物平台又是信息沟通平台，通过移动端信息沟通反馈，增加客流量。</p>
+			</div>
+			<div class="b3_05 b3_txt" style="left: 670px; top: 353px; opacity: 0; ">
+				<strong>休闲娱乐</strong>
+				<p>KTV|电影院|酒吧<br>各种娱乐场所信息发布平台，更多优惠活动，让顾客在线购票，查询预订轻松完成。</p>
+			</div>
+			<div class="b3_06 b3_txt" style="left: 670px; opacity: 0; ">
+				<strong>美容美发</strong>
+				<p>美发师介绍及预约|会员卡|发型设计|发型秀<br>客户进行精准管理，随时与客户互通，提前预约，方便店家和发型师及时的处理订单和安排时间。</p>
+			</div>
+			<!-- add -->
+			<div class="b3_07 b3_txt" style="left: 770px; top: 275px; opacity: 0; ">
+				<strong>电商</strong>
+				<p>会员卡|订单管家|支付|商品管理|配送|智能客服<br>收银、会员卡管理、积分、充值、会员分析一体化管理，获取会员、产品信息，能更科学地调整市场策略。</p>
+			</div>
+			<div class="b3_08 b3_txt" style="left: 770px; opacity: 0; ">
+				<strong>汽车</strong>
+				<p>车型展示|预约驾驶|4S店加油站定位查询|违章查询<br>新车销售、车型查看预约试驾、4S店及加油站查询，查违章、智能疲劳监测等一系列功能</p>
+			</div>
+			<div class="b3_09 b3_txt" style="left: 770px; top: 353px; opacity: 0; ">
+				<strong>教育</strong>
+				<p>课程预约|校园活动|教学评估|成绩查询|第二课堂<br>移动端教学评估、课程查询、预约、成绩查询等功能，成为家长、学生、老师之间私密的三方交流通道。</p>
+			</div>
+			<!-- end -->
+		</div>
+	</div>
+	<div class="box b4_bg" style="height: 570px; ">
+		<div class="load" style="display: none; ">
+			<p><img src="/static/wxgjcn/weiqin/loading.gif" alt=""></p>
+			<div class="load_bg"></div>
+		</div>
+		<div class="box_bg box4_bg" style="top: 0px; "><img src="/static/wxgjcn/weiqin/b4_bg.jpg" alt=""></div>
+		<div class="box_fixed b4_fixed" style="top: 0px; ">
+			<div class="b4_txt_box">
+				<h2 class="b4_tl" style="top: 810px; opacity: 0; ">移动智能应用核心优势<!--<br><span>APP应用无法替代</span>--></h2>
+				<div class="b4_txt b4_txt01" style="opacity: 0; top: 930px; ">
+					<strong>跨平台，节省开发成本</strong>
+					<p>一次开发，所有平台都能使用。</p>
+				</div>
+				<div class="b4_txt b4_txt02" style="opacity: 0; top: 1012px; ">
+					<strong>无需下载，即刻浏览</strong>
+					<p>瞬间打开手机网站，无需下载，降低使用门槛。</p>
+				</div>
+				<div class="b4_txt b4_txt03" style="opacity: 0; top: 1000px; ">
+					<strong>有效利用搜索引擎推广</strong>
+					<p>手机网站可被搜索引擎检索。APP则无法被检索，不理推广。</p>
+				</div>
+				<div class="b4_txt b4_txt04" style="opacity: 0; top: 1176px; ">
+					<strong>便于网络营销推广</strong>
+					<p>网页链接可在多种渠道推广，APP则不支持超链接。</p>
+				</div>
+				<div class="b4_txt b4_txt05" style="opacity: 0; top: 1258px; ">
+					<strong>易于维护</strong>
+					<p>APP升级需要再次下载；而手机网站会自动更新。</p>
+				</div>
+				<div class="b4_txt b4_txt06" style="opacity: 0; top: 1340px; ">
+					<strong>随时随地互动，节省宣传成本</strong>
+					<p>让你时时在线，不受空间阻隔。</p>
+				</div>
+			</div>
+			<div class="b4_01" style="left: 1195px; opacity: 0; ">
+				<img src="/static/wxgjcn/weiqin/b4_01.png" alt="">
+				<p class="tl">智能手机版网站</p>
+			</div>
+			<div class="b4_02" style="left: 1235px; opacity: 0; ">
+				<img src="/static/wxgjcn/weiqin/b4_02.png" alt="">
+				<p class="tl">APP应用</p>
+			</div>
+		</div>
+	</div>
+	<div class="box b5_bg" style="height: 570px; ">
+		<div class="load" style="display: none; ">
+			<p><img src="/static/wxgjcn/weiqin/loading.gif" alt=""></p>
+			<div class="load_bg"></div>
+		</div>
+		<div class="box_bg box5_bg" style="top: 0px; "><img src="/static/wxgjcn/weiqin/b5_bg.jpg" alt=""></div>
+		<div class="box_fixed b5_fixed" style="top: 0px; ">
+			<!--<div class="b5_tl box_tl" style="opacity: 0; ">
+				<h2><span class="clfea005">特色</span>功能模块</h2>
+				<!-- <p>生成APP，可免输入网址直接浏览，支持Android与iOS，更多功能联系我们！</p>
+			</div>
+			<p class="b5_txt" style="opacity: 0; ">生成APP，可免输入网址直接浏览，支持Android与iOS，更多功能联系我们！</p>
+			<div class="b5_01" style="opacity: 0; "><img src="/static/wxgjcn/weiqin/b5_01.png" alt=""></div>
+			<div class="b5_ico">
+				<p class="b5_ico01" style="left: 500px; opacity: 0; ">二维码名片</p>
+				<p class="b5_ico02" style="left: 625px; top: -34px; opacity: 0; ">企业动态</p>
+				<p class="b5_ico03" style="left: 625px; top: 304px; opacity: 0; ">地图导航</p>
+				<p class="b5_ico04" style="left: 780px; top: -145px; opacity: 0; ">一键分享</p>
+				<p class="b5_ico05" style="left: 780px; opacity: 0; ">企业产品库</p>
+				<p class="b5_ico06" style="left: 780px; top: 395px; opacity: 0; ">生成APP</p>
+			</div>-->
+			<div class="b5_tl box_tl" style="opacity: 0; ">
+				<h2><span class="clfea005">特色</span>功能模块</h2>
+			</div>
+			<div class="b5_txt1">
+<ul id="highlight" class="g">
+								<li >
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/weihuiyuan.html" title="微会员" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/weihuiyuan.png" alt="微会员"><br>
+					<span>微会员</span>
+				</a>
+			</h3>
+			<p>无需人力电子调研<br>掌握市场第一首数据</p>
+		</li>
+						<li >
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/weiwangzhan.html" title="微网站" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/weiwangzhan.png" alt="微网站"><br>
+					<span>微网站</span>
+				</a>
+			</h3>
+			<p>小微信也有大商城<br>电商轻松走入微信</p>
+		</li>
+						<li >
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/dazhuanpan.html" title="大转盘" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/dazhuanpan.png" alt="大转盘"><br>
+					<span>大转盘</span>
+				</a>
+			</h3>
+			<p>微信上的休闲吧<br>交流互动话品牌</p>
+		</li>
+						<li >
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/guaguaka.html" title="刮刮卡" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/guaguaka.png" alt="刮刮卡"><br>
+					<span>刮刮卡</span>
+				</a>
+			</h3>
+			<p>颠覆传统方式<br>让庆典更时尚</p>
+		</li>
+						<li class="mr0">
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/youhuiquan.html" title="优惠券" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/youhuiquan.png" alt="优惠券"><br>
+					<span>优惠券</span>
+				</a>
+			</h3>
+			<p>还怕库存淡旺季<br>安啦，我有微团购</p>
+		</li>
+						<li >
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/zhinengkefu.html" title="智能客服" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/zhinengkefu.png" alt="智能客服"><br>
+					<span>智能客服</span>
+				</a>
+			</h3>
+			<p>房产行业解决方案<br>360度看房更给力</p>
+		</li>
+						<li >
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/weituangou.html" title="微团购" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/weituangou.png" alt="微团购"><br>
+					<span>微团购</span>
+				</a>
+			</h3>
+			<p>酷炫微网站<br>微信上的形象门户</p>
+		</li>
+						<li >
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/weicaidan.html" title="微菜单" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/weicaidan.png" alt="微菜单"><br>
+					<span>微菜单</span>
+				</a>
+			</h3>
+			<p>融品牌于知识<br>便销售为乐趣</p>
+		</li>
+						<li >
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/weixiangce.html" title="微相册" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/weixiangce.png" alt="微相册"><br>
+					<span>微相册</span>
+				</a>
+			</h3>
+			<p>幸运机摇奖服务<br>增强用户粘性</p>
+		</li>
+						<li class="mr0">
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/zaixianyuding.html" title="在线预订" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/zaixianyuding.png" alt="在线预订"><br>
+					<span>在线预订</span>
+				</a>
+			</h3>
+			<p>快乐大转盘<br>幸运落谁家</p>
+		</li>
+						<li >
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/weimendian.html" title="微门店" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/weimendian.png" alt="微门店"><br>
+					<span>微门店</span>
+				</a>
+			</h3>
+			<p>开展在线刮奖活动<br>吸引顾客线下消费</p>
+		</li>
+						<li >
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/youhuiquan.html" title="优惠券" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/youhuiquan.png" alt="优惠券"><br>
+					<span>优惠券</span>
+				</a>
+			</h3>
+			<p>电子优惠券利益客户<br>又节约营销预算</p>
+		</li>
+						<li >
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/weitoupiao.html" title="微投票" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/weitoupiao.png" alt="微投票"><br>
+					<span>微投票</span>
+				</a>
+			</h3>
+			<p>适用于多门店、多服务点<br>让客户更方便的找到你</p>
+		</li>
+						<li >
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/weidiaoyan.html" title="微调研" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/weidiaoyan.png" alt="微调研"><br>
+					<span>微调研</span>
+				</a>
+			</h3>
+			<p>智能客服，自动应答<br>7×24不间断服务</p>
+		</li>
+						<li class="mr0">
+			<h3>
+				<a href="./static/wxgjcn/standard/2014/0401/weiba.html" title="微吧" rel="#overlay">
+					<img src="./static/wxgjcn/uploadfile/2014/0401/weiba.png" alt="微吧"><br>
+					<span>微吧</span>
+				</a>
+			</h3>
+			<p>便捷关键词回复<br>轻松设置</p>
+		</li>
+							</ul>
+			</div>
+			</div>
+		</div>
+		<div class="box b6_bg" style="height: 570px; ">
+		<div class="load" style="display: none; ">
+			<p><img src="/static/wxgjcn/weiqin/loading.gif" alt=""></p>
+			<div class="load_bg"></div>
+		</div>
+		<div class="box_bg box6_bg" style="top: 0px; "><img src="/static/wxgjcn/weiqin/b6_bg.jpg" alt=""></div>
+		<div class="box_fixed b6_fixed" style="top: 0px; ">
+			<h2 class="b6_tl" style="opacity: 0; ">技术特点<br><span>Technical Characteristics</span></h2>
+			<div class="b6_cont">
+				<div class="b6_img" style="opacity: 0; "><img src="/static/wxgjcn/weiqin/b6_img.png" alt=""></div>
+				<div class="b6_arrow">
+					<em class="b6_arrow01" style="top: -34px; "></em>
+					<em class="b6_arrow02" style="top: 34px; "></em>
+				</div>
+				<div class="b6_txt b6_txt01" style="opacity: 0; "><i></i>网页优化加速<br>节省更多流量</div>
+				<div class="b6_txt b6_txt02" style="opacity: 0; "><i></i>实时同步更新</div>
+				<div class="b6_txt b6_txt03" style="opacity: 0; "><i></i>云同步，与PC版<br>共享数据库</div>
+				<div class="b6_txt b6_txt04" style="opacity: 0; "><i></i>前沿的HTML5技术</div>
+				<div class="b6_txt b6_txt05" style="opacity: 0; "><i></i>PHP+MYSQL安全高效</div>
+				<div class="b6_txt b6_txt06" style="opacity: 0; "><i></i>移动地图及导航</div>
+				<div class="b6_txt b6_txt07" style="opacity: 0; "><i></i>超强兼容，高端定制<br>安全监护，扩展升级</div>
+			</div>
+			<div class="b6_01" style="left: 400px; opacity: 0; "><img src="/static/wxgjcn/weiqin/b6_01.png" alt=""></div>
+		</div>
+	</div>
+	<div class="box b7_bg" style="height: 570px; ">
+		<div class="load" style="display: none; ">
+			<p><img src="/static/wxgjcn/weiqin/loading.gif" alt=""></p>
+			<div class="load_bg"></div>
+		</div>
+		<div class="box_bg box7_bg" style="top: 0px; "><img src="/static/wxgjcn/weiqin/b7_bg.jpg" alt=""></div>
+		<div class="box_fixed b7_fixed" style="top: 0px; ">
+			<div class="b7_tl box_tl">
+				<h2>联系我们</h2>
+			</div>
+			<div class="b7_contact"></div>
+			<div class="b7_bottom">
+				<div class="b7_map">
+					<style type="text/css">
+						html,body{margin:0;padding:0;}
+						.iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+						.iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+					</style>
+					<!--<div class="img" style="width: 413px; height: 300px; border: 1px solid rgb(204, 204, 204); overflow: hidden; position: relative; z-index: 0; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); text-align: left; " id="baidumap"><div style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 0px; cursor: url(http://api.map.baidu.com/images/openhand.cur), default; "><div class="BMap_mask" style="position: absolute; left: 0px; top: 0px; z-index: 9; overflow: hidden; -webkit-user-select: none; width: 413px; height: 300px; "></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200; "><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800; "></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700; "><span class="BMap_Marker BMap_noprint" unselectable="on" "="" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 19px; height: 25px; cursor: pointer; background-image: url(http://api.map.baidu.com/images/blank.gif); left: 197px; top: 125px; z-index: -6209592; background-position: initial initial; background-repeat: initial initial; " title=""></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600; "></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500; "><label class="BMapLabel" unselectable="on" style="position: absolute; display: none; cursor: inherit; background-color: rgb(190, 190, 190); border: 1px solid rgb(190, 190, 190); padding: 1px; white-space: nowrap; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: arial, sans-serif; z-index: -20000; color: rgb(190, 190, 190); ">shadow</label></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400; "><span class="BMap_Marker" unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 197px; top: 125px; z-index: -6209592; "><div style="position: absolute; margin: 0px; padding: 0px; width: 19px; height: 25px; overflow: hidden; left: 0px; top: -20px; "><img src="/static/wxgjcn/weiqin/marker_red_sprite.png" style="border:none;left:0px; top:0px; position:absolute;"></div></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 300; "><span unselectable="on" style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 20px; height: 11px; left: 201px; top: 139px; "><div style="position: absolute; margin: 0px; padding: 0px; width: 20px; height: 11px; overflow: hidden; left: 15px; top: -15px; "><img src="/static/wxgjcn/weiqin/marker_red_sprite.png" style="border:none;left:-19px; top:-13px; position:absolute;"></div></span></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 201; "></div><div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200; "></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 1; "><div style="position: absolute; overflow: visible; z-index: -100; left: 206px; top: 150px; "><img style="position: absolute; border: none; width: 256px; height: 256px; left: -236px; top: -3px; max-width: none; opacity: 1; " src="/static/wxgjcn/weiqin/saved_resource"><img style="position: absolute; border: none; width: 256px; height: 256px; left: 20px; top: -3px; max-width: none; opacity: 1; " src="/static/wxgjcn/weiqin/saved_resource(1)"><img style="position: absolute; border: none; width: 256px; height: 256px; left: -236px; top: -259px; max-width: none; opacity: 1; " src="/static/wxgjcn/weiqin/saved_resource(2)"><img style="position: absolute; border: none; width: 256px; height: 256px; left: 20px; top: -259px; max-width: none; opacity: 1; " src="/static/wxgjcn/weiqin/saved_resource(3)"></div></div><div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 2; "></div></div><div style="height: 32px; position: absolute; z-index: 10; -webkit-text-size-adjust: none; bottom: 0px; right: auto; top: auto; left: 1px; " class=" anchorBL"><a title="到百度地图查看此区域" target="_blank" href="http://map.baidu.com/?sr=1" style="outline: none; "><img style="border:none;width:77px;height:32px" src="/static/wxgjcn/weiqin/copyright_logo.png"></a></div><div id="zoomer" style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:url(http://api.map.baidu.com/images/openhand.cur) 8 8,default"><div class="BMap_zoomer" style="top:0;left:0;"></div><div class="BMap_zoomer" style="top:0;right:0;"></div><div class="BMap_zoomer" style="bottom:0;left:0;"></div><div class="BMap_zoomer" style="bottom:0;right:0;"></div></div><div unselectable="on" class=" BMap_stdMpCtrl BMap_stdMpType0 BMap_noprint anchorTL" style="width: 62px; height: 192px; bottom: auto; right: auto; top: 10px; left: 10px; position: absolute; z-index: 1100; -webkit-text-size-adjust: none; "><div class="BMap_stdMpPan"><div class="BMap_button BMap_panN" title="向上平移"></div><div class="BMap_button BMap_panW" title="向左平移"></div><div class="BMap_button BMap_panE" title="向右平移"></div><div class="BMap_button BMap_panS" title="向下平移"></div><div class="BMap_stdMpPanBg BMap_smcbg"></div></div><div class="BMap_stdMpZoom" style="height: 147px; width: 62px; "><div class="BMap_button BMap_stdMpZoomIn" title="放大一级" style=""><div class="BMap_smcbg"></div></div><div class="BMap_button BMap_stdMpZoomOut" title="缩小一级" style="top: 126px; "><div class="BMap_smcbg"></div></div><div class="BMap_stdMpSlider" style="height: 108px; "><div class="BMap_stdMpSliderBgTop" style="height: 108px; "><div class="BMap_smcbg"></div></div><div class="BMap_stdMpSliderBgBot" style="top: 25px; height: 87px; "></div><div class="BMap_stdMpSliderMask" title="放置到此级别"></div><div class="BMap_stdMpSliderBar" title="拖动缩放" style="cursor: url(http://api.map.baidu.com/images/openhand.cur), default; top: 25px; "><div class="BMap_smcbg"></div></div></div><div class="BMap_zlHolder"><div class="BMap_zlSt"><div class="BMap_smcbg"></div></div><div class="BMap_zlCity"><div class="BMap_smcbg"></div></div><div class="BMap_zlProv"><div class="BMap_smcbg"></div></div><div class="BMap_zlCountry"><div class="BMap_smcbg"></div></div></div></div></div><div unselectable="on" class=" BMap_omCtrl BMap_ieundefined BMap_noprint anchorBR quad4" style="width: 13px; height: 13px; bottom: 0px; right: 0px; top: auto; left: auto; position: absolute; z-index: 10; -webkit-text-size-adjust: none; "><div class="BMap_omOutFrame" style="width: 149px; height: 149px; "><div class="BMap_omInnFrame" style="bottom: auto; right: auto; top: 5px; left: 5px; width: 142px; height: 142px; "><div class="BMap_omMapContainer"></div><div class="BMap_omViewMv" style="cursor: url(http://api.map.baidu.com/images/openhand.cur), default; "><div class="BMap_omViewInnFrame"><div></div></div></div></div></div><div class="BMap_omBtn BMap_omBtnClosed" style="bottom: 0px; right: 0px; top: auto; left: auto; "></div></div><div unselectable="on" class=" BMap_cpyCtrl BMap_noprint anchorBL" style="cursor: default; white-space: nowrap; color: black; background-image: none; font-style: normal; font-variant: normal; font-weight: normal; font-size: 11px; line-height: 15px; font-family: arial, sans-serif; bottom: 2px; right: auto; top: auto; left: 81px; position: absolute; z-index: 10; -webkit-text-size-adjust: none; background-position: initial initial; background-repeat: initial initial; "><span _cid="1"><span style="font-size:11px">© 2014 Baidu&nbsp;- Data © <a target="_blank" href="http://www.navinfo.com/" style="display:inline;">NavInfo</a> &amp; <a target="_blank" href="http://www.cennavi.com.cn/" style="display:inline;">CenNavi</a> &amp; <a target="_blank" href="http://www.365ditu.com/" style="display:inline;">道道通</a></span></span></div></div>-->
+					 <!--百度地图容器-->
+                  <!--百度地图容器-->
+                  <div style="width:453px;height:340px;border:#ccc solid 1px;" id="dituContent"></div>
+				</div>
+				<div class="b7_msg">
+					<h4>联系我们<span></span></h4>
+					<div class="row">
+						<p class="txt">电话：10086</p>
+					</div>
+					<div class="row">
+						<p class="txt">微信：聚微客</p>
+					</div>
+					<div class="row">
+						<p class="txt">邮箱：chengyang.ye@gmail.com</p>
+					</div>
+					<div class="row">
+						<p class="txt">地址：上海</p>
+					</div>
+					<div class="row" style="text-align: left;">
+					<img src="/static/wxgjcn/weiqin/juweike.png" alt="聚微客">
+					</div>
+				</div>
+			</div>
+			<div class="b7_bottom footer_m" style="margin-top:20px;">
+				<span class="pull-left">
+					<p>Powered by <a href=""><b>聚微客</b></a> v0.1 © 2014 <a href="">http://wx.zongyangtech.cn</a></p>
+				</span>
+				<span class="pull-right">
+					<p><a href="">关于聚微客</a>&nbsp;&nbsp;<a href="http://wx.zongyangtech.cn"></a></p>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 弹出层 开始 -->
+	<div class="apple_overlay" id="overlay">
+		<div class="overlayTool">
+			<!--<div class="oImgBox l"></div>-->
+			<div class="oTitle l">
+				<h3></h3>
+				<p></p>
+			</div>
+			<!--<div class="oLink r">
+				<a href="index/static/wxgjcom/product/" class="allM" target="_blank">全部模块</a>
+				<a href="" class="newW" target="_blank">新窗口打开</a>
+			</div>-->
+		</div>
+		<div class="contentWrap"></div>
+	</div>
+	<!-- 弹出层 结束 -->
+<script>
+//document.body.style.overflow = 'hidden';
+var ie6 = !-[1,]&&!window.XMLHttpRequest;
+ie6 || loadImg.init();
+</script>
+<script type="text/javascript">
+
+	var t = 5;
+	function login() {
+		$('#showtime').html(t);
+		if(t == 0) window.location.href="login.html";
+		setTimeout("login()",1000);
+		t = t -1;
+	}
+</script>
+	<script type="text/javascript" src="/static/wxgjcn/weiqin/api"></script><script type="text/javascript" src="/static/wxgjcn/weiqin/getscript"></script>
+
+<script>
+	$(function(){
+		$("#ftrigger").tabs("#focus li", {effect:'fade', fadeInSpeed:500, event:'mouseover', rotate:true}).slideshow({autoplay:true, interval:4000});
+		$("#chained").scrollable({circular: true}).autoscroll({interval:3000});
+		$("#info").rowScroll({line:1,speed:500,left:"infoBtnL",right:"infoBtnR",timer:"3000"});
+		$("#highlight li").hover(
+			function(){
+				$(this).addClass("hover");
+			},
+			function(){
+				$(this).removeClass("hover");
+			}
+		);
+		$("a[rel]").overlay({
+			mask: '#44af35',
+			effect: 'apple',
+			top:"center",
+			onBeforeLoad: function() {
+				var wrap = this.getOverlay().find(".contentWrap");
+				wrap.load(this.getTrigger().attr("href")+" #mdCnt");
+				$(".oImgBox").html(this.getTrigger().children("img").clone());
+				$(".oTitle h3").html(this.getTrigger().children("span").html());
+				$(".oTitle p").html(this.getTrigger().parent().next().html().replace(/<br[^>]*>/ig, "，"));
+				$(".newW").attr("href",this.getTrigger().attr("href"));
+			}
+		});
+	});
+	</script>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(121.443519,31.29777);//定义一个中心点坐标
+        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+
+    //标注点数组
+    var markerArr = [{title:"聚微客",content:"聚微客",point:"121.443523|31.297863",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+</body></html>

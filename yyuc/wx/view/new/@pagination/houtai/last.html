@@ -1,0 +1,7 @@
+{if !$P->islast}
+<a href="{$P->lastlink}" class="number">末页</a>
+{/if}
+{if $P->linknum < $P->totalpage}
+<input type="text" id="YYUC_PAGE_jumptxt" style="width:25px;" value="{$P->pagenum}">
+<a href="javascript:;" class="number" onclick="page_jump('#Form1')">跳转</a>
+{/if}

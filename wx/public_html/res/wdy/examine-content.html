@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>具体内容</title>
+<link type="text/css" rel="stylesheet" href="style/examine.css" />
+<script type="text/javascript">
+	var checkId="";
+	function divClick(imgId){
+		if(checkId==""){//全是未被选时
+			var tempClassName=document.getElementById(imgId).className;
+			document.getElementById(imgId).className=document.getElementById(imgId+1).className;
+			document.getElementById(imgId+1).className=tempClassName;
+			checkId=imgId;
+		}else{//有一个被选中时
+			if(imgId==checkId){
+				var tempClassName=document.getElementById(imgId).className;
+				document.getElementById(imgId).className=document.getElementById(imgId+1).className;
+				document.getElementById(imgId+1).className=tempClassName;
+				checkId="";
+			}else{
+				for(var i=1;i<6;i++){
+					var tempId="img"+i;
+					if(tempId==checkId){
+						var tempClassName=document.getElementById(tempId).className;
+						document.getElementById(tempId).className=document.getElementById(tempId+1).className;
+						document.getElementById(tempId+1).className=tempClassName;
+					}
+					if(tempId==imgId){
+						var tempClassName=document.getElementById(tempId).className;
+						document.getElementById(tempId).className=document.getElementById(tempId+1).className;
+						document.getElementById(tempId+1).className=tempClassName;
+					}					
+				}
+				checkId=imgId;
+			}	
+		}
+	}
+</script>
+</head>
+<body style="background-color: #ffb100;">
+<div class="wrapper">
+	<img class="bg" src="images/bg.jpg">
+	<div class="question" style="overflow:hidden;">
+		<div class="title">微房产版块是否能满足需求？</div>
+		<div class="tip1">注：本题最多能选择1个答案！</div>
+		<div class="options">
+			<div class="option" data-value="1" onclick="divClick('img1')">
+				<img id="img1" class="oimg" src="images/option_bg.png">
+				<img id="img11" class="oimg-sel" src="images/option_sel_bg.png">
+				<div class="text">
+					<div class="otext">不能满足</div>
+				</div>
+			</div>
+			<div class="option" data-value="2"  onclick="divClick('img2')">
+				<img id="img2" class="oimg" src="images/option_bg.png">
+				<img id="img21" class="oimg-sel" src="images/option_sel_bg.png">
+				<div class="text">
+					<div class="otext">基本满足</div>
+				</div>
+			</div>
+			<div class="option" data-value="3" onclick="divClick('img3')">
+				<img id="img3" class="oimg" src="images/option_bg.png">
+				<img id="img31" class="oimg-sel" src="images/option_sel_bg.png">
+				<div class="text">
+					<div class="otext">完全满足</div>
+				</div>
+			</div>
+			<div class="option" data-value="4" onclick="divClick('img4')">
+				<img id="img4" class="oimg" src="images/option_bg.png">
+				<img id="img41" class="oimg-sel" src="images/option_sel_bg.png">
+				<div class="text">
+					<div class="otext">非常满足</div>
+				</div>
+			</div>
+			<div class="option" data-value="5" onclick="divClick('img5')">
+				<img id="img5" class="oimg" src="images/option_bg.png">
+				<img id="img51" class="oimg-sel" src="images/option_sel_bg.png">
+				<div class="text">
+					<div class="otext">其它</div>
+				</div>
+			</div>
+		</div>
+		<div id="submit">
+			<img src="images/next_btn.png">
+			<span>下一步</span>
+		</div>
+	</div>
+ 	<p class="page-url">
+		<a href="" target="_blank" class="page-url-link">由"聚微客"平台提供</a>
+	</p>
+</div>
+</body>
+</html>

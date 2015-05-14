@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>会员卡</title>
+<link type="text/css" rel="stylesheet" href="style/card.css" />
+<script type="text/javascript">
+		function card(flag){
+			if(flag==1){
+				document.getElementById("zm").className="back";
+				document.getElementById("fm").className="front";
+			}else{
+				document.getElementById("zm").className="front";
+				document.getElementById("fm").className="back";
+			}
+			
+		}
+	</script>
+</head>
+<body id="" class="" style="padding-bottom: 50px;">
+<div id="mappContainer">
+    <section class="cc_shop2" id="card_ctn">
+        <div class="bk1"></div>
+        <div class="cont"> 
+            <div class="card flip" data-side="-1">
+                <div class="front" id="zm" onclick="card(1)">
+                    <figure class="fg" style="background-image:url(images/mc_bg.jpg);"> 
+                        <img id="cardlogoimg" src="images/45d4a89d-a47b-415c-8880-ddcba5b4ca06.png" style="margin-top: 39px;">
+                        <img data-src="{###barcodeimg###}" style="display: none;">
+                        <figcaption class="fc"> 
+                            <span class="cname" style="color:#957426;">花儿精品店-会员卡（演示）</span> 
+                            <span class="t" style="color:#aaa;text-shadow:#000 0 -1px;">花儿精品店</span>
+                            <span class="n" style="color: rgb(170, 170, 170); text-shadow: rgb(0, 0, 0) 0px -1px;"></span> 
+                        </figcaption> 
+                    </figure> 
+                </div> 
+                <div class="back" id="fm" onclick="card(2)"> 
+                    <figure class="fg" style="background-image:url(images/card_back.jpg);">
+                        <div class="backtag">
+                            <canvas data-bgcolor="#d90001" width="54" height="30"></canvas>
+                            <p style="color:#ffffff">返回</p>
+                        </div>
+                        <div class="info"> 
+                            <p class="addr">深圳福田本元大厦</p> 
+                            <p class="tel"><a class="autotel" href="" data-telnum="tel:0755-88308939">0755-88308939</a></p> 
+                        </div> 
+                        <p class="keywords">花儿精品店</p> 
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <div class="vs2" id="shop_lst" style=""> 
+        <article class="shoptype" id="type0">
+            <h1>尊享会员，实惠多多</h1> 
+            <div class="lst"> 
+                <ul id="lstname0"> 
+                    <li data-ajax-params="" data-ajax-act="5"><a><em>获得微信加平台7天试用特权</em></a></li>
+                    <li data-ajax-params="" data-ajax-act="5"><a><em>新功能上线优先体验权</em></a></li><li data-ajax-params="" data-ajax-act="5" class="r"><a><em>获得渠道代理高额返点优先权</em></a></li>
+                </ul> 
+            </div>
+        </article>
+    </div>  
+    <footer style="height:20px;"></footer>
+</div>
+<div id="applyBtn" class="footFix"><a href="">立即获取</a></div>
+<article id="footer">
+    <p class="page-url"><a href="http://www.weijuju.com" target="_blank" class="page-url-link">此功能由"微俱聚（原微信加）"平台提供</a></p>
+</article>
+</body>
+</html>

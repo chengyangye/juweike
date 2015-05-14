@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="{$CSS}admin/bootstrap.min.css">
+<link rel="stylesheet" href="{$CSS}admin/admin.css">
+<title>我的活动</title>
+
+</head>
+<body>
+	<div class="main-title">
+		<h3>{$lbs->name}微调研活动</h3>
+	</div>
+
+<div class="pagination">
+  <ul>
+    {P}
+  </ul>  
+</div>
+<div>
+</div>
+	<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>问题</th>
+					<th>回答</th>
+					
+					<!-- <th>操作</th> -->
+				</tr>
+			</thead>
+			<tbody>
+			{loop $res as $r}
+			      <tr>
+						<td>{$r->question}</td>
+						<td>
+						<?php
+						if(!isset($r->a)){
+								echo '[未回答]';
+
+						}elseif(is_array($r->a)){
+                                for($i=0;$i<count($r->a);$i++){
+									$opt = 'option'.$r->a[$i];																
+									echo $r->$opt;
+								}
+
+							}else{
+							$opt = 'option'.$r->a;
+								echo $r->$opt;
+							}
+							
+						?>
+						</td>
+				  </tr>
+			{/loop}
+			</tbody>
+		</table>
+	<div class="tb-toolbar">
+	</div>
+
+<div class="pagination">
+  <ul>
+{P}
+  </ul>
+  
+</div>
+<br/><br/><br/></body></html>

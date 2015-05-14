@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="{$CSS}admin/bootstrap.min.css">
+<link rel="stylesheet" href="{$CSS}admin/appmsg.css">
+<style>
+	body{
+		padding-bottom: 20px;
+	}
+	.pagination{
+		margin: 0 70px;
+		float: right;
+	}
+	#first_col{
+		display: inline-block; 
+		zoom: 1; 
+		*display: inline; 
+	}
+	#second_col{
+		margin-left: 15px;
+		display: inline-block; 
+		zoom: 1; 
+		*display: inline; 
+	}
+	.add-btn {
+		height: 90px;
+		margin: 0 18px;
+		color: #b5b5b5;
+		background: transparent url('{$IMG}qadmin/appmsg-icon.png') no-repeat 50% -242px;
+	}
+	.multi-access {
+		background-position: 50% -342px;
+	}
+	ul{
+		padding: 0;
+		margin: 0;
+	}
+	li{
+		list-style-type: none;
+	}
+	.sub-msg-item {
+		padding: 12px 14px;
+		overflow: hidden;
+		zoom: 1;
+		border-top: 1px solid #c6c6c6;
+	}
+	.thumb {
+		float: right;
+		font-size: 0;
+	}
+	.thumb .default-tip {
+		font-size: 16px;
+		color: #c0c0c0;
+		width: 70px;
+		line-height: 70px;
+		border: 1px solid #b2b8bd;
+	}
+	.thumb img {
+		width: 70px;
+		height: 70px;
+		border: 1px solid #b2b8bd;
+	}
+	.sub-msg-item .msg-t {
+		margin-left: 0;
+		margin-right: 85px;
+		margin-top: 0;
+		padding-left: 4px;
+		padding-top: 12px;
+		line-height: 24px;
+		max-height: 48px;
+		font-size: 14px;
+		overflow: hidden;
+	}
+	
+	
+</style>
+<title>图文素材管理页面</title>
+<script>
+//删除单图文素材
+function deldsc(id,o){
+	if(confirm('确定删除此素材信息吗？')){
+		ajax('contresourceone-del.html',{ id:id},function(m){
+			if(m=='ok'){
+				$('#dsc_'+id).remove();
+			}
+		});
+	}
+}
+function delddsc(id,o){
+	if(confirm('确定删除此素材信息吗？')){
+		ajax('contresourcemore-del.html',{ id:id},function(m){
+			if(m=='ok'){
+				$('#dsc_'+id).remove();
+			}
+		});
+	}	
+}
+
+$(function() {
+	setTimeout(function(){
+		$('#multiArticle11if',window.parent.document).height($('body').height());
+	},500);
+	$('.msg-item').click(function(){
+		window.parent.openscset();		
+	});
+});
+
+
+
+
+</script>
+<style type="text/css">
+html,body{
+	overflow: hidden;
+}
+</style>
+</head>
+
+<body>
+	<div class="tj msg-list">
+		   				<!-- 偶数内容 -->
+		   				<div id="first_col" class="b-dib vt msg-col">
+					       {_ $ll = json_decode($l->con)}
+		   					{if $l->typ=='1'}
+		   					<div class="msg-item-wrapper" id="dsc_{$l->id}">
+		   					<div class="msg-item">
+		   					<h4 class="msg-t"><a href="javascript:;" class="i-title">{$ll->tit}</a></h4>           
+				   							<p class="msg-meta"><span class="msg-date">{date('Y-m-d')}</span></p>
+											<div class="cover">
+												<p class="default-tip" style="display:none">封面图片</p>
+												<img src="{$ll->pic}" class="i-img" style="">
+											</div>
+											<p class="msg-text">{$ll->des}</p>         
+										</div>	
+										<!-- 								   
+										<div class="msg-opr">
+											<ul class="f0 msg-opr-list">
+												<li class="b-dib opr-item"><a data-mul="false" class="block tc opr-btn edit-btn" href="contresourceone-{$l->id}.html" {if $sel}target="_blank"{/if} data-rid="20330"><span class="th vm dib opr-icon edit-icon">编辑</span></a></li>           
+												<li class="b-dib opr-item"><a class="block tc opr-btn del-btn" href="javascript:;" data-rid="20330" onclick="deldsc({$l->id},this)"><span class="th vm dib opr-icon del-icon">删除</span></a></li>         
+											</ul>       
+										</div>
+										 -->	             
+									</div>
+		   					{else}
+		   					
+		   					<div class="msg-item-wrapper" id="dsc_{$l->id}">
+					   		<div class="msg-item multi-msg">
+					   		{loop $ll as $lll}
+					   		{if $__i==1}
+					   		<div class="appmsgItem">
+	   							<h4 class="msg-t"><a href="javascript:;" class="i-title"></a></h4>           
+	   							<p class="msg-meta"><span class="msg-date">{date('Y-m-d')}</span></p>
+								<div class="cover">
+									<img src="{$lll->pic}" class="i-img" style="">
+								</div>
+								<p class="msg-text">{$lll->tit}</p>         
+							</div>					   		
+					   		{else}
+					   		<div class="rel sub-msg-item appmsgItem">              
+							<span class="thumb">                 
+							<img src="{$lll->pic}" class="i-img" style="">
+							</span>       
+							<h4 class="msg-t">                 
+							 <a href="javascript:;" target="_blank" class="i-title">{$lll->tit}</a>                
+							</h4>       
+							</div>
+					   		{/if}
+					   		{/loop}
+					   		</div>   
+					   		<!-- 
+								<div class="msg-opr">
+									<ul class="f0 msg-opr-list">
+										<li class="b-dib opr-item"><a data-mul="true" class="block tc opr-btn edit-btn" href="contresourcemore-{$l->id}.html" {if $sel}target="_blank"{/if} data-rid="20331"><span class="th vm dib opr-icon edit-icon">编辑</span></a></li>           
+										<li class="b-dib opr-item"><a class="block tc opr-btn del-btn" href="javascript:delddsc({$l->id},this);" data-rid="20331"><span class="th vm dib opr-icon del-icon">删除</span></a></li>         
+									</ul>
+								</div>
+								 -->
+								</div>
+		   					{/if}
+		   				</div>
+		   				<!-- 奇数内容 -->
+		   				
+		   			</div></body></html>

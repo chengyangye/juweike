@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>会员卡设置</title>
+<link rel="stylesheet" href="{$CSS}admin/bootstrap.min.css">
+<link rel="stylesheet" href="{$CSS}admin/admin.css">
+<!--<script type="text/javascript" src="http://stc.weimob.com/src/plugins/jscolor/jscolor.js?2013-12-16-2"></script>-->
+<style type="text/css">
+	table td {
+		min-width:50px;
+		overflow:hidden;text-overflow:ellipsis;
+	}
+	#picsethere{
+		width: 510px;
+		display: block;
+	}
+	#picsethere img{
+		max-width: 500px;
+		display: block;
+	}
+</style>
+</head>
+<body>
+	<h3>会员卡设置</h3>
+	<div class="alert alert-info">
+	  	<p><span class="bold">说明：</span>会员卡是对会员回馈降价的模式。</p>
+	  	<p><span class="bold">当前地址：</span>{getUrl('hyk')}</p>
+	</div>
+	<form class="form-horizontal" id="lbsForm" action="" method="post">{tk()}{$lbs->hidden('id')}
+		<div class="control-group">
+	    	<label class="control-label" for="keyword">会员卡名称</label>
+	    	<div class="controls">
+	    	{$lbs->text('name','class="span4"')}
+		    	<span class="maroon">*</span>
+		    	<span class="help-inline">最多只能输入30个字符。</span>
+	    	</div>
+	  	</div>
+	  	<div class="control-group">
+	    	<label class="control-label" for="keyword">活动关键字</label>
+	    	<div class="controls">
+	    	{$lbs->text('gjz','class="span4"')}
+		    	<span class="maroon">*</span>
+		    	<span class="help-inline">最多只能输入20个字符。</span>
+	    	</div>
+	  	</div>
+		<div class="control-group">
+	    	<label class="control-label" for="location_p">会员卡开始时间</label>
+	    	<div class="controls">
+	    	{$lbs->datetime('kssj','class="span4"')}
+	    	</div>
+	  	</div>
+	  
+	  	<div class="control-group">
+	    	<label class="control-label" for="category_f">会员卡结束时间</label>
+	    	<div class="controls">
+	    	{$lbs->datetime('jssj','class="span4"')}
+	    	</div>
+	  	</div>
+		<div class="control-group">
+		    <label class="control-label" for="">会员卡介绍图片</label>
+		    <div class="controls">
+			    <div class="cover-area">
+					<table style="height: 30px;overflow: hidden;">
+					<tr>
+					<td>{$lbs->upload('pic',array('text'=>'上传图片','showdel'=>false,'type'=>'png,jpeg,jpg,gif,bmp','width'=>100),null,null,'picsethere')}</td>
+					<td valign="top" style="line-height: 30px;color:gray;">建议尺寸：700像素 * 380像素</td>
+					</tr>
+					</table>
+					<p class="img-area cover-bd" id="picsethere">
+					</p>
+				</div>
+		    </div>
+	  	</div>
+	  	<div class="control-group">
+		    <label class="control-label" for="">会员卡正面图片</label>
+		    <div class="controls">
+			    <div class="cover-area">
+					<table style="height: 30px;overflow: hidden;">
+					<tr>
+					<td>{$lbs->upload('pic1',array('text'=>'上传图片','showdel'=>false,'type'=>'png,jpeg,jpg,gif,bmp','width'=>100),null,null,'picsethere1')}</td>
+					<td valign="top" style="line-height: 30px;color:gray;">建议尺寸：240像素 * 145像素</td>
+					</tr>
+					</table>
+					<p class="img-area cover-bd" id="picsethere1">
+					</p>
+				</div>
+		    </div>
+	  	</div>
+	  	
+	  	<div class="control-group">
+		    <label class="control-label" for="">会员卡名称颜色</label>
+		    <div class="controls">
+			    <div class="cover-area">
+					<table style="height: 30px;overflow: hidden;">
+					<tr>
+					<td>{$lbs->text('namecolor','class="color"')}</td>
+					<td valign="top" style="line-height: 30px;color:gray;"></td>
+					</tr>
+					</table>
+					<p class="img-area cover-bd" id="picsethere2">
+					</p>
+				</div>
+		    </div>
+	  	</div>
+	  	<div class="control-group">
+		    <label class="control-label" for="">会员卡卡号颜色</label>
+		    <div class="controls">
+			    <div class="cover-area">
+					<table style="height: 30px;overflow: hidden;">
+					<tr>
+					<td>{$lbs->text('numcolor','class="color"')}</td>
+					<td valign="top" style="line-height: 30px;color:gray;"></td>
+					</tr>
+					</table>
+					<p class="img-area cover-bd" id="picsethere2">
+					</p>
+				</div>
+		    </div>
+	  	</div>
+	  	<div class="control-group">
+			<label class="control-label" for="detail">会员卡简述:</label>
+			<div class="controls">
+			{$lbs->text('ms','class="span4" onblur="if($(this).val().length>18)!{ $(this).val($(this).val().substr(0,18));!}"')}
+				<span class="maroon">*</span><br><span class="help-inline">最多为18个字符。</span>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="detail">会员卡说明:</label>
+			<div class="controls">
+			{$lbs->texteditor('sm',3, '520px','90px')}
+				<span class="maroon">*</span><br><span class="help-inline">最多为1000个字符。</span>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="detail">会员卡通知:</label>
+			<div class="controls">
+			{$lbs->texteditor('tz',3, '520px','90px')}
+				<span class="maroon">*</span><br><span class="help-inline">最多为1000个字符。</span>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="detail">会员卡特权:</label>
+			<div class="controls">
+			{$lbs->texteditor('tq',3, '520px','90px')}
+				<span class="maroon">*</span><br><span class="help-inline">最多为1000个字符。</span>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="detail">积分兑换活动:</label>
+			<div class="controls">
+			{$lbs->texteditor('jfhd',3, '520px','90px')}
+				<span class="maroon">*</span><br><span class="help-inline">最多为1000个字符。</span>
+			</div>
+		</div>
+		<div class="control-group">
+	    	<label class="control-label" for="keyword">会员卡数量</label>
+	    	<div class="controls">
+	    	{$lbs->text('sl','class="span4" isint="1"')}
+		    	<span class="maroon">*</span>
+		    	<span class="help-inline">请输入整数。</span>
+	    	</div>
+	  	</div>
+	  	<div class="control-group">
+	    	<label class="control-label" for="keyword">地址</label>
+	    	<div class="controls">
+	    	{$lbs->text('addr','class="span4"')}
+		    	<span class="maroon">*</span>
+		    	<span class="help-inline">最多只能输入20个字符。</span>
+	    	</div>
+	  	</div>
+	  	<div class="control-group">
+	    	<label class="control-label" for="keyword">电话</label>
+	    	<div class="controls">
+	    	{$lbs->text('tel','class="span4"')}
+		    	<span class="maroon">*</span>
+		    	<span class="help-inline"></span>
+	    	</div>
+	  	</div>
+	  	<div class="control-group">
+	    	<label class="control-label" for="keyword">地理坐标</label>
+	    	<div class="controls">
+	    	{$lbs->text('loc','class="span4"')}
+		    	<span class="maroon">*</span>
+		    	<span class="help-inline"><a href="http://api.map.baidu.com/lbsapi/getpoint/index.html" class="btn" target="_blank">拾取</a></span>
+	    	</div>
+	  	</div>
+	  	<div class="control-group">
+	    	<label class="control-label" for="keyword">每日签到积分</label>
+	    	<div class="controls">
+	    	{$lbs->text('jf','class="span4"')}
+		    	<span class="maroon">*</span>
+		    	<span class="help-inline"></span>
+	    	</div>
+	  	</div>
+ 		<div class="control-group">
+		    <div class="controls">
+		    
+		      <button id="save-btn" type="submit" class="btn btn-primary btn-large">保存并开启</button>
+		     
+		    </div>
+	    </div>
+	</form>
+<script type="text/javascript" src="{$JS}comm.js"></script>
+<script type="text/javascript">
+$(function(){
+	var picjk1 = setInterval(function(){
+		if($('#picsethere1').find('img').size()>0){
+			$('#picsethere1').find('img').each(function(){
+				$(this).error(function(){
+					$(this).attr('src','/res/demopic.jpg');
+				});
+				$(this).attr('src',$(this).attr('src'));
+			});
+			clearInterval(picjk1);
+		}
+	},500);
+	var picjk2 = setInterval(function(){
+		if($('#picsethere2').find('img').size()>0){
+			$('#picsethere2').find('img').each(function(){
+				$(this).error(function(){
+					$(this).attr('src','/res/demopic.jpg');
+				});
+				$(this).attr('src',$(this).attr('src'));
+			});
+			clearInterval(picjk2);
+		}
+	},500);
+	 $("#lbsForm").submit(function(){
+		var cansv= true;
+		$(this).find('input[type="text"],select,textarea').filter(':visible').each(function(){
+			if($.trim($(this).val())=='' && $(this).attr('noneed')!='1'){
+				cansv = false;
+				$(this).css('backgroundColor','yellow');
+				$(this).one('focus',function(){
+					$(this).css('backgroundColor','transparent');
+				});
+			}
+		});
+		if(!cansv){
+			tusi('请将信息填写完整');
+			return false;
+		}
+		$(this).find('input[type="text"],select,textarea').each(function(){
+			if($(this).attr('isint')=='1' && $.trim($(this).val())!=''){
+				var intthis = parseInt2($(this).val());
+				if(intthis+''=='NaN'){
+					cansv = false;
+					$(this).css('backgroundColor','yellow');
+					$(this).one('focus',function(){
+						$(this).css('backgroundColor','transparent');
+					});
+				}else{
+					$(this).val(parseInt($(this).val()));
+				}
+			}
+		});
+		if(!cansv){
+			tusi('标注的项目必须为整数');
+			return false;
+		}
+		
+		$(this).find('input[type="text"],select,textarea').each(function(){
+			if($(this).attr('isfloat')=='1' && $.trim($(this).val())!=''){
+				var intthis = parseFloat($(this).val());
+				if(intthis+''=='NaN'){
+					$(this).val('0');
+					cansv = false;
+					$(this).css('backgroundColor','yellow');
+					$(this).one('focus',function(){
+						$(this).css('backgroundColor','transparent');
+					});
+				}else{
+					$(this).val(parseFloat($(this).val()));
+				}
+			}
+		});
+		if(!cansv){
+			tusi('标注的项目必须为数字');
+			return false;
+		}
+		
+		if($('#picsethere').find('img').size()<1){
+   		cansv = false;
+   		tusi('请上传活动图片');
+   		return false;
+   	}
+   	return cansv;
+   });
+});
+</script>
+<br/><br/><br/></body>
+
+</html>

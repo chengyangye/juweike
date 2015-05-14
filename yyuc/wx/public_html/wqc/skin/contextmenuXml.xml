@@ -1,0 +1,127 @@
+<krpano version="1.0.8">
+
+<contextmenu fullscreen="true" 
+             enterfs="全屏"
+             exitfs="退出全屏"
+             >
+		<item name="gongsi"
+          caption="微汽车全景" 
+          enabled="true"
+          visible="true"
+          
+          onclick="http://www.othink.cn" 
+          />
+		<item name="dianhua"
+          caption="服务专线：000000 " 
+          onclick="http://www.demo.com" 
+		  separator="false"
+          />
+		<item caption="正常视角"        onclick="action(view_normal);"        separator="true" />
+		<item caption="鱼眼视角"       onclick="action(view_fisheye);"       />
+		<item caption="保真视角" onclick="action(view_architectural);" />
+		<item caption="极射平面投影" onclick="action(view_stereographic);" />
+		<item caption="超小视角"       onclick="action(view_pannini);"       />
+		<item caption="小行星视角" onclick="action(view_littleplanet);"  />
+	</contextmenu>
+
+
+
+
+
+<!-- actions for view changing -->
+	<action name="view_normal">
+		tween(view.fovmax,       150.0, distance(179, 1.00), easeoutquad);
+		tween(view.architectural,  0.0, distance(1.0, 0.45), easeoutquad);
+		tween(view.fisheye,        0.0, distance(1.0, 0.45), easeoutquad, set(view.stereographic,false); set(view.pannini,false); set(display.flash10,on); );
+	</action>
+
+
+	<action name="view_fisheye">
+		set(display.flash10,off);
+		tween(view.architectural, 0.0, distance(1.0, 0.30), easeoutquad);
+		tween(view.fisheye,       0.0 ,distance(1.0, 0.30), easeoutquad, set(view.stereographic,false); set(view.pannini,false); set(view.fovmax,179); tween(view.fisheye, 0.35, distance(1.0,1.25)); );
+	</action>
+
+
+	<action name="view_architectural">
+		tween(view.fovmax,       150.0, distance(179, 1.00), easeoutquad);
+		tween(view.architectural,  1.0, distance(1.0, 0.45), easeoutquad);
+		tween(view.fisheye,        0.0, distance(1.0, 0.45), easeoutquad, set(view.stereographic,false);set(view.pannini,false);set(display.flash10,on); );
+	</action>
+
+
+	<action name="view_stereographic">
+		set(display.flash10,off);
+
+		tween(view.architectural, 0.0, 0.25);
+
+		set(backtonormalfirst,false);
+		if(view.pannini       == true,  set(backtonormalfirst,true) );
+		if(view.stereographic == false, set(backtonormalfirst,true) );
+
+		if(backtonormalfirst, tween(view.fisheye, 0.0 ,distance(1.0, 0.25), easeoutquad, WAIT); );
+
+		set(view.pannini, false);
+		set(view.stereographic, true);
+		set(view.fovmax, 150);
+
+		tween(view.fisheye, 1.0, distance(1.0, 0.75), easeoutquad);
+	</action>
+
+
+	<action name="view_pannini">
+		set(display.flash10,off);
+
+		set(backtonormalfirst,false);
+		if(view.pannini       == false, set(backtonormalfirst,true) );
+		if(view.stereographic == false, set(backtonormalfirst,true) );
+
+		if(backtonormalfirst, tween(view.fisheye, 0.0 ,distance(1.0, 0.25), easeoutquad, WAIT); );
+
+		set(view.pannini, true);
+		set(view.stereographic, true);
+		set(view.fovmax, 150);
+
+		tween(view.fisheye, 1.0, distance(1.0, 0.75), easeoutquad);
+	</action>
+
+
+	<action name="view_littleplanet">
+		set(display.flash10,off);
+
+		tween(view.architectural, 0.0, 0.25);
+
+		tween(view.vlookat,  90, distance(179, 1.50), easeoutquad);
+
+		set(backtonormalfirst,false);
+		if(view.pannini       == true,  set(backtonormalfirst,true) );
+		if(view.stereographic == false, set(backtonormalfirst,true) );
+
+		if(backtonormalfirst, tween(view.fisheye, 0.0 ,distance(1.0, 0.25), easeoutquad, WAIT); );
+
+		set(view.pannini, false);
+		set(view.stereographic, true);
+		set(view.fovmax, 150);
+
+		tween(view.fisheye, 1.0, distance(1.0, 0.75), easeoutquad);
+		tween(view.fov,     150, distance(179, 0.75), easeoutquad);
+	</action>
+
+
+
+	<!-- setup pano, will be called on the onxmlcomplete event -->
+	<action name="setuppano">
+		<!-- set qtvr cursor -->
+		action(qtvrcursor);
+
+		<!-- hide the other view settings in the context menu on partial panos -->
+		if(ispartialpano === true, set(showviewitems,false), set(showviewitems,true));
+		
+		set(contextmenu.item[2].visible, get(showviewitems));
+		set(contextmenu.item[3].visible, get(showviewitems));
+		set(contextmenu.item[4].visible, get(showviewitems));
+		set(contextmenu.item[5].visible, get(showviewitems));
+		set(contextmenu.item[6].visible, get(showviewitems));
+		set(contextmenu.item[7].visible, get(showviewitems));
+	</action>
+</krpano>

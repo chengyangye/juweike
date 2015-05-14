@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="{$CSS}mwm/reset.css?2013-12-18-1" media="all" />
+<link rel="stylesheet" type="text/css" href="{$CSS}mwm/common2.css?2013-12-18-1" media="all" />
+<title>车辆信息</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <meta name="Keywords" content="" />
+        <meta name="Description" content="" />
+        <!-- Mobile Devices Support @begin -->
+            <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+            <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+            <meta content="no-cache" http-equiv="pragma">
+            <meta content="0" http-equiv="expires">
+            <meta content="telephone=no, address=no" name="format-detection">
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+            <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <!-- Mobile Devices Support @end -->
+        <style>
+            img{ width:100%!important;}
+        </style>
+        <script type="text/javascript" src="{$JS}mwm/swipe.js"></script>
+    </head>
+<body onselectstart="return true;" ondragstart="return false;" class="portrait">
+	<div class="header">
+		<div class="logo">
+			<img src="{$pp->pic}" width="213" height="29" alt="" style="width:auto!important;max-width:213px;"/>
+		</div>
+		<!-- <div style="clear: both;"></div>-->
+	</div>
+	<span class="gradient_h_wbw"></span>
+	<div class="top">
+		<div id="roundabout_container" class="relative">
+			<a id="scrollLeft__7f8fc196" class="scrollLeft__7f8fc196 btn_ra_prev"></a>
+			<a id="scrollRight__7f8fc196" class="scrollRight__7f8fc196 btn_ra_next"></a>
+			<div id='roundabout__7f8fc196' class="ofh">
+				<ul class="list_ul_top">
+					{loop $cxres as $r}
+					<li data-start="start" >
+						<a href="chexing-{$r->id}.html#mp.weixin.qq.com"><span>{$r->name}</span></a>
+					</li>
+				{/loop}
+				</ul>
+			</div>
+		</div>
+		{if count($pics)>0}
+		<span class="gradient_h_wbw"></span>
+			<div class="stage_container relative">
+			<article id="indicator_36eea047" class="indicator" data-maxBullets="8">
+			{loop $pics as $p}
+				<span {if $__i==1}class="ind_a"{/if}></span>
+			{/loop}
+			</article>
+			<div id="stage_36eea047" class="ofh" style="position: relative;">
+					<ul class="list_ul_scroll">
+					{loop $pics as $p}
+						<li data-itemid="1" data-start="start" style="float: left;position: relative;">
+							<img alt="" src="{$p->src}" data-touchable="touchable"/>
+						</li>
+					{/loop}
+					</ul>
+				</div>
+			</div>
+			{/loop}
+		</div>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					new Swipe(document.getElementById('stage_36eea047'), {
+						speed:500,
+						//auto:3000,
+						callback: function(index, elem){
+							var lis = $("#indicator_36eea047 span");
+							lis.removeClass("ind_a").eq(index).addClass("ind_a");
+						}
+					});
+				});
+			</script>
+			</div>
+<!-------------------- 车系列表 begin ----------------------->
+<!-------------------- 车型列表 begin ----------------------->
+
+<!-------------------- 车型详情 begin ----------------------->
+
+		<div class="main" style="padding-top: 10px;">
+			<ul class="car_detail">
+			{if $qj->has_id()}
+				<div style="margin:5px;border: 1px solid #ccc;line-height:35px;text-indent:10px;border-radius:5px;background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#eee));-webkit-box-shadow: 0 1px 1px #fff;">
+					<a href="qc360-{$qj->id}-{$cxid}.html" style="color:#666;display:block;">特别关注：360全景看车</a>
+				</div>
+			{/if}
+				<table>
+					<tr>
+						<td>指导价：</td>
+						<td>{$c->zdj}万</td>
+					</tr>
+					<tr>
+						<td>排量：</td>
+						<td>{$c->pl}L</td>
+					</tr>
+					<tr>
+						<td>年款：</td>
+						<td>{$c->nk}</td>
+					</tr>
+					<tr>
+						<td>经销商报价：</td>
+						<td>{$c->bj}万</td>
+					</tr>
+					<tr>
+						<td>档位：</td>
+						<td>{$c->dws}档</td>
+					</tr>
+					<tr>
+						<td>变速箱：</td>
+						<td>{$bsx_arr[$c->bsx]}</td>
+					</tr>
+				</table>
+				<li class="box group_btn">
+					<div><a href="xiaoshou.html" class="gray">联系销售</a></div>
+					<div><a href="yysj-{$cxid}.html">预约试驾</a></div>
+				</li>
+			</ul>
+		</div>
+<!-------------------- end ----------------------->
+		{T /_wf}
+
+		<footer class="nav_footer">
+				<ul class="box">
+					<li><a href="javascript:history.go(-1);" >返回</a></li>
+					<li><a href="javascript:history.go(1);" >前进</a></li>
+					<li><a href="/weiweb/{$wid}/">首页</a></li>
+					<li><a href="javascript:location.reload();" >刷新</a></li>
+				</ul>
+		</footer>
+	</body>        		
+</html>

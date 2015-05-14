@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="{$CSS}admin/bootstrap.min.css">
+<link rel="stylesheet" href="{$CSS}admin/admin.css">
+<title>我的活动</title>
+
+</head>
+<body>
+	<div class="main-title">
+		<h3>{$lbs->name}微投票活动</h3>
+	</div>
+
+<div class="pagination">
+  <ul>
+    {P}
+  </ul>  
+</div>
+<div>
+<form action="microVoteList-{$lbs->id}.html">
+手机号：
+{$tj->text('tel','style="margin-top: 10px;width:100px;"')}
+
+开始时间：
+{$tj->datetime('kssj','style="margin-top: 10px;width:140px;"')}
+结束时间：
+{$tj->datetime('jssj','style="margin-top: 10px;width:140px;"')}
+<button type="submit" class="btn">检索</button>
+</form>
+
+</div>
+<div>总计：<B>{$p->totalnum}条/{$p->totalpage}页</B></div>
+	<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>用户名称</th>
+					<th>用户电话</th>
+					<th>投票时间</th>
+					<th>投票</th>
+					<!-- <th>操作</th> -->
+				</tr>
+			</thead>
+			<tbody>
+			{loop $res as $r}			 
+			      <tr>
+						<td>{$r->un}</td>
+						<td>{$r->tel}</td>
+						<td>{$r->ctime}</td>
+						<td>
+						{if $r->ans == 1}{$lbs->option1}
+						{else if $r->ans == 2 }{$lbs->option2}
+						{else if $r->ans == 3 }{$lbs->option3}
+						{else if $r->ans == 4 }{$lbs->option4}
+						{/if}
+						</td>
+					<!-- 	<td></td> -->
+				  </tr>
+			{/loop}
+			</tbody>
+		</table>
+	<div class="tb-toolbar">
+	</div>
+
+<div class="pagination">
+  <ul>
+{P}
+  </ul>
+  
+</div>
+
+<script type="text/javascript">
+</script>
+<br/><br/><br/></body></html>

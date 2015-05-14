@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>订单信息</title>
+<link type="text/css" rel="stylesheet" href="style/buying.css" />
+<script type="text/javascript">
+	function sub(){
+		var val=document.getElementById("buyCount").value;
+		val=parseInt(val)-1;
+		document.getElementById("buyCount").value=val;
+		document.getElementById("decreaseBtn").className = "No_y";
+		document.getElementById("increaseBtn").className = "No_t";
+		document.getElementById("increaseBtn").style.color='#b8b7b7';
+	}
+	function add(){
+		var val=document.getElementById("buyCount").value;
+		val=parseInt(val)+1;
+		document.getElementById("buyCount").value=val;
+		document.getElementById("increaseBtn").className = "No_y";
+		document.getElementById("decreaseBtn").className = "No_t";
+		document.getElementById("increaseBtn").style.color='#bc8900';
+	}
+</script>
+</head>
+<body>
+	<div id="Fh_hbotno" class="Fh_hbotno"></div>
+	<form action="/shoper/tuangou" method="post">
+		<section id="order_add" class="F_cqsmt box-shadow marg20" style="">
+			<h2>订单信息</h2>
+			<ul>
+				<li><strong>名称:</strong><span>花儿火锅海鲜套餐</span></li>
+				<li><strong>单价:</strong><span id="singlePrice" class="F_red">￥99.0</span></li>
+				<li><strong>数量：</strong>
+					<div class="F_inpNum">
+						<a id="decreaseBtn" href="javascript:sub()" class="No_t">-</a>
+							<input id="buyCount" name="buyCount" type="number" value="1" nummax="1" nummin="1" size="4">
+						<a id="increaseBtn" href="javascript:add()" class="No_y">+</a>
+					</div>
+					<b id="buyCountTip" class="F_red2"></b>
+				</li>
+			</ul>
+			
+			<h2>用户信息</h2>
+			<ul>
+	     		<li><strong>姓名:</strong><input id="addr_name" name="uname" type="text" htip="请输入正确的姓名，2~8个汉字" errtip="请输入正确的姓名，2~8个汉字" class="adress_inp addr_prop" tag="input" value=""></li>
+	     		<li><strong>手机:</strong><input id="addr_phone" name="tel" type="tel" htip="请输入正确的手机号码" errtip="请输入正确的手机号码" class="adress_inp addr_prop" tag="input" maxlength="11" value=""></li>
+	   		</ul>
+	
+			<div class="marg20"></div>
+			<div class="btn_box">
+				<button id="BtnBack" onclick="" class="fc_btn fc_btn_o" type="button">返回</button>
+				<button id="BtnOrder" class="fc_btn" onclick="">提交订单</button>
+			</div>
+			<input value="" id="token" name="token" type="hidden">
+		</section>
+	</form>
+	<section id="tipMessage" class="Fh_qdown_apv box-shadow" style="display: none; z-index: 10000; ">
+	   <p class="F_red F_font">请输入正确的姓名，2~8个汉字</p>
+	   <span class="F_grey2">--聚团购--</span>
+	</section>
+
+</body>
+</html>

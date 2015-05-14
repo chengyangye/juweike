@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*帮助中心*/
+.layout750{width:730px;overflow:hidden;}
+.page_tit{font-size:18px;color:#5b5b5b;border-bottom:1px dotted #eee;margin: 20px 10px 0;padding: 10px 20px;font-family: '微软雅黑', 'YaHei','宋体', '黑体', 'Hei', Tahoma, Helvetica, arial, sans-serif;}
+.sect{padding:20px 20px 0;overflow:hidden;}
+
+/*一键生成模式*/
+.part {padding-bottom:20px;}
+.fs16 {font-size:16px;_margin-top:0px;}
+.part p{color:#8e8e8e; line-height:20px;font-size:13px;margin: 0;}
+.part_c {padding: 20px 0 20px 100px;}
+.fs14 {font-size: 14px;}
+.mt5 {margin-top: 5px;}
+.ul2 {padding: 0px 20px 0px 40px;}
+.ul2 li {list-style: decimal;margin: 10px 0;}
+.mt5 {margin-top: 5px;}
+.listmore{margin-left:40px; margin-top:40px;}
+.mt31{margin-top:10px; margin-bottom:10px;}
+
+/*自由模式*/
+.cz2{color: #8e8e8e;font-size:13px;margin: 0; list-style:none;}
+.cz2 p{margin-top:20px;line-height:24px;}
+.part_c .free_wz{margin-top:20px;}
+.part_c .free_wz1{margin-top:5px;}
+
+/*新手学堂——快速上手*/
+.mb20{margin-bottom:20px;}
+.part {margin-bottom: 20px;padding-bottom:20px;border-bottom:1px dotted #cecece;}
+.part .num {display: block;float: left;background:url(/media/images/htm/help_point.gif) no-repeat;height:110px;width:78px;font-size:38px;line-height:60px;margin-right: 20px;text-align: center;color:#fff; font-family:Arial, Helvetica, sans-serif;}
+.mt30 {margin-top:30px;}
+.sect img {padding:2px;border:1px solid #eee;}
+
+
+/*常见问题*/
+.contents{width:710px;margin-left:-40px;*margin-left:0px;margin-top: -15px;overflow:hidden;}
+.contents li { padding: 20px 10px; border-bottom: 1px dotted #cecece; list-style:none;}
+.contents li .q { font: 14px/24px '微软雅黑', 'YaHei','宋体', '黑体', 'Hei', Tahoma, Helvetica, arial, sans-serif; color: #434343; font-weight: bold; }
+.contents li .a { margin-top: 10px; }
+.contents li .a,.contents li .q { position: relative; padding-left: 30px; }
+.contents li .ico{ position: absolute; left: 0; _left: -30px; top: 0; height:22px; width: 24px; background:url(/media/images/htm/faqs.gif) no-repeat; }
+.contents li .a .ico { background-position: 0 -24px; top: 4px; }
+.contents p{color:#8e8e8e; line-height:20px;font-size:12px;margin: 0;}
+.contents p a{color:#0794dc; line-height:20px;font-size:12px; text-decoration:none;}
+.contents p a:hover{color:#5ca500;}
+
+/*关于菜鸟应用平台*/
+.tac{text-align:center;}
+.t2{text-indent:2em;color:#323b44;line-height:26px;margin: 0;}
+.fs18 {font-size:18px;}
+.bigfs {font-family: '微软雅黑','YaHei','宋体','黑体','Hei',Tahoma,Helvetica,arial,sans-serif;}
+.pl20 {padding-left:20px;}
+.pd20{padding: 0px 20px 20px 20px;color:#8e8e8e; line-height:24px;margin: 0;}
+
+/*平台使用协议*/
+.fs12 {font-size: 12px;}
+.t3{text-indent:2em;color:#8e8e8e;line-height:20px;margin: 0;}
+.layout960{width:960px;}
+.bigfs1{margin-top:10px; margin-bottom:10px;}
+.sect1_new{float:left;width:890px; margin-left:30px;display:inline; margin-top:10px;}
+
+

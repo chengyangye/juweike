@@ -1,0 +1,125 @@
+@CHARSET "UTF-8";
+
+.appmakedh {
+	background: #f6f6f6;
+	height: 50px;
+	border-radius: 8px;
+}
+.appmakedh tr td{
+	width: 180px;
+}
+.appmakedh tr td span {
+	font-size: 15px;
+	float: left;
+	line-height: 50px;
+}
+.appmakedh .yybj{
+	height:45px;
+	width: 45px;
+	float: left;
+}
+.appmakedh .yybj a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+.yybj.jbxx{
+	background: url("img@make/step_bg.png") -32px 6px no-repeat;
+}
+.yybj.jbxxh{
+	background: url("img@make/step_bg.png") -42px -45px no-repeat;
+}
+.yybj.dhsz{
+	background: url("img@make/step_dh.png") -43px 16px no-repeat;
+}
+.yybj.dhszh{
+	background: url("img@make/step_dh.png") 0px 6px no-repeat;
+}
+.yybj.gzzd{
+	background: url("img@make/step_bg.png") -230px 6px no-repeat;
+}
+.yybj.gzzdh{
+	background: url("img@make/step_bg.png") -282px -45px no-repeat;
+}
+.yybj.xgck{
+	background: url("img@make/step_bg.png") -163px 6px no-repeat;
+}
+.yybj.xgckh{
+	background: url("img@make/step_bg.png") -203px -45px no-repeat;
+}
+.yybj.yjsc{
+	background: url("img@make/step_bg.png") -286px 6px no-repeat;
+}
+.yybj.yjsch{
+	background: url("img@make/step_bg.png") -363px -45px no-repeat;
+}
+.xbyzbbtn {
+	font-size: 15px;
+	color: #ffffff;
+	padding: 5px 8px 5px 8px;
+	background-color: #3f7f7f;
+}
+.container .ch2{
+	margin-bottom: 2px;
+}
+.subh2 {
+	text-indent:18px;
+	font-size: 15px;
+	color:#4ca1b6;
+}
+.subinput{
+	margin-left: 18px;
+	margin-top: 10px;
+	width:200px;
+	height:20px;
+}
+.tbimgsrc{	
+	border-radius: 6px;
+	height:57px;
+	width:57px;
+}
+.startimgsrc{
+	height:96px;
+	width:64px;
+}
+.byyymc{
+	font-size:14px;
+}
+.arrow{
+	font-size:25px;
+	color: #00dc2e;
+	margin-left: 40px;
+}
+
+
+.scdhz
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	border-collapse:collapse;
+	border:none;
+	margin-bottom: 30px;
+}
+
+
+
+.scdhz tr{
+	background: #ffffff;
+}
+.scdhz th
+{
+	padding: 10px;
+	background: #eeeeee;
+	border:solid #cdcdcd 1px;
+}
+.scdhz td
+{
+	padding: 7px;	
+	border:solid #cdcdcd 1px;
+}
+.tminp{
+	background: transparent;
+	border:none;
+}

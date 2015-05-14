@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>试驾</title>
+<link type="text/css" rel="stylesheet" href="style/Test-drive.css" />
+</head>
+<body id="onlinebooking">
+	<div class="qiandaobanner">
+		<img src="images/headLogo.jpg">
+	</div>
+	<div class="cardexplain">
+		<ul class="round">
+			<li>
+				<h2>预约说明</h2>
+				<div class="text">
+					试驾宝马全系车型，体验前瞻性主动安全系统，智能车载交互系统，豪华精致的设计，高效动力操控系统；
+				</div>
+			</li>
+		</ul>
+		<!--后台可控制是否显示-->
+		<ul class="round">
+			<li class="addr">
+				<a href="#"><span>深圳市福田区深南路本元大厦16B</span></a>
+			</li>
+			<li class="tel">
+				<a href="tel:0755-88308939">
+					<span>0755-88308939 预约电话</span>
+				</a>
+			</li>
+		</ul>
+		<!--粉丝填写过的信息的，直接就显示名字电话，粉丝没有填写过信息的话，这里就直接留空让粉丝填写-->
+		<ul class="round">
+			<li class="title mb"><span class="none">请认真填写表单</span></li>
+			<li class="nob">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+					<tbody><tr>
+						<th>联系人</th>
+						<td><input name="truename" type="text" class="px" id="truename" value="" placeholder="请输入您的真实姓名"></td>
+					</tr>
+				</tbody></table>
+			</li>
+			<li class="nob">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+					<tbody><tr>
+						<th>联系电话</th>
+						<td><input name="tel" class="px" id="tel" value="" type="text" placeholder="请输入您的电话"></td>
+					</tr>
+				</tbody></table>
+			</li>
+			<li class="nob">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+					<tbody><tr>
+						<th>预约日期</th>
+						<td>
+							<select name="dateline" id="dateline" class="dropdown-select">
+							    <option value="2013-10-07">2013-10-07</option>
+                                <option value="2013-10-08">2013-10-08</option>
+                                <option value="2013-10-09">2013-10-09</option>
+                                <option value="2013-10-10">2013-10-10</option>
+                                <option value="2013-10-11">2013-10-11</option>
+                                <option value="2013-10-12">2013-10-12</option>
+                                <option value="2013-10-13">2013-10-13</option>
+                                <option value="2013-10-14">2013-10-14</option>
+                                <option value="2013-10-15">2013-10-15</option>
+                                <option value="2013-10-16">2013-10-16</option>
+                                <option value="2013-10-17">2013-10-17</option>
+                                <option value="2013-10-18">2013-10-18</option>
+                                <option value="2013-10-19">2013-10-19</option>
+                                <option value="2013-10-20">2013-10-20</option>
+                                <option value="2013-10-21">2013-10-21</option>
+                                <option value="2013-10-22">2013-10-22</option>
+                                <option value="2013-10-23">2013-10-23</option>
+                                <option value="2013-10-24">2013-10-24</option>
+                                <option value="2013-10-25">2013-10-25</option>
+                                <option value="2013-10-26">2013-10-26</option>
+                                <option value="2013-10-27">2013-10-27</option>
+                                <option value="2013-10-28">2013-10-28</option>
+                                <option value="2013-10-29">2013-10-29</option>
+                                <option value="2013-10-30">2013-10-30</option>
+                                <option value="2013-10-31">2013-10-31</option>
+                                <option value="2013-11-01">2013-11-01</option>
+                                <option value="2013-11-02">2013-11-02</option>
+                                <option value="2013-11-03">2013-11-03</option>
+                                <option value="2013-11-04">2013-11-04</option>
+                                <option value="2013-11-05">2013-11-05</option>
+                            </select>
+						</td>
+					</tr>
+				</tbody></table>
+			</li>
+            <li class="nob">
+			    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+				    <tbody>
+                        <tr>
+				            <th>预订人数</th>
+						    <td><input name="txt1" class="px" id="txt1" value="" type="text" placeholder="请输入预订人数"></td>
+						</tr>
+					</tbody>
+                </table>
+			</li>
+			<li class="nob">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+					<tbody><tr>
+					    <th>试驾车型</th>
+						<td>
+                            <select name="select1" class="dropdown-select" id="select1">
+                                <option value="">请选择试驾车型</option>
+                                <option value="宝马z4">宝马z4</option>
+                                <option value="宝马x1">宝马x1</option>
+                                <option value="宝马x7">宝马x7</option>
+                                <option value="宝马x5">宝马x5</option>
+                            </select>
+                        </td>
+					</tr>
+				</tbody></table>
+			</li>
+			<li class="nob">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+					<tbody><tr>
+						<th valign="top" class="thtop">备注</th>
+						<td><textarea name="info" class="pxtextarea" style="height: 99px; overflow-y: visible" id="info" placeholder="请输入备注信息"></textarea></td>
+					</tr>
+				</tbody></table>
+			</li>
+		</ul>
+		<div class="footReturn">
+			<input type="button" id="showcard" class="submit" value="提交预约">
+		</div>
+	</div>
+ 	<p class="page-url">
+		<a href="http://www.weijuju.com" target="_blank" class="page-url-link">此功能由"微俱聚（原微信加）"平台提供</a>
+	</p>
+</body>
+</html>

@@ -1,0 +1,248 @@
+html{overflow:hidden;}
+body {
+  margin:0;
+  border:0;
+  padding:0;
+  font-family:arial, verdana, sans-serif; 
+  font-size:1.2em;
+  overflow:hidden;
+  }
+*{ margin:0; padding:0;}
+a ,a:hover{text-decoration: none;}
+
+/*音频信息模块*/
+.music_info {
+  width:100%; 
+  }
+/*CD模块*/
+.music_info .cd_holder {
+	width: 1px;
+	height: 1px;
+	float:left;
+}
+.music_info .cd_holder .cd {
+	position: fixed;
+	z-index:1000;
+	left:10px;
+	top:10px;
+	width: 32px;
+	height: 32px;
+	background:url(menu.png) no-repeat center center;
+	background-size:32px 32px;
+}
+/*音频的元信息模块*/
+.music_info .meta_data {
+	width: 100%;
+	color: #fff;
+	margin-top: 10px;
+	overflow: hidden;
+	position: fixed;
+	text-align: center;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-moz-user-select:none;/**ff*/  
+	-webkit-user-select:none;/**chrome、safari、360极速*/  
+}
+.music_info .singer {
+	font:bold 14px/120% Helvetica,Sans-serif;
+	margin-bottom: 10px;
+}
+.music_info .title {
+	width: 60%;
+display: block;
+margin: 0 auto;
+	font:bold 12px/120% Helvetica,Sans-serif;
+	color: #fff;
+	text-shadow: 0 1px 2px rgba(60,61,64,0.6);
+}
+.volume_control {
+	position: absolute;
+	width: 150px;
+	bottom: 10px;
+}
+.volume_control .decrease,.volume_control .increase {
+	font-family: "icomoon";
+	color: rgb(220,220,220);
+	text-decoration: none;
+	margin-left: 5px;
+	cursor: pointer;
+}
+/*音量条和进度条外层包裹*/
+.base_bar {
+	height: 6px;
+	border-top: 1px solid rgb(18,18,18);
+	border-bottom: none;
+	border-radius: 5px;
+	display: inline-block;
+	box-shadow: 0 1px 0 rgb(60,61,64);
+	position: relative;
+	background: -webkit-linear-gradient(top,rgb(50,50,50),rgb(40,40,40));
+	background: -moz-linear-gradient(top,rgb(50,50,50),rgb(40,40,40));
+	background: -ms-linear-gradient(top,rgb(50,50,50),rgb(40,40,40));
+	background: linear-gradient(top,rgb(50,50,50),rgb(40,40,40));
+}
+/*音量条和进度条*/
+.progress_bar {
+	display: block;
+	height: 100%;
+	border-radius: 5px;
+	background: -webkit-linear-gradient(top,rgb(101,215,251),rgb(23,137,232));
+	background: -moz-linear-gradient(top,rgb(101,215,251),rgb(23,137,232));
+	background: -ms-linear-gradient(top,rgb(101,215,251),rgb(23,137,232));
+	background: linear-gradient(top,rgb(101,215,251),rgb(23,137,232));
+}
+#myAudio .volume_control .base_bar {width: 100px;}
+#myAudio .volume_control .progress_bar {width: 100%;}
+
+/*音量条的滑动器*/
+.volume_control .slider {
+	width: 12px;
+	height: 12px;
+	border-radius: 6px;
+	border:1px solid rgb(0,0,0);
+	position: absolute;
+	left: 93px;
+	top: -2px;
+	background: -webkit-linear-gradient(top,rgb(246,246,246),rgb(190,190,190));
+	background: -moz-linear-gradient(top,rgb(246,246,246),rgb(190,190,190));
+	background: -ms-linear-gradient(top,rgb(246,246,246),rgb(190,190,190));
+	background: linear-gradient(top,rgb(246,246,246),rgb(190,190,190));
+}
+/*播放列表*/
+.music_list {
+	position:fixed;
+	max-height:220px;
+	bottom:100px; 
+  overflow:auto;
+  width:100%;
+  background-image: -webkit-linear-gradient( rgba(10, 10, 10,0.1) 0%,rgba(10, 10, 10,0.95) 100%);
+
+}
+.music_list li {
+	margin: 0;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+	list-style-type: decimal;
+	border-bottom:1px solid rgba(10, 10, 10, 0.36);
+	padding: 10px;
+}
+/*.music_list li:hover {color: #F90;}*/
+.music_list .active {color: #0CF;}
+/*播放控制模块*/
+#myAudio .controls {
+	height:100px;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	background-color: rgba(10,10,10, 0.95);
+ position: fixed; 
+  bottom:0; 
+  width:100%;
+  }
+#myAudio .controls > div {}
+#myAudio .controls .play_controls {
+	box-shadow: 1px 0 0 rgb(45,45,45);
+	padding: 16px 0 0 0;
+	text-align:center;
+	display: -webkit-box;
+}
+/*使用font-face来制作播放按钮的图标*/
+#myAudio .play_controls a {
+	cursor: pointer;
+	width: 33%;
+	height:36px;
+	-webkit-box-flex: 1;
+	display: block;
+	text-align:center;
+}
+#myAudio .play_controls a.btn_play {
+	font-size: 36px;
+}
+#myAudio .play_controls .btn_previous {
+	background:url(backward.png) no-repeat center center;
+	background-size:36px 36px;
+}
+#myAudio .play_controls .btn_next {
+	background:url(forward.png) no-repeat center center;
+	background-size:36px 36px;
+}
+#myAudio .play_controls .btn_play{
+	background:url(play.png) no-repeat center center;
+	background-size:36px 36px;
+}
+#myAudio .play_controls .btn_play.pause{
+	background:url(pause.png) no-repeat center center;
+	background-size:36px 36px;
+}
+/*进度条的实现*/
+#myAudio .time_line {
+	padding: 10px 8px;
+	width: 100%;
+	white-space: nowrap;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	position:relative;
+}
+#myAudio .passed_time {
+	color: #fff;
+	font-size: 9px;
+	font-family: Helvetica,Sans-serif;
+	-webkit-text-size-adjust:none;
+	position:absolute;
+	top:19px;
+	left:8px;
+}
+#myAudio .total_time {
+	color: #fff;
+	font-size: 9px;
+	font-family: Helvetica,Sans-serif;
+	-webkit-text-size-adjust:none; 
+	position:absolute;
+	top:19px;
+	right:8px;
+}
+#myAudio .time_line .base_bar {
+	width: 100%;
+	background: -webkit-linear-gradient(top,rgb(87,87,87),rgb(87,87,87)) left top/0px 100% no-repeat;
+	background: -moz-linear-gradient(top,rgb(87,87,87),rgb(87,87,87)) left top/0px 100% no-repeat;
+	background: -ms-linear-gradient(top,rgb(87,87,87),rgb(87,87,87)) left top/0px 100% no-repeat;
+	background: linear-gradient(top,rgb(87,87,87),rgb(87,87,87)) left top/0px 100% no-repeat;
+}
+#myAudio .time_line .progress_bar {width: 0;}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	clear: both;
+}
+/*歌曲星星评分器的实现*/
+.starbar {
+	width: 100px;
+	height: 20px;
+	margin-top: 5px;
+	background: url(stars.png) 0px 0px repeat-x;
+	position: relative;
+	margin: 0 auto;
+}
+.current-rating {
+	width: 85%;
+	height: 100%;
+	background: url(stars.png) 0px -40px repeat-x;
+	margin: 0;
+	padding: 0;
+}
+.current-rating li {
+	list-style:none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+.current-rating li:hover {background: url(stars.png) 0px -20px repeat-x;}
+.current-rating .star5 {width: 100%;}
+.current-rating .star4 {width: 80%;}
+.current-rating .star3 {width: 60%;}
+.current-rating .star2 {width: 40%;}
+.current-rating .star1 {width: 20%;}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>话题内容</title>
+<link type="text/css" rel="stylesheet" href="/res/weiba/style/topic.css" />
+</head>
+<body>
+	<div class="wrapper">
+	    <div class="topic_detail">
+		   <img id="detail_gb" src="{$wb->pic}" style="width:100%;">
+		   <div class="con">
+	           <div class="summry">话题简介：<p style="float:right;marging-right:20px;">发起人：{$fht->un}</p></div>
+	           <div class="content">#{$wh->keywd}#{$fht->con}</div>
+	           <div class="title">#{$wh->keywd}#</div>
+	           <div class="time">{$fht->stime}</div>
+           </div>
+           <div class="spacing">&nbsp;</div>
+           <div class="btn_bar">
+               <div class="btn_con btn_1">
+                    <a href="javascript:;" class="praise_btn" onclick="tozan({$fht->id},this)" data-id="187">赞</a>
+                    <p class="praise_count" data-id="187">{$fht->zan}</p>
+               </div>
+               <div class="left_slider">&nbsp;</div>
+               <div class="btn_con btn_2 pub_topic"><a href="weibaadd-{$wh->id}.html">参与</a></div>
+               <div class="right_slider">&nbsp;</div>
+               <div class="btn_con btn_3">
+                    <a href="javascript:;" class="tread_btn" data-id="187" onclick="toma({$fht->id},this)">踩 </a>
+                    <p class="tread_count" data-id="187">{$fht->ma}</p>
+               </div>
+           </div>
+	    </div>
+		<ul id="topic_data" class="mod_item_list topic_comment_list" style="background-color: #f0f0f0;">
+		{loop $res as $r}
+		<li>
+                <div class="item_con">
+                    <h2>{$r->un}</h2>
+                    <div class="con"><span class="topic_name">#{$wh->keywd}#</span>{$r->con}</div>                         
+                    <div class="time">{$r->stime}                            
+                        <p style="float:right;margin-right:10px;">                                 
+                            <a href="javascript:;" class="icon praise_btn" data-id="6919"  onclick="tozan({$r->id},this)"><span>赞</span></a>
+                            <span class="praise_count" data-id="6919">{$r->zan}</span>                                 
+                            <a href="javascript:;" class="icon tread_btn" data-id="6919" onclick="toma({$r->id},this)"><span>踩</span></a>
+                            <span class="tread_count" data-id="6919">{$r->ma}</span>                             
+                        </p>                         
+                    </div>                     
+                </div>                 
+            </li>
+		{/loop}
+        </ul>
+		<div class="city_select get_more">
+			<ul class="mod_item_list city_list">
+				<li><a id="get_more" href="javascript:loadmore();">查看更多</a></li>
+			</ul>
+		</div>
+	</div>
+ 	<p class="page-url">
+		<a href="/" target="_blank" class="page-url-link"></a>
+	</p>
+	<script type="text/javascript">
+	function tozan(id,o){
+		if(!$(o).data('haszan')){
+			ajax('weibafk-zan.html',{ id:id},function(m){
+				$(o).next().text(m);
+				tusi('谢谢参与');
+			});
+			$(o).data('haszan',true);
+		}else{
+			tusi('已经赞过了');
+		}
+		
+	}
+	function toma(id,o){
+		if(!$(o).data('hascai')){
+			ajax('weibafk-ma.html',{ id:id},function(m){
+				$(o).next().text(m);
+				tusi('谢谢参与');
+			});
+			$(o).data('hascai',true);
+		}else{
+			tusi('已经踩过了');
+		}
+		
+	}
+	
+	function loadmore(){
+		if(!window.loadnum){
+			window.loadnum = 10;
+		}else{
+			window.loadnum += 10;
+		}
+		$('.get_more').hide();
+		ajax('weibamore-con.html',{ id:{$wh->id},num:window.loadnum},function(m){
+			if(m.length <10){
+				$('.get_more').remove();
+			}else{
+				$('.get_more').show();
+			}
+			for(var i=0;i<m.length;i++){
+				var mm = m[i];
+				$('#topic_data').append('<li><div class="item_con"><h2>'+mm.un+'</h2><div class="con"><span class="topic_name">#{$wh->keywd}#</span>'+$.trim(mm.con)+'</div><div class="time">'+mm.stime+'<p style="float:right;margin-right:10px;"><a href="javascript:;" class="icon praise_btn" data-id="6919"  onclick="tozan('+mm.id+',this)"><span>赞</span></a><span class="praise_count" data-id="6919">'+mm.zan+'</span><a href="javascript:;" class="icon tread_btn" data-id="6919" onclick="toma('+mm.id+',this)"><span>踩</span></a><span class="tread_count" data-id="6919">'+mm.ma+'</span></p></div></div></li>');
+			}
+		});
+	}
+	</script>
+	{T /_wf}
+</body>
+</html>

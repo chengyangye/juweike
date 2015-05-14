@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="微信">
+<title></title>
+<link rel="stylesheet" type="text/css" href="/res/page.css" />
+<link href="/res/xym.css" rel="stylesheet" type="text/css">
+<link href="/res/zwj.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+
+<div class="m_ggl">
+
+<div class="m_ylzjxx">
+<table class="ggltb">
+<tr>
+<td class="ggltd"></td>
+<td><h1>{$hd->name}</h1></td>
+<td class="ggltd"></td>
+</tr>
+</table>
+</div>
+<br/>
+<div class="m_ylzjxx">
+{if $hdlog->has_id()}
+{_ $jjj = 'j'.$hdlog->jx.'ms'}
+恭喜{$hdlog->tel}获得{$hd->$jjj}
+{else}
+目前还没人中奖，快来试一试。
+{/if}
+</div>
+<div class="main" style="background: url('/res/dzpppq.png') no-repeat top center;background-size: 320px auto;">
+<div id="rotate_outercont" style="display:block;">
+		<div id="outer-cont">
+			<div id="outer" style="-webkit-transform: rotate(786deg);-moz-transform: rotate(786deg);transform: rotate(786deg);"><img src="/res/w/dzp.png"></div>
+		</div>
+		<div id="inner-cont">
+			<div id="inner"><img src="/res/w/dzpzz.png"></div>
+		</div>
+</div>
+</div>
+<div class="m_yljpsm" style="margin-top: 0px;">
+<div class="m_yljpsms">
+<h2 style="background: url('/res/stitle.png') no-repeat; color: white;">奖项设置：</h2>
+{if trim($hd->j1mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j1mc}： {$hd->j1ms}。{if $hd->isshowsl == 1}数量：{$hd->j1sl}{/if}</div>
+{/if}
+{if trim($hd->j2mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j2mc}： {$hd->j2ms}。{if $hd->isshowsl == 1}数量：{$hd->j2sl}{/if}</div>
+{/if}
+{if trim($hd->j3mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j3mc}： {$hd->j3ms}。{if $hd->isshowsl == 1}数量：{$hd->j3sl}{/if}</div>
+{/if}
+{if trim($hd->j4mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j4mc}： {$hd->j4ms}。{if $hd->isshowsl == 1}数量：{$hd->j4sl}{/if}</div>
+{/if}
+{if trim($hd->j5mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j5mc}： {$hd->j5ms}。{if $hd->isshowsl == 1}数量：{$hd->j5sl}{/if}</div>
+{/if}
+{if trim($hd->j6mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j6mc}： {$hd->j6ms}。{if $hd->isshowsl == 1}数量：{$hd->j6sl}{/if}</div>
+{/if}
+{if trim($hd->j7mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j7mc}： {$hd->j7ms}。{if $hd->isshowsl == 1}数量：{$hd->j7sl}{/if}</div>
+{/if}
+{if trim($hd->j8mc) !=''}
+<div class="m_yljpsmnr"> {$hd->j8mc}： {$hd->j8ms}。{if $hd->isshowsl == 1}数量：{$hd->j8sl}{/if}</div>
+{/if}
+</div>
+</div>
+<div class="m_yljpsm">
+<div class="m_yljpsms">
+<h2 style="background: url('/res/stitle.png') no-repeat; color: white;">活动说明：</h2>
+<div class="m_yljpsmnr">您今天还有 <span id="syjhspan">{$sycs}</span> 次参与机会</div>
+<div class="m_yljpsmnr">{$hd->ms}</div>
+</div>
+</div>
+
+</div>
+{if $sycs >0}
+<script type="text/javascript">
+$(function() {	
+    window.requestAnimFrame = (function() {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+        function(callback) {
+            window.setTimeout(callback, 1000 / 60)
+        }
+    })();
+    var totalDeg = 360 * 2 + 0;
+    var steps = [];
+    var lostDeg = [36, 66, 96, 156, 186, 216, 276, 306, 336];
+    var prizeDeg = [6, 126, 246,66,186,306,36,226];
+    var prize, sncode;
+	var prize_type = [];
+    var now = 0;
+    var a = 0.06;
+    var outter, inner, timer, running = false;
+    function countSteps() {
+        var t = Math.sqrt(2 * totalDeg / a);
+        var v = a * t;
+        for (var i = 0; i < t; i++) {
+            steps.push((2 * v * i - a * i * i) / 2)
+        }
+        steps.push(totalDeg)
+    }
+    function step() {
+        outter.style.webkitTransform = 'rotate(' + steps[now++] + 'deg)';
+        outter.style.MozTransform = 'rotate(' + steps[now++] + 'deg)';
+        if (now < steps.length) {
+			running = true;
+            requestAnimFrame(step);
+        } else {
+            running = false;
+            setTimeout(function() {
+            	tellcjok('xydzp');
+            },
+            200)
+        }
+    }
+    function start(deg) {
+        deg = deg || lostDeg[parseInt(lostDeg.length * Math.random())];
+        running = true;
+        clearInterval(timer);
+        totalDeg = 360 * 4 + deg;
+        steps = [];
+        now = 0;
+        countSteps();
+        requestAnimFrame(step)
+    }
+    window.start = start;
+    outter = document.getElementById('outer');
+    inner = document.getElementById('inner');
+    i = 10;
+	
+    $("#inner").click(function() {
+   
+        if (running) return;
+        timer = setInterval(function() {
+            i += 5;
+            outter.style.webkitTransform = 'rotate(' + i + 'deg)';
+            outter.style.MozTransform = 'rotate(' + i + 'deg)'
+        },
+        1);
+        setTimeout(function(){
+        	clearInterval(timer);
+        	 prize = $('#hdjxmc').val();
+             start(prizeDeg[parseInt($('#hdjx').val())-1])
+        },1000);
+    })
+});
+
+</script>
+<input type="hidden" id="hdid" value="{$hd->id}"/>
+<input type="hidden" id="hdjx" value="{$jx}"/>
+<input type="hidden" id="hdjxmc" value="{$jxmc}"/>
+{/if}
+<script src="/res/hammer.js"></script>
+<script src="/res/wx.js"></script>
+<div id="zjtzdiv" style="display: none;position: fixed;width: 100%; bottom: 0px;z-index:9999;">
+<div class="Pop-upbox" id="usermsg" >
+        <div class="upbox_top">
+            <h1>恭喜中奖：</h1>
+            <a href=""><div class="close" style="display: none;"></div></a>
+        </div>
+        <div class="upbox_cens">
+        <div>
+恭喜获得奖品:{$jxmc}。
+请留下你的手机号码作为领奖依据。<br/>
+姓名：<input type="text" id="un" value="{h $op->un}" class="sinput">
+        </div>
+     <div style="margin-top: 5px;">
+ 电话：<input type="text" id="tel" value="{h $op->tel}" class="sinput">
+     </div>
+        
+        </div>
+        <div class="upbox_cen">
+            <a href="javascript:tellcjxxok('xydzp')"><div class="button_1"><span>确认信息</span></div></a>
+        </div>
+</div>
+</div>
+{T /_wf}
+</body></html>

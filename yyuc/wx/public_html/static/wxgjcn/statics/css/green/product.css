@@ -1,0 +1,24 @@
+/*网格布局*/
+#grid{padding-top:15px;width:1016px;_width:1032px;background:url(../../images/green/w1000bg.png) center top repeat-y;font-size:0}
+.grid{*word-spacing:-1px;/* IE6、7 */}
+	.grid li{height:200px;width:188px;margin:0 7px 10px 8px;position:relative;z-index:0;font-size:14px}
+	.grid li{*display:inline;*zoom:1;*float:left;}
+		.grid li.hover{background:url(../../images/green/block_bg.png) no-repeat;cursor:pointer}
+	.grid li h3{font-size:20px;font-weight:normal;height:140px;line-height:28px}
+	.grid li h3 a{padding-top:15px;display:block;height:185px;z-index:100;position:absolute;width:188px;text-align:center;top:0;left:0}
+	.grid li h3 img{background:#ccc;border-radius:43px;height:86px;width:86px}
+	.grid li h3 span{display:block;_padding-top:7px}
+	.grid li p{font-size:13px;text-align:center;color:#888;line-height:22px;z-index:10}
+#grid .mix{opacity:0;display:none}
+
+
+
+/*产品工具*/
+.prdTool{background:url(../../images/green/prdTool.png) repeat-y;height:154px;padding:25px 0;border-top:1px solid #e6e6e6;margin-bottom:25px}
+	.prdTool a{display:inline-block;height:118px;width:298px;border:1px solid #77bc64;float:left;margin-left:25px;background:#9ad687;border-radius:3px;text-shadow:0 1px 1px rgba(0,0,0,0.15);box-shadow:0 1px 2px rgba(0,0,0,0.3);text-align:center;color:#fff;padding-top:34px;font-size:16px}
+	.prdTool span{display:block;line-height:36px}
+	.prdTool .ptTitle{font-size:35px;line-height:52px;padding-left:60px;background:url(../../images/green/prdTitle.png) no-repeat 50px 0;overflow:hidden}
+	.prdTool .ptHelp{border:1px solid #6c91a3;background:#87b3d4}
+	.ptHelp .ptTitle{background-position:50px -52px}
+	.prdTool .ptSrvs{border:1px solid #a84350;background:#db5f68}
+	.ptSrvs .ptTitle{background:none;padding-left:0}

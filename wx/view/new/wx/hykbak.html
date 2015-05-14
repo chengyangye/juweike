@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>会员卡</title>
+<link type="text/css" rel="stylesheet" href="/res/hyk/style/card.css?pp1" />
+<link href="/res/zwj.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+		function card(flag){
+			if(flag==1){
+				$('.card').addClass('cardfz');
+			}else{
+				$('.card').removeClass('cardfz');
+			}
+			
+		}
+	</script>
+</head>
+<body id="" class="" style="padding-bottom: 50px;">
+<div id="mappContainer">
+    <section class="cc_shop2" id="card_ctn">
+        <div class="bk1"></div>
+        <div class="cont"> 
+            <div class="card flip" data-side="-1">
+                <div class="front cardcard" id="zm" onclick="card(1)">
+                    <figure class="fg" style="background-image:url({$hyk->pic1});"> 
+                        <div class="fc" style="position: relative;width: 100%；;height: 100%;"> 
+                            
+                      
+                           {if $sn !=''} 
+                           <span style="color:white;position: absolute;font-weight:bold; right: 15px;bottom:14px;">{$sn}</span> 
+                           {/if}
+                        </div> 
+                    </figure> 
+                </div> 
+                <div class="back cardcard" id="fm" onclick="card(2)"> 
+                    <figure class="fg" style="background-image:url({$hyk->pic2});">
+                       <div class="backtag">
+                        </div>
+                       <div class="info">
+                              <p></p>  
+                              <p style="display:block;text-align:left;margin-top:23px;margin-left:18px;">{$ckr}</p> 
+                        </div> 
+                      <!--  <img id="cardlogoimg" src="{$hyk->pic1}" style="margin-top: 30px;"> -->
+                        <!-- <div class="backtag">
+                            <canvas data-bgcolor="#d90001" width="54" height="30"></canvas>
+                            <p style="color:#ffffff"></p>
+                        </div>
+                        <div class="info"> 
+                            <p class="addr">{$hyk->addr}</p> 
+                            <p class="tel"><a class="autotel" href="" data-telnum="tel:0755-88308939">{$hyk->tel}</a></p> 
+                        </div> 
+                        <p class="keywords">持卡人：{$ckr}</p>  -->
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <div class="vs2" id="shop_lst" style=""> 
+        <article class="shoptype" id="type0">
+            <h1>尊享会员，实惠多多</h1> 
+            <div class="lst"> 
+                <ul id="lstname0"> 
+                    <li data-ajax-params="" data-ajax-act="5"><a>{nl2br($hyk->ms)}</a></li>
+                </ul> 
+            </div>
+            
+            <div class="lst"> 
+                <ul id="lstname0"> 
+                    <li data-ajax-params="" data-ajax-act="5">
+                    <table width="100%" style="width:100%;">
+                    <tr>
+                    <td width="33%" align="center">
+                    消费金额
+                    </td>
+      <td width="33%" style="border-left: 1px dotted gray;" align="center">
+                    剩余积分
+                    </td>
+      <td width="33%" style="border-left: 1px dotted gray;" align="center">
+                    剩余金额
+                    </td>
+                    </tr>
+                    <tr>
+                    <td width="33%" align="center">
+       <span>{$hykrecord->xf}</span>元
+                    </td>
+      <td width="33%" style="border-left: 1px dotted gray;" align="center">
+       <span>{$hykrecord->jf}</span>分
+                    </td>
+      <td width="33%" style="border-left: 1px dotted gray;" align="center">
+       <span>{$hykrecord->ye}</span>元
+                    </td>
+                    </tr>
+                    </table>
+                    </li>
+                </ul> 
+            </div>
+            
+            <div class="lst"> 
+                <ul id="lstname0">
+                {if $sn!=''}
+                <li data-ajax-params="" data-ajax-act="5"><a href="hykxx-{$hykrecord->id}.html">会员信息</a><img src="/res/arrow3.png" class="arraow"/></li>
+                {/if}
+                    <li data-ajax-params="" data-ajax-act="5"><a href="hykmm-tq-{$hykid}.html">会员卡特权</a><img src="/res/arrow3.png" class="arraow"/></li>
+                    <li data-ajax-params="" data-ajax-act="5"><a href="hykmm-tz-{$hykid}.html">会员卡通知</a><img src="/res/arrow3.png" class="arraow"/></li>
+                </ul> 
+            </div>
+            
+            <div class="lst"> 
+                <ul id="lstname0"> 
+                    <li data-ajax-params="" data-ajax-act="5"><a href="javascript:quaiqndoa();">签到拿积分</a>
+                    <div style="height: 26px;border-radius:14px;color: black;background-color:red;position: absolute;right:6px;top: 8px;font-size:12px;line-height:26px;">
+                    
+                    {if $yjqd}
+               &nbsp;&nbsp;&nbsp;&nbsp;今日已经签到&nbsp;&nbsp;&nbsp;&nbsp;
+                    {else}
+                   &nbsp;&nbsp;&nbsp;&nbsp; 今日还未签到&nbsp;&nbsp;&nbsp;&nbsp;
+                    {/if}
+                    </div></li>
+                    <li data-ajax-params="" data-ajax-act="5"><a href="hykmm-sm-{$hykid}.html">会员卡说明</a>
+                    <img  src="/res/arrow3.png" class="arraow"/>
+                    </li>
+                </ul> 
+            </div>
+            <div class="lst"> 
+                <ul id="lstname0"> 
+                    <li data-ajax-params="" data-ajax-act="5"><img src="/res/addr.png" class="arraow" style="left: 8px;right: auto;width:18px; height:18px;"/><a href="{$hyurl}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地址：{$hyk->addr}</a><img src="/res/arrow3.png" class="arraow"/></li>
+                    <li data-ajax-params="" data-ajax-act="5"><img src="/res/tel.png" class="arraow" style="left: 8px;right: auto;width:18px; height:18px;"/><a href="javascript:location.href='tel:{$hyk->tel}'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话：{$hyk->tel}</a><img src="/res/arrow3.png" class="arraow"/></li>
+                </ul> 
+            </div>
+        </article>
+    </div>  
+    <footer style="height:20px;"></footer>
+    {T /_wf}
+</div>
+{if $sn==''}
+<div style="width: 100%; display: none;" class="footFix" id="xxsjdiv">
+<div class="Pop-upbox" id="usermsg" >
+        <div class="upbox_top">
+            <h1>请填写您的用户资料：</h1>
+            <a href=""><div class="close" style="display: none;"></div></a>
+        </div>
+        <div class="upbox_cens">
+        <div>
+           姓名：<input type="text" id="un" class="sinput" value="{$op->un}">
+        </div>
+     <div style="margin-top: 5px;">
+     电话：<input type="text" id="tel" class="sinput" value="{$op->tel}">
+     </div>
+        
+        </div>
+        <div class="upbox_cen">
+            <a href="javascript:lingqu()"><div class="button_1"><span>确认领取</span></div></a>
+        </div>
+</div>
+</div>
+
+<div id="applyBtn" class="footFix"><a href="javascript:showlingqu();" >立即获取</a></div>
+<article id="footer">
+    <p class="page-url"><a href="/" target="_blank" class="page-url-link"></a></p>
+</article>
+{else}
+<div id="applyBtn" class="footFix" style="display: none;"><a href="javascript:;">会员卡SN：{$sn}</a></div>
+{/if}
+<script type="text/javascript">
+function quaiqndoa(){
+	ajax('hykmm-qdl-{$hykid}.html',{ rid:'{$hykrecord->id}'},function(m){
+		if(m=='ok'){
+			tusi('签到成功,积分+{$hyk->jf}');
+			setTimeout(function(){
+				location.href = location.href; 
+			},888);
+			
+		}else if(m=='not'){
+			tusi('你还不是会员');
+		}
+	});	
+}
+
+function showlingqu(){
+	$('#applyBtn').hide();
+	$('#xxsjdiv').show();
+}
+
+function lingqu(){
+	var un = $.trim($('#un').val());
+	var tel = $.trim($('#tel').val());
+	if(un=='' || tel==''){
+		tusi('请完善用户信息');
+		return;
+	}
+	ajax('hykok-add.html',{ tel:tel,un:un,id:'{$hykid}'},function(m){
+		if(m=='rep'){
+			location.reload(true);
+		}
+		tusi('领取成功');
+		//window.location.reload();
+		//$('#applyBtn').show().find('a').html('会员卡SN：'+m).attr('href','javascript:;');
+		//$('#xxsjdiv').hide();
+		location.reload(true);
+	});	
+}
+</script>
+</body>
+</html>

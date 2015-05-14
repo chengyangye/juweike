@@ -1,0 +1,26 @@
+.banner{height:500px}
+.agentCnt{background:url(../../images/green/w1000bg.png) repeat-y}
+.agentCnt .agntC{height:540px}
+.ac2{background:#69bf5d}
+.ac4{background:#bfd0e9}
+.agntC h3{text-indent:-9999px;height:105px;background:url(../../images/green/agentTitle.png) no-repeat;}
+.ac2 h3{background-position:0 -105px}
+.ac3 h3{background-position:0 -210px}
+.ac4 h3{background-position:0 -315px}
+.ac5 h3{background-position:0 -420px}
+.agntC li{float:left;text-align:center}
+h4{color:#fff;font-size:18px}
+
+.acCnt{padding:0 75px}
+.acCnt p{font-size:16px;line-height:30px}
+
+.ac1 ul{margin-top:40px}
+.ac1 ul li{width:240px;height:230px;margin-right:60px}
+
+.ac2 ul{padding:0 50px}
+.ac2 ul li{height:180px;width:225px}
+
+.ac3{background:url(../../images/agent/youshi.png) center 110px no-repeat}
+
+.ac4{background:#bfd0e9 url(../../images/agent/liucheng.png) center 160px no-repeat}
+.agentCnt .ac5{height:700px;background:url(../../images/agent/map.png) 350px 50px no-repeat;}

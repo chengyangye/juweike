@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="{$CSS}admin/bootstrap.min.css">
+<link rel="stylesheet" href="{$CSS}admin/admin.css">
+<title>我的活动</title>
+
+</head>
+<body>
+	<div class="main-title">
+		<h3>{$lbs->name}微会员卡活动</h3>
+	</div>
+
+<div class="pagination">
+  <ul>
+    {P}
+  </ul>  
+</div>
+<div>
+<form action="">
+操作类型：
+{$tj->select($fs_arr,'fs','style="margin-top: 10px;width:100px;"')}
+开始时间：
+{$tj->datetime('kssj','style="margin-top: 10px;width:140px;"')}
+结束时间：
+{$tj->datetime('jssj','style="margin-top: 10px;width:140px;"')}
+门店：
+{$tj->select($md_arr,'mdid','style="margin-top: 10px;"')}
+<button type="submit" class="btn">检索</button>
+</form>
+
+</div>
+<div>用户名称：<B>{$rcd->un}</B>&nbsp;&nbsp;用户电话：<B>{$rcd->tel}</B>&nbsp;&nbsp;金额合计：<B>{$hj}</B></div>
+<div>总计：<B>{$p->totalnum}条/{$p->totalpage}页</B></div>
+	<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>时间</th>
+					<th>方式</th>
+					<th>门店</th>
+					<th>数额</th>
+					<th>备注</th>
+				</tr>
+			</thead>
+			<tbody>
+			{loop $res as $r}			 
+			      <tr>
+						<td>{$r->stime}</td>
+						<td>{$fs_arr[$r->fs]}</td>
+						<td>{$mdlb[$r->mdid]}</td>
+						<td>{$r->je}</td>
+						<td>{$r->bz}</td>
+				  </tr>
+			{/loop}
+			</tbody>
+		</table>
+	<div class="tb-toolbar">
+	</div>
+
+<div class="pagination">
+  <ul>
+{P}
+  </ul>
+  
+</div>
+<br/><br/><br/></body></html>

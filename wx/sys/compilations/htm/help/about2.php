@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>公司资质</title><script type="text/javascript">var yyuc_jspath = "/@system/";</script><script type="text/javascript" src="/@system/js/jquery.js"></script><script type="text/javascript" src="/@system/js/yyucadapter.js"></script>
+<link type="text/css" rel="stylesheet" href="<?php echo $CSS; ?>htm/help.css" />
+<script type="text/javascript">
+$(function(){
+	$(parent.document).find('.ifconh').height($('body').height() + 100);
+	setInterval(function(){
+		$(parent.document).find('.ifconh').height($('body').height() + 100);
+	},500);
+});
+</script>
+</head>
+<body>
+<div class="layout750 content" id="helpContainer" style="float: inherit;">
+        <h2 class="page_tit">上海XXXXX信息技术股份有限公司</h2>
+        <div class="sect">
+            <p class="tac"><img src="<?php echo $IMG; ?>htm/zhang_logo.gif" alt="聚微客" width="300" height="147px"></p>
+<!--            <p class="t2 fs14">聚微客是中国主要电信运营商资深的战略合作伙伴，在移动商务的平台技术、应用产品、销售渠道和服务网络等方面开展了全方位的深度合作。</p>
+            <p class="t2 fs14">聚微客与中国移动、中国联通、中国网通、中国电信有着丰富的合作经验，并先后获得了由中华人民共和国信息产业部颁发的“中华人民共和国增值电信业务经营许可证”、“中华人民共和国电信与信息服务业务经营许可证”和由信产部批准的全国四网合一短消息类服。</p>	-->
+            <p class="t2 fs14">从销售合作到行业方案整合服务，聚微客为不同伙伴设计了更为开放的合作模式。</p>
+            <p class="t2 fs14">聚微客本着“创新 责任 勤奋 沟通”的理念，以可靠的产品和强有力的技术支持和服务与业内伙伴共创的移动商务的美好前景。</p>
+        </div>
+    </div>
+</body>
+</html>

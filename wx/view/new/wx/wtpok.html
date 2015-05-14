@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>投票结束</title>
+<link type="text/css" rel="stylesheet" href="/res/wtp/style/vote.css" />
+</head>
+<body>
+<div class="wrapper" style="margin-top:-8px;">
+	<img class="bg" src="/res/wtp/images/bg.jpg">
+	<div class="top fn-clear">
+		<div class="count-cont">
+			<h3>参与人数</h3>
+			<div class="count">{$cyrs}</div>
+		</div>
+		<div class="title-cont">
+			<p class="title">{$wtp->name}</p>
+			<p class="timeout"><img class="clock" src="/res/wtp/images/clock.png"><span class="text">距离投票结束还有{$end_time}</span></p>
+		</div>
+	</div>
+	<div class="cover">
+		<img class="line" src="/res/wtp/images/ctline.jpg">
+		<img class="cimg" src="{$wtp->pic}">
+		<img class="line" src="/res/wtp/images/cbline.jpg">
+	</div>
+	<div class="summary">{$wtp->ms}</div>
+	<div class="tip-cont">
+		<img class="icon" src="/res/wtp/images/tip_icon.png">
+		投票后才能看到结果 | 最多选1项
+	</div>
+	<div class="option-cont">
+	
+	{if trim($wtp->option1)!=''}
+	        {if trim($wtp->headpic1)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic1}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option1}</div>
+			
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl1}%;"></div></div><span class="per" style="left: 102.78px;">{$ans1}({$bl1}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+	
+
+	{if trim($wtp->option2)!=''}
+			{if trim($wtp->headpic2)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic2}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option2}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl2}%;"></div></div><span class="per" style="left: 102.78px;">{$ans2}({$bl2}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+	{if trim($wtp->option3)!=''}
+			{if trim($wtp->headpic3)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic3}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option3}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl3}%;"></div></div><span class="per" style="left: 102.78px;">{$ans3}({$bl3}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+	
+	{if trim($wtp->option4)!=''}
+			{if trim($wtp->headpic4)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic4}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option4}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl2}%;"></div></div><span class="per" style="left: 102.78px;">{$ans4}({$bl4}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+	{if trim($wtp->option5)!=''}
+	    {if trim($wtp->headpic5)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic5}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option5}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl5}%;"></div></div><span class="per" style="left: 102.78px;">{$ans5}({$bl5}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+{if trim($wtp->option6)!=''}
+		{if trim($wtp->headpic6)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic6}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option6}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl6}%;"></div></div><span class="per" style="left: 102.78px;">{$ans6}({$bl6}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+{if trim($wtp->option7)!=''}
+			{if trim($wtp->headpic7)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic7}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option7}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl7}%;"></div></div><span class="per" style="left: 102.78px;">{$ans7}({$bl7}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+{if trim($wtp->option8)!=''}
+		{if trim($wtp->headpic8)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic8}"/>
+		{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option8}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl8}%;"></div></div><span class="per" style="left: 102.78px;">{$ans8}({$bl8}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+
+{if trim($wtp->option9)!=''}
+		{if trim($wtp->headpic9)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic9}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option9}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl9}%;"></div></div><span class="per" style="left: 102.78px;">{$ans9}({$bl9}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+{if trim($wtp->option10)!=''}
+		{if trim($wtp->headpic10)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic10}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option10}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl10}%;"></div></div><span class="per" style="left: 102.78px;">{$ans10}({$bl10}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+{if trim($wtp->option11)!=''}
+		{if trim($wtp->headpic11)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic11}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option11}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl11}%;"></div></div><span class="per" style="left: 102.78px;">{$ans11}({$bl11}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+{if trim($wtp->option12)!=''}
+		{if trim($wtp->headpic12)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic12}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option12}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl12}%;"></div></div><span class="per" style="left: 102.78px;">{$ans12}({$bl12}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+{if trim($wtp->option13)!=''}
+		{if trim($wtp->headpic13)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic13}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option13}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl13}%;"></div></div><span class="per" style="left: 102.78px;">{$ans13}({$bl13}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+{if trim($wtp->option14)!=''}
+          	{if trim($wtp->headpic14)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic14}"/>
+			{/if}($wtp->option14)!=''}
+		
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option14}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl14}%;"></div></div><span class="per" style="left: 102.78px;">{$ans14}({$bl14}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+{if trim($wtp->option15)!=''}
+		{if trim($wtp->headpic15)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic15}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option15}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl15}%;"></div></div><span class="per" style="left: 102.78px;">{$ans15}({$bl15}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+{if trim($wtp->option16)!=''}
+		{if trim($wtp->headpic16)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic16}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option16}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl16}%;"></div></div><span class="per" style="left: 102.78px;">{$ans16}({$bl16}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+{if trim($wtp->option17)!=''}
+		{if trim($wtp->headpic17)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic17}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option17}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl17}%;"></div></div><span class="per" style="left: 102.78px;">{$ans17}({$bl17}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+{if trim($wtp->option18)!=''}
+		{if trim($wtp->headpic18)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic18}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option18}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl18}%;"></div></div><span class="per" style="left: 102.78px;">{$ans18}({$bl18}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+{if trim($wtp->option19)!=''}
+		{if trim($wtp->headpic19)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic19}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option19}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl19}%;"></div></div><span class="per" style="left: 102.78px;">{$ans19}({$bl19}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+{if trim($wtp->option20)!=''}
+		{if trim($wtp->headpic20)!= ''}
+			<img  width="200" height="160" src="{$wtp->headpic20}"/>
+			{/if}
+		<div class="option fn-clear option-statis" data-value="0">
+			<div>{$wtp->option20}</div>
+			<div class="progress"><div data-per="56.52" class="bar bar0" style="width:{$bl20}%;"></div></div><span class="per" style="left: 102.78px;">{$ans20}({$bl20}%)</span>	
+		</div>
+		<img class="sep" src="/res/wtp/images/option_sep.jpg">
+	{/if}
+	</div>
+ 	<p class="page-url">
+		<a href="/" target="_blank" class="page-url-link"></a>
+	</p>
+</div>
+{T /_wf}
+</body>
+</html>

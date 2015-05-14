@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>话题列表</title>
+<link type="text/css" rel="stylesheet" href="/res/weiba/style/topic.css" />
+</head>
+<body>
+	<div id="wrapper" class="wrapper main_content">
+		<div>
+			<div class="load_more">
+				<a href="weiba-{$wbid}-new.html?wid={$wid}&wxid{$wxid}">发布话题</a>
+			</div>
+			<div class="topic_list">
+				<ul id="topic_data" class="topic_list_item">
+				{loop $res as $r}
+					<li>
+						<a href="weiba-{$wbid}-{$r->id}.html?wid={$wid}&wxid={$wxid}">#{$r->keywd}#
+						</a>
+						<span class="hot">热度：{$r->zm}</span>
+					</li>
+				{/loop}
+				</ul>
+			</div>
+			<div class="load_more">
+				<a href="javascript:loadmore();">查看更多</a>
+			</div>
+		</div>
+	</div>
+ 	<p class="page-url">
+		<a href="/" target="_blank" class="page-url-link"></a>
+	</p>
+	<script type="text/javascript">
+	function loadmore(){
+		if(!window.loadnum){
+			window.loadnum = 10;
+		}else{
+			window.loadnum += 10;
+		}
+		$('.load_more').eq(1).hide();
+		ajax('weibamore-list.html',{ num:window.loadnum},function(m){
+			if(m.length <10){
+			}else{
+				$('.load_more').eq(1).show();
+			}
+			for(var i=0;i<m.length;i++){
+				var mm = m[i];
+				$('#topic_data').append('<li><a href="weiba-{$wbid}-'+mm.id+'.html?wid={$wid}&wxid={$wxid}">#'+mm.keywd+'#</a><span class="hot">热度：'+mm.zm+'</span></li>');
+			}
+		});
+	}
+	</script>
+	{T /_wf}
+</body>
+</html>

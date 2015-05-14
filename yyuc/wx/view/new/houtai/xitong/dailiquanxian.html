@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系统首页</title>
+<link rel="stylesheet" href="{$CSS}ht/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="{$CSS}ht/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="{$CSS}ht/invalid.css" type="text/css" media="screen" />
+<script type="text/javascript">
+$(function(){
+	var np = $.trim($('#fnopages').val());
+	var nps = np.split(',');
+	for(var i=0;i<nps.length;i++){
+		$('input[name="'+nps[i]+'"]').prop('checked',false);
+	}
+	
+	$('input[type="checkbox"]').click(function(){
+		if($(this).prop('checked')){
+			 remprop($(this).attr('name'));
+		}else{
+			addprop($(this).attr('name'));
+		}
+	});
+	$('#Form1').submit(function(){
+		var na = [];
+		$('input[type="checkbox"]').each(function(){
+			if(!$(this).prop('checked')){
+				na[na.length] = $(this).attr('name');
+			}			
+		});
+		$('#fnopages').val(na.join(','));
+		return true;
+	});
+});
+function remprop(name){
+	var np = $.trim($('#fnopages').val());
+	np = np.replace(name+',','').replace(','+name,'').replace(name,'');
+	$('#fnopages').val(np);
+}
+function addprop(name){
+	remprop(name);
+	var np = $.trim($('#fnopages').val());
+	if(np==''){
+		np = name;
+	}else{
+		np = np+','+name;
+	}
+	$('#fnopages').val(np);
+}
+
+</script>	
+</head>
+<BODY>
+<div class="content-box role">
+	<div class="content-box-header">
+		<h3>代理用户权限设置</h3>
+		<div class="clear"></div>
+	</div>
+	<div class="content-box-content">
+		<div class="default-tab" >
+            
+		<div class="searchgrid">
+			<form method="post" action="" name="Form" id="Form1">
+			<label>代理级别</label>{$m->select($dl_arr,'typid','onchange="goto(\'dailiquanxian-\'+$(this).val()+\'.html\')"')}	
+			<input type="submit" class="button" value="保存" />
+			{$m->textarea('nopages',' style="display:none;"')}
+			</form>
+
+		</div>
+		<div class="tab-content default-tab" >
+			<table>
+			{loop $pages as $k=>$m}
+			<tr><td align="left" style="text-align: left;padding-left: 20px;font-weight: bold;background-color:#164d85;color: white;">
+			{$m['name']}
+			</td></tr>
+			<tr><td align="left" style="text-align: left;padding-left: 20px;">
+			{loop $m['sub'] as $kk=>$mm}
+			<input type='checkbox' name='{$m['path']}@{$mm['file']}' value='1' checked="checked"/>{$mm['name']};
+			{/loop}			
+			</td></tr>
+			{/loop}
+			
+			
+				<tfoot>
+					<tr>
+						<td colspan="13">
+							<div class="pagination">
+								
+							</div>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+			
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+</BODY>
+</html>

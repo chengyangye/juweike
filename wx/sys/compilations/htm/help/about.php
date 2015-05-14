@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>关于我们</title><script type="text/javascript">var yyuc_jspath = "/@system/";</script><script type="text/javascript" src="/@system/js/jquery.js"></script><script type="text/javascript" src="/@system/js/yyucadapter.js"></script>
+<link type="text/css" rel="stylesheet" href="<?php echo $CSS; ?>htm/help.css" />
+<script type="text/javascript">
+$(function(){
+	$(parent.document).find('.ifconh').height($('body').height() + 100);
+	setInterval(function(){
+		$(parent.document).find('.ifconh').height($('body').height() + 100);
+	},500);
+});
+</script>
+</head>
+<body>
+<div class="layout750 content" id="helpContainer"  style="float: inherit;">
+        <h2 class="page_tit">公司简介</h2>
+        <div class="sect">
+            <div>
+        <img src="<?php echo $IMG; ?>htm/zzb-xingxiang.png" alt="上海XXXXX信息科技股份有限公司" style="border:none" />
+    </div>
+    <div style="font-size:14px;font-family:'宋体';line-height:28px">
+<!--        <p style="padding:5px 0;">
+        　　<strong>上海XXXXX信息技术股份有限公司</strong>（聚微客，股票代码：100189）成立于2003年，注册资金1000万，是一家专注于移动互联网业务的高新技术企业，是山东省首批5家新三板上市公司之一。
+        </p>
+        <p style="padding:5px 0;">
+        　　公司有近260名员工，17项知识产权，在各地开设9家分公司和办事处，并开拓遍布电商、CRM、ERP、L连锁、金融、零售、汽车、房产、医疗等多个行业的数万家企业客户。 随着公司业务的不断发展，为了更好地服务客户，聚微客本着真诚合作、共同发展的原则，面向全国诚征代理商。欢迎关注移动商务发展的人士加入我们，共同开创移动信息新时代！
+        </p>
+        <p style="padding:5px 0;">
+        　　聚微客与中国移动、中国联通、中国网通、中国电信有着丰富的合作经验，并先后获得了由中华人民共和国信息产业部颁发的“中华人民共和国增值电信业务经营许可证”、“中华人民共和国电信与信息服务业务经营许可证”和由信产部批准的全国四网合一短消息类服。
+        </p>    -->
+        <p style="padding:5px 0;">
+        　　更详细的了解我们，或申请试用，请拨打咨询热线：<strong style="color:#0075C1;font-size:16px">18621784057</strong> 或联系QQ:<strong style="color:#0075C1;font-size:16px">86671718</strong>
+        </p>
+    </div>
+    <div>
+        <img src="<?php echo $IMG; ?>htm/zzb-wxapp.png" alt="上海XXXXX信息科技股份有限公司" style="border:none"/>
+    </div>
+        </div>
+    </div>
+</body>
+</html>

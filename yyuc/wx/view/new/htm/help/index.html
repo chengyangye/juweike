@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{$_SERVER['WEB_NAME']}—国内领先的微信公众服务平台</title>
+<meta content="微管家、微信营销、微信代运营、微信托管、微网站、微商城、微营销、微信定制开发" name="Keywords">
+<meta content="{$_SERVER['WEB_NAME']},国内领先的微信公众智能服务平台,管家十大微体系:微菜单、微官网、微会员、微活动、微商城、微推送、微服务、微统计、微支付、微客服,企业微营销必备。" name="Description">
+<link rel="icon" href="/favicon.ico?v000015" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico?v000015" type="image/x-icon">
+<link rel="stylesheet" href="{$CSS}htm/base.css" type="text/css" media="screen">
+<link rel="stylesheet" href="{$CSS}htm/index.css" type="text/css" media="screen">
+<link rel="stylesheet" href="{$CSS}htm/global.css" type="text/css" media="screen">
+<link rel="stylesheet" type="text/css" href="/res/index/weixin.css" media="all" />
+<style type="text/css">
+.drag_li img {
+width: 144px;
+height: 204px;
+cursor: pointer;
+}
+.drag_li div{
+	text-align: center;
+}
+</style>
+</head>
+<body>{T /_h}
+{_ $noindh='help'}
+<div class="m_box r3  pb30 clearfix ifconh">
+    <div class="top_bar">
+      <h2>帮助中心</h2>
+    </div>
+    <div class="layout210 sidebar rl3">
+      <div class="sidebar_in">
+        <div class="sidebar_nav">
+          <ul>
+           <li class="li_features curr"><a href="javascript:;" onclick="help(this)" rel="ptys"><i class="ico ico_praise"></i>平台优势</a></li>
+           <li class="li_faqs"><a href="javascript:;" onclick="help(this)" rel="newone"><i class="ico ico_page"></i>新手指引</a></li>
+           <li class="first li_about_apppark"><a href="javascript:;" onclick="help(this)" rel="about"><i class="ico ico_fans"></i>关于我们</a></li>
+           <li class="li_faqs"><a href="javascript:;" onclick="help(this)" rel="about2"><i class="ico ico_account"></i>公司资质</a></li>
+           <!-- <li class="li_faqs"><a href="javascript:;" onclick="help(this)" rel="contact"><i class="ico ico_message"></i><span class="arror"></span>联系我们</a></li> -->
+           <li class="li_faqs"><a href="javascript:;" onclick="help(this)" rel="questions"><i class="ico ico_follow"></i><span class="arror"></span>常见问题</a></li>
+           <li class="li_faqs"><a href="javascript:;" onclick="help(this)" rel="joinus"><i class="ico ico_push"></i><span class="arror"></span>加入我们</a></li>
+           <!-- <li class="li_faqs"><a href="javascript:;" onclick="help(this)" rel="price"><i class="ico ico_appstats"></i><span class="arror"></span>资费套餐</a></li>-->
+           <!-- <li class="li_faqs"><a href="javascript:;" onclick="help(this)" rel="pay"><i class="ico ico_app_manage"></i><span class="arror"></span>支付方式</a></li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+<div class="layout750 content ifconh" id="helpContainer" style="height: 530px;overflow: hidden;">
+<iframe src="/htm/help/about.html" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" id="ifcon" class="ifconh" style="border: none;width:100%;height: 530px;overflow: hidden;" ></iframe>
+</div>
+  </div>
+<script type="text/javascript">
+$(function(){
+	var o = $("a[rel='{$bzpage}']").get(0);
+	help(o);
+});
+function help(o){
+	var page = $(o).attr('rel');
+	$('#ifcon').attr('src','/htm/help/'+page+'.html');
+	$('.sidebar_nav').find('li').removeClass('curr');
+	$(o).parent().addClass('curr');
+}
+$(function(){
+	
+});
+</script>
+{T /_f}
+</body></html>

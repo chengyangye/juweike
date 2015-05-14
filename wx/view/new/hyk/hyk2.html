@@ -1,0 +1,325 @@
+
+<!DOCTYPE>
+<html>
+<head>
+<title>会员卡</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="{$CSS}mwm/card/card.css" media="all" />
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+</head>
+
+<body id="card" ondragstart="return false;" onselectstart="return false;">
+    <section class="body">
+<div id="overlay" style="position:fixed;z-index:100;"></div>
+<div class="cardcenter">
+            <div class="msk">
+                            <p class="explain2">
+                    <a id="showcard" class="receive" href="javascript:void(0)">领取您的新会员卡</a>
+                    <span>微时代会员卡，方便携带收藏，永不挂失…</span>
+                </p>
+                    </div>
+        <div class="card">
+        <!--
+            <img class="cardbg" src="http://stc.weimob.com/img/web_bb/card/cardbg/card_bg16.png">
+                            <img id="cardlogo" class="logo" src="http://img.weimob.com/static/1b/8d/53/image/20131217/20131217094510_98642.jpg">
+        -->
+            <h1 style="color: #B5C6FF">wqewqewq</h1>
+            <strong class="pdo verify" style="color: #8AFFCC">
+                <span id="cdnb" style="text-align: right;margin-top: 15px;"><em>普通会员</em></span>
+            </strong>
+        </div>
+        <!--<div id="masklayer" class="masklayer off" ontouchmove="return true;" onclick="$(this).toggleClass('on');">
+            <img src="http://stc.weimob.com/img/web_bb/card/themes/1/instruction.png" />
+        </div>-->
+        <div id="masklayer" class="masklayer off" ontouchmove="return true;" onclick="$(this).toggleClass('on');">
+            <script>
+                var isAndroid = navigator.userAgent.toLowerCase().indexOf("android");
+                document.write(isAndroid>-1?"<img src='http://stc.weimob.com/img/instruction_android.png' alt='' />":"<img src='http://stc.weimob.com/img/instruction_iphone.png' alt='' />");
+            </script>
+        </div>
+        <p class="explain">
+        <span>使用时向服务员出示此卡</span>
+    </p>
+</div>
+<div class="cardexplain">
+    <!--会员积分信息-->
+    <div class="jifen-box">
+        <ul class="zongjifen">
+            <li>
+                <a href="/userinfo/Cardshopping?memberid=&wechatid=oLKXFt_nd1c8f_G_e_jb_ZP4RR&id=5085&pid=33260&bid=62312">
+                    <div class="fengexian">
+                        <p>消费总额</p>
+                        <span>0元</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/webcard/signhistory?id=5085&bid=62312&pid=33260&memberid=&wechatid=oLKXFt_nd1c8f_G_e_jb_ZP4RR">
+                    <div class="fengexian">
+                        <p>剩余积分</p>
+                        <span>0分</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/userinfo/Cardshopping?memberid=&wechatid=oLKXFt_nd1c8f_G_e_jb_ZP4RR&id=5085&pid=33260&bid=62312">
+                    <p>剩余金额</p>
+                    <span>0元</span>
+                </a>
+            </li>
+        </ul>
+        <div class="clr"></div>
+    </div>
+        <!---------------------->
+        <!---------------------->
+
+    <ul class="round" id="powerandgift" style="display:none">
+        <li>
+            <a href="javascript:;">
+                <span>签到赚积分<em class="error">今日未签到</em></span>
+            </a>
+        </li>
+        <li>
+            <a href="carduser.html">
+                <span>个人资料</span>
+            </a>
+        </li>
+    </ul>
+	    <ul class="round">
+        <li><a href="/userinfo/CardInfo?id=5085&pid=33260&bid=62312"><span>会员卡说明</span></a></li>
+        <li><a href="/userinfo/Store?id=5085&pid=33260&bid=62312&wxref=mp.weixin.qq.com"><span>适用门店电话及地址</span></a></li>
+    </ul>
+    <ul class="round">
+                <li class="addr">
+            <a href="http://api.map.baidu.com/marker?location=39.897445,116.331398&title=北京市丰台区马连道北路&name=北京市丰台区马连道北路&content=1111&output=html&src=weiba|weiweb">
+                <span>地址: 1111</span>
+            </a>
+        </li>
+        <li class="tel">
+            <a href="tel:1111">
+                <span>电话: 1111</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="plugback">
+    <a href="javascript:history.back(-1)">
+        <div class="plugbg themeStyle">
+            <span class="plugback"></span>
+        </div>
+    </a>
+</div>
+<!--输入框-->
+<div class="window" id="windowcenter" style="height:auto!important;max-height:1000px!important;bottom:inherit!important;">
+    <div id="title" class="wtitle">领卡信息<span class="close" id="alertclose"></span></div>
+    <input type="hidden" id="id" name="id" value="5085"/>
+    <input type="hidden" id="bid" name="bid" value="62312"/>
+    <input type="hidden" id="pid" name="pid" value="33260"/>
+    <input type="hidden" id="wechatid" name="wechatid" value="oLKXFt_nd1c8f_G_e_jb_ZP4RR"/>
+    <div class="content">
+        <div id="txt">填写真实的姓名以及电话号码，即可获得会员卡，享受会员特权。</div>
+        <script>
+            var navg = navigator.userAgent.toLowerCase(), html = '';
+            if(navg.match(/(ipad)|(iphone)/i)){
+                html = '<p><input name="truename" value="" class="px" id="truename" type="text" placeholder="请输入您的姓名" ontouchstart="event.preventDefault();this.focus();this.select();" /></p>\
+						<p><input name="tel" class="px" id="tel" value="" type="tel" placeholder="请输入您的电话" ontouchstart="event.preventDefault();this.focus();this.select();" /></p>\
+												';
+            }else{
+                html = '<p><input name="truename" value="" class="px" id="truename" type="text" placeholder="请输入您的姓名" /></p>\
+						<p><input name="tel" class="px" id="tel" value="" type="tel" placeholder="请输入您的电话" /></p>\
+												';
+            }
+            document.write(html);
+        </script>
+        <input type="button" value="确 定" name="确 定" class="txtbtn" id="windowclosebutton">
+    </div>
+</div>
+</div>
+<!---->
+<script type="text/javascript">
+    $(document).ready(function (){
+		var now = new Date();
+		var nowArr = [now.getFullYear(), now.getMonth()+1, now.getDate()];
+		$("#birthday").each(function(k,v){
+			var ndate = $(v).datepicker({
+				format:"yyyy-mm-dd",
+				onRender: function(date) {
+					var t1 = new Date(date.valueOf());
+					var t2 = new Date(now.valueOf());
+					t1 = t1.getFullYear()+"/"+(t1.getMonth()+1)+"/"+t1.getDate();
+					t2 = t2.getFullYear()+"/"+(t2.getMonth()+1)+"/"+t2.getDate();
+					return ( t1!=t2 && (date.valueOf() > now.valueOf()) ) ? 'disabled' : '';
+				}
+			}).on("changeDate", function(date){
+					if('days' == date.viewMode){
+						ndate.datepicker('hide');
+					}
+				});
+			//v.value = nowArr.join("-");
+		});
+        $("#windowclosebutton").bind("click",
+            function() {
+                var btn = $(this);
+                var birthday = $("#birthday").val();
+				var tel = $("#tel").val();
+                var bid = $('#bid').val();
+                var truename = $("#truename").val();
+                var pid = $('#pid').val();
+                var id = $('#id').val();
+                var wechatid = $('#wechatid').val();
+                if (truename == '' || "请输入名字!" == truename) {
+                    $("#truename").val("请输入名字!");
+                    return;
+                }
+                if (tel == '' || "手机号不对或为空!" == tel) {
+                    $("#tel").val("手机号不对或为空!");
+                    return;
+                }
+                var submitData = {
+                    bid:bid,
+                    pid:pid,
+                    id:id,
+                    wechatid:wechatid,
+                    truename:truename,
+					birthday:birthday,
+                    tel: tel,
+                    txt1: $("#txt1").val(),
+                    txt2: $("#txt2").val(),
+                    txt3: $("#txt3").val(),
+                    txt4: $("#txt4").val(),
+                    txt5: $("#txt5").val(),
+                    value1: $("#value1").val(),
+                    value2: $("#value2").val(),
+                    value3: $("#value3").val(),
+                    value4: $("#value4").val(),
+                    value5: $("#value5").val(),
+                    select1: $("#select1").val(),
+                    select2: $("#select2").val(),
+                    select3: $("#select3").val(),
+                    select4: $("#select4").val(),
+                    select5: $("#select5").val(),
+                    svalue1: $("#svalue1").val(),
+                    svalue2: $("#svalue2").val(),
+                    svalue3: $("#svalue3").val(),
+                    svalue4: $("#svalue4").val(),
+                    svalue5: $("#svalue5").val(),
+                    action: "setTel"
+                };
+                $.post('/Userinfo/Registerinfo/', submitData,
+                    function(data) {
+                        if(data.errno == 200) {
+                            $("#windowcenter").slideUp(500);
+                            $("#overlay").css("display","none");
+                            $("#cdnb").html(data.msg);
+                            $("#notice").css("display","");
+                            $("#powerandgift").css("display","");
+                            window.location.href=data.url;
+                        }else{
+                            $("#txt").html('<span style="color:red;">'+data.error+'</span>');
+                        }
+                    },
+                    "json");
+            });
+
+        $("#showcard").click(function () {
+            alert("填写真实的姓名以及电话号码，即可获得会员卡，享受会员特权。");
+            $("#overlay").css("display","block");
+        });
+    });
+
+    $("#alertclose").click(function () {
+        $("#windowcenter").slideUp(500);
+        $("#overlay").css("display","none");
+    });
+
+    function alert(title){
+        $("#windowcenter").slideToggle("slow");
+        $("#txt").html(title);
+    }
+</script>
+<script>
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+        window.shareData = {
+        /*
+            "imgUrl": "http://stc.weimob.com/img/web_bb/card/cover/card_cover1.jpg",
+            "timeLineLink": "http://www.weimob.com/userinfo/index?id=5085&pid=33260&bid=62312&wechatid=fromUsername&wxref=mp.weixin.qq.com",
+            "sendFriendLink": "http://www.weimob.com/userinfo/index?id=5085&pid=33260&bid=62312&wechatid=fromUsername&wxref=mp.weixin.qq.com",
+            "weiboLink": "http://www.weimob.com/userinfo/index?id=5085&pid=33260&bid=62312&wechatid=fromUsername&wxref=mp.weixin.qq.com",
+            */
+            "imgUrl": "",
+            "timeLineLink": "",
+            "sendFriendLink": "",
+            "weiboLink": "",
+
+            "tTitle": "关注可获得「管家」微生活会员卡",
+            "tContent": "会员卡?>",
+            "fTitle": "会员卡",
+            "fContent": "关注可获得「商家」微生活会员卡",
+            "wContent": "#微信扫描二维码#我刚在某某商户扫描二维码，轻松获得微生活会员卡，酷炫又好玩！"
+        };
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.sendFriendLink,
+                "desc": window.shareData.fContent,
+                "title": window.shareData.fTitle
+            }, function (res) {
+                _report('send_msg', res.err_msg);
+            })
+        });
+
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "img_width": "640",
+                "img_height": "640",
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function (res) {
+                _report('timeline', res.err_msg);
+            });
+        });
+
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": window.shareData.wContent,
+                "url": window.shareData.weiboLink,
+            }, function (res) {
+                _report('weibo', res.err_msg);
+            });
+        });
+    }, false)
+</script>
+<style>
+    .masklayer{
+        display:none;
+        position:fixed;
+        top:0;
+        left:0;
+        z-index:2000;
+        width:100%;
+        height:100%;
+        background-color:rgba(0,0,0,0.5);
+        text-align:right;
+    }
+    .masklayer.on{
+        display:block;
+    }
+    .masklayer img{
+        margin-top:10px;
+        margin-right:30px;
+        width:160px;
+    }
+</style>
+    </section>
+</body>
+</html>

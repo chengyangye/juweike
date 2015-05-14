@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+<link rel="stylesheet" href="css/admin.css" media="screen">
+<link rel="stylesheet" href="css/help.css" media="screen">
+<title>如何绑定微信公众号？</title>
+<style>
+ ul li{
+ 	list-style: none;
+ }
+ .setup{
+ 	width: 300px;
+ 	margin: 10px auto;
+ 	cursor: pointer;
+ }
+</style>
+</head>
+<body>
+    <h3>如何绑定微信公众号？</h3>
+    <p>微信公众号的绑定指的是把微信公众号的信息注册到微俱聚平台的一个过程，完成注册后，微信公众号便拥有了微俱聚平台
+    的各种扩展功能。</p>
+    <p>微俱聚平台一共提供了两种微信公众号的绑定方式，分别为一键智能绑定和手动绑定。以下分别作说明。</p>
+    <p>一.  一键智能绑定</p>
+    <p>一键智能绑定非常的简单，当用户第一次登录平台，会进入到绑定的一个页面，如下图</p>
+    <img src="image/bind1.jpg">
+    这时候只需要输入您想要绑定的微信公众平台的账号和密码(此账号和密码必须可以在mp.weixin.qq.com中顺利登录),然后点击“一键智能升级”，系统
+    便会智能完成绑定所需要的一切，静候几十秒后，就会进入如下页面
+    <img src="image/bind2.jpg">
+    这时候，您用一个微信小号往您刚刚绑定的微信公众号发送“为爱升级”这四个字，系统如果回复“升级成功”，那么绑定就成功了，直接下一步就可以了。
+    有时候，用户在绑定的过程中会出现一些问题，这里稍微总结一下：
+    <ul>
+    	<li>1. 输入公众平台账号和密码后一直不对。<br>
+    		请注意，这里输入的账号和密码必须是微信公众平台的账号和密码，而不是微俱聚平台的账号。
+    	</li>
+    	<li>2. 有时候账号和密码输入正确却提示账号被冻结，如下图所示
+    	<img src="image/bind3.jpg">
+    		这主要是平台限制了同一个微信公众号在平台内的绑定次数，出现这种情况，可以寻求客服帮助。
+    	</li>
+    	<li>3. 如果绑定过程出现其它错误。<br>
+    	请确保您的微信公众账号至少已经在mp.weixin.qq.com中已经注册超过7天了，然后已经拥有高级功能和开发者模式。
+    	</li>
+    </ul>
+    <p>二.  手动绑定</p>
+    <p>如下图所示，点击进入“手动绑定”模式
+    <img src="image/bind4.jpg">
+    这时候，平台会自动生成一个url和Token，如下所示:
+    <img src="image/bind5.jpg"></p>
+    然后点击图中的“前往微信公众平台”，这时候会进入微信公众平台，
+    <img src="image/bind6.jpg">
+    接着，点击“高级功能”，然后进入“开发模式”，
+    <img src="image/bind7.jpg">
+    一定要开启“开发者模式”，然后点击“修改”，
+    <img src="image/bind8.jpg">
+    把前面微俱聚平台生成的url和Token回填到微信公众平台，提交便可以完成绑定了。
+    <img src="image/bind9.jpg">
+    在公众平台提交完url和Token后，在微俱聚页面一直往下一步走，便可以结束整个绑定流程了。
+    其实，简单的说，手动绑定就是把平台生成的url和Token填写到微信公众平台，然后打开微信公众平台的“开发者模式”便可以了。
+    <br>
+    在此对手动绑定做一个总结：
+    <ul>
+    	<li>1. 在微信公众平台开启“开发者模式”</li>
+    	<li>2. 复制微俱聚平台生成的url和Token到公众平台上进行绑定。</li>
+    	<li>3. 完成前面的工作后，请用微信小号往刚刚绑定的公众账号发送“为爱升级”，如果回复“升级成功”，则绑定成功了。</li>
+    </ul>
+    
+    <img src="image/bind10.png" class="setup" onclick="window.top.jumpAccount();">
+
+</body></html>

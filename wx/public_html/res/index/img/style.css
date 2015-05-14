@@ -1,0 +1,672 @@
+BODY {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DIV {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DT {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DD {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+PRE {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+FIELDSET {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TEXTAREA {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+BLOCKQUOTE {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TH {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TD {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+FONT {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H1 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	LINE-HEIGHT: 16px; FONT-SIZE: 12px
+}
+SELECT {
+	LINE-HEIGHT: 16px; FONT-SIZE: 12px
+}
+HTML {
+	-webkit-text-size-adjust: none
+}
+BODY {
+	-webkit-text-size-adjust: none
+}
+IMG {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+UL {
+	LIST-STYLE-TYPE: none
+}
+LI {
+	LIST-STYLE-TYPE: none
+}
+.tc {
+	TEXT-ALIGN: center
+}
+.tl {
+	TEXT-ALIGN: left
+}
+.tr {
+	TEXT-ALIGN: right
+}
+.dis {
+	DISPLAY: block
+}
+.undis {
+	DISPLAY: none
+}
+.house {
+	CURSOR: pointer
+}
+.fl {
+	FLOAT: left
+}
+.fr {
+	FLOAT: right
+}
+.cl {
+	CLEAR: both
+}
+.fixed {
+	Z-INDEX: 999; POSITION: fixed; MARGIN-TOP: 0px; WIDTH: 100%; TOP: 0px; LEFT: 0px
+}
+.mar {
+	MARGIN: 0px 5px
+}
+.marr {
+	MARGIN-LEFT: 10px
+}
+.blank {
+	HEIGHT: 5px; CLEAR: both
+}
+.fb {
+	FONT-WEIGHT: bold
+}
+.fnb {
+	MARGIN-LEFT: -1px; FONT-WEIGHT: 200
+}
+.white {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.red {
+	COLOR: #f00
+}
+.hui {
+	COLOR: #333333
+}
+.orange {
+	COLOR: #f30
+}
+.green {
+	COLOR: #1b9446
+}
+A {
+	COLOR: #000; TEXT-DECORATION: none
+}
+BODY {
+	FONT-FAMILY: Microsoft YaHei, 宋体
+}
+.bg {
+	BEHAVIOR: url(/img/PIE.htc)
+}
+.head {
+	Z-INDEX: 99; WIDTH: 100%; BACKGROUND: url(/img/weimob_01.png) repeat-x; HEIGHT: 98px; OVERFLOW: hidden
+}
+.top {
+	MARGIN: 0px auto; WIDTH: 1120px; BACKGROUND: url(/img/logo.png) no-repeat; HEIGHT: 100px
+}
+.topnav {
+	MARGIN-TOP: 5px; PADDING-LEFT: 500px; DISPLAY: block; COLOR: #666; FONT-SIZE: 12px
+}
+.topnav A {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; COLOR: #8c8c8c; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+.topnav A.orange {
+	COLOR: #f30
+}
+.tel {
+	FONT-SIZE: 16px; FONT-WEIGHT: bold
+}
+.tel SPAN {
+	COLOR: #547907; FONT-SIZE: 18px
+}
+.menu {
+	MARGIN-TOP: 28px; PADDING-LEFT: 400px; DISPLAY: block; HEIGHT: 25px; CLEAR: both
+}
+.menu A {
+	TEXT-ALIGN: center; LINE-HEIGHT: 25px; WIDTH: 73px; DISPLAY: inline-block; HEIGHT: 25px; FONT-SIZE: 16px
+}
+.menu A:hover {
+	BACKGROUND: #da6b00; COLOR: #fff; BEHAVIOR: url(/img/PIE.htc); border-radius: 10px; text-shadow: 0 1px 2px #ccc
+}
+.menu A.active {
+	BACKGROUND: #da6b00; COLOR: #fff; BEHAVIOR: url(/img/PIE.htc); border-radius: 10px; text-shadow: 0 1px 2px #ccc
+}
+.banner {
+	MARGIN: 0px auto; WIDTH: 1343px; BACKGROUND: url(/img/weimob_02.jpg) no-repeat center center; HEIGHT: 300px
+}
+.f17px {
+	FONT-SIZE: 17px
+}
+#banner {
+	POSITION: relative; HEIGHT: 300px
+}
+#pose {
+	WIDTH: 100%; HEIGHT: 300px; OVERFLOW: hidden
+}
+#login_panel {
+	Z-INDEX: 98; POSITION: relative; MARGIN-TOP: -300px; WIDTH: 300px; MARGIN-LEFT: auto; OVERFLOW: hidden; MARGIN-RIGHT: auto; LEFT: 300px
+}
+#login_panel .window {
+	PADDING-LEFT: 30px; WIDTH: 270px; BACKGROUND: url(/img/login_bg.png) no-repeat 0px 0px; FLOAT: right; HEIGHT: 270px; PADDING-TOP: 30px; -background: none
+}
+#helloword {
+	BORDER-BOTTOM: 1px dotted; PADDING-BOTTOM: 5px; MARGIN-BOTTOM: 10px; MARGIN-RIGHT: 30px; PADDING-TOP: 25px
+}
+#login_panel INPUT {
+	_position: relative
+}
+#role .username {
+	COLOR: #f26535
+}
+#login_panel .identity {
+	PADDING-LEFT: 15px
+}
+.title P {
+	HEIGHT: 55px
+}
+.title H1 {
+	FONT-WEIGHT: normal
+}
+.inputlist {
+	HEIGHT: 55px
+}
+#username {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 200px; DISPLAY: block; HEIGHT: 40px; COLOR: #777; MARGIN-LEFT: 40px; FONT-SIZE: 13px; OVERFLOW: hidden; BORDER-TOP: medium none; FONT-WEIGHT: bold; BORDER-RIGHT: medium none
+}
+#password {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 200px; DISPLAY: block; HEIGHT: 40px; COLOR: #777; MARGIN-LEFT: 40px; FONT-SIZE: 13px; OVERFLOW: hidden; BORDER-TOP: medium none; FONT-WEIGHT: bold; BORDER-RIGHT: medium none
+}
+.input_box {
+	WIDTH: 240px
+}
+.warn_box {
+	Z-INDEX: 9999; POSITION: absolute; TEXT-ALIGN: center; MARGIN-TOP: -23px; WIDTH: 120px; HEIGHT: 40px; VISIBILITY: hidden; RIGHT: 2px
+}
+.warn {
+	LINE-HEIGHT: 28px; BACKGROUND-COLOR: #555555; WIDTH: 120px; HEIGHT: 28px; COLOR: #fff; border-radius: 2px 2px; box-shadow: -1px 2px 2px rgba(150, 150, 150, 0.2)
+}
+.angle {
+	WIDTH: 120px; BACKGROUND: url(/img/angle.gif) no-repeat 50% 0px; HEIGHT: 7px
+}
+.email_box {
+	BACKGROUND: url(/img/sprite.gif) no-repeat 0px -1152px
+}
+.password_box {
+	BACKGROUND: url(/img/sprite.gif) no-repeat 0px -1192px
+}
+.inputlist_active {
+	BACKGROUND: url(/img/sprite.gif) no-repeat 0px -24px
+}
+.input_active {
+	BACKGROUND: #fff
+}
+.input_email_n {
+	BACKGROUND: url(/img/sprite.gif) no-repeat -40px -1152px
+}
+.input_password_n {
+	BACKGROUND: url(/img/sprite.gif) no-repeat -40px -1192px
+}
+.input_correct {
+	BACKGROUND: url(/img/sprite.gif) no-repeat -40px -1272px
+}
+.input_error1 {
+	BACKGROUND: url(/img/sprite.gif) no-repeat -40px -1232px
+}
+#hold {
+	
+}
+#login_panel .btn {
+	BORDER-BOTTOM: #b8b8b8 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #b8b8b8 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 35px; BACKGROUND-COLOR: #f6f6f6; PADDING-LEFT: 0px; WIDTH: 101px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 34px; FONT-SIZE: 12px; BORDER-TOP: #b8b8b8 1px solid; CURSOR: pointer; MARGIN-RIGHT: 20px; BORDER-RIGHT: #b8b8b8 1px solid; TEXT-DECORATION: none; PADDING-TOP: 0px; border-radius: 4px 4px
+}
+#role .btn {
+	MARGIN-TOP: 15px
+}
+#login_panel .btn:hover {
+	BACKGROUND-COLOR: #ededed
+}
+#tips H1 {
+	FONT-SIZE: 13px
+}
+#tips H1 {
+	MARGIN: 20px 0px 0px; FONT-WEIGHT: normal
+}
+#tips H2 {
+	FONT-SIZE: 13px
+}
+#tips H1 A {
+	TEXT-DECORATION: none
+}
+#tips H1 A:hover {
+	COLOR: #ddd
+}
+#p0 {
+	WIDTH: 100%; HEIGHT: 300px; LEFT: 0px
+}
+#p1 {
+	WIDTH: 100%; HEIGHT: 300px; LEFT: 0px
+}
+#p2 {
+	WIDTH: 100%; HEIGHT: 300px; LEFT: 0px
+}
+#p3 {
+	WIDTH: 100%; HEIGHT: 300px; LEFT: 0px
+}
+#p4 {
+	WIDTH: 100%; HEIGHT: 300px; LEFT: 0px
+}
+#p0 {
+	Z-INDEX: 5; BACKGROUND: url(/img/p0.jpg) no-repeat center 50%
+}
+#p1 {
+	Z-INDEX: 4; BACKGROUND: url(/img/p1.jpg) no-repeat center 50%
+}
+#p2 {
+	Z-INDEX: 3; BACKGROUND: url(/img/p2.jpg) no-repeat center 50%
+}
+#p3 {
+	Z-INDEX: 2; BACKGROUND: url(/img/p3.jpg) no-repeat center 50%
+}
+#p4 {
+	Z-INDEX: 2; BACKGROUND: url(/img/p4.jpg) no-repeat center 50%
+}
+.skdslider {
+	POSITION: relative; WIDTH: 100%; HEIGHT: 300px; OVERFLOW: hidden
+}
+.skdslider UL.slides {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.skdslider UL.slides LI {
+	POSITION: absolute; WIDTH: 100%; DISPLAY: none; HEIGHT: 300px; TOP: 0px; LEFT: 0px
+}
+.skdslider UL.slides LI A {
+	WIDTH: 100%; DISPLAY: block; HEIGHT: 100%
+}
+.skdslider UL.slides LI IMG {
+	BORDER-BOTTOM: 0px; TEXT-ALIGN: center; BORDER-LEFT: 0px; WIDTH: 100%; HEIGHT: 100%; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.skdslider .slide-navs {
+	Z-INDEX: 15; POSITION: absolute; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; BOTTOM: 20px; PADDING-RIGHT: 0px; PADDING-TOP: 0px; LEFT: 50%
+}
+.skdslider .slide-navs LI {
+	WIDTH: 12px; BACKGROUND: url(/img/slide-bg.png) no-repeat 0px 0px; FLOAT: left; HEIGHT: 12px; CURSOR: pointer; MARGIN-RIGHT: 4px
+}
+.skdslider .slide-navs LI.current-slide {
+	BACKGROUND: url(/img/slide-bg-active.png) no-repeat 0px 0px
+}
+.skdslider .slide-desc {
+	POSITION: absolute; PADDING-BOTTOM: 10px; PADDING-LEFT: 85px; WIDTH: 50%; PADDING-RIGHT: 25px; BACKGROUND: url(../../img/www/images/slide_desc.png) 0px 0px; TOP: 327px; PADDING-TOP: 6px; LEFT: 0px
+}
+.skdslider .slide-desc > H2 {
+	TEXT-TRANSFORM: uppercase; MARGIN-TOP: 10px; FONT-FAMILY: "Oswald"; MARGIN-BOTTOM: 10px; COLOR: #cfdb0c; FONT-SIZE: 25px
+}
+.skdslider .slide-desc > P {
+	LINE-HEIGHT: 20px; MARGIN-TOP: 5px; FONT-FAMILY: "Oswald"; COLOR: #ffffff; FONT-SIZE: 16px
+}
+.skdslider .slide-desc > P A.more {
+	WIDTH: 22px; FLOAT: right; HEIGHT: 18px; COLOR: #990000; FONT-SIZE: 20px; TEXT-DECORATION: none
+}
+.skdslider .slide-desc > P A.more:hover {
+	TEXT-DECORATION: underline
+}
+#bottom_pose {
+	Z-INDEX: 1; POSITION: absolute; WIDTH: 100%; BACKGROUND: url(/img/p0.jpg) no-repeat center 50%; HEIGHT: 300px; LEFT: 0px
+}
+#contact-said {
+	Z-INDEX: 99; POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 50px; WIDTH: 100px; BACKGROUND: url(/img/contact.png) no-repeat 0px 0px; HEIGHT: 50px; CURSOR: pointer; RIGHT: 0px; -background: url(/img/contact.gif?r=0.2) no-repeat 0 0
+}
+#contact-said A {
+	PADDING-LEFT: 15px; WIDTH: 85px; DISPLAY: block; BACKGROUND: url(/img/sprite.gif?r=0.1) no-repeat -194px -533px; HEIGHT: 50px; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.weiapp {
+	MARGIN-TOP: 2px; WIDTH: 100%; BACKGROUND: url(/img/weimob_05.jpg) repeat-x 0px top
+}
+.weiapp DL {
+	MARGIN: 0px auto; WIDTH: 960px; BACKGROUND: url(/img/weimob1.png) no-repeat right center; HEIGHT: 405px; PADDING-TOP: 45px
+}
+.weiapp DT {
+	WIDTH: 550px
+}
+DD {
+	WIDTH: 550px
+}
+.weiapp DT {
+	FONT-FAMILY: Microsoft YaHei; HEIGHT: 35px; COLOR: #ec7400; FONT-SIZE: 24px; FONT-WEIGHT: bold
+}
+.weiapp DD {
+	MARGIN-TOP: 45px; HEIGHT: 230px; FONT-SIZE: 14px
+}
+.weiapp DD P {
+	LINE-HEIGHT: 32px; MARGIN-TOP: 10px; FONT-FAMILY: 宋体
+}
+.bottom {
+	MARGIN-TOP: 15px; WIDTH: 135px; DISPLAY: block; HEIGHT: 37px; CLEAR: both
+}
+.weimenber {
+	BACKGROUND: #f3f3f3
+}
+.weimenber DL {
+	MARGIN: 0px auto; PADDING-LEFT: 440px; WIDTH: 500px; BACKGROUND: url(/img/weimob2.png) no-repeat left center; HEIGHT: 282px; PADDING-TOP: 50px
+}
+.weimenber DT {
+	WIDTH: 550px
+}
+DD {
+	WIDTH: 550px
+}
+.weimenber DT {
+	FONT-FAMILY: Microsoft YaHei; HEIGHT: 35px; COLOR: #ec7400; FONT-SIZE: 22px; FONT-WEIGHT: bold
+}
+.weimenber DD {
+	MARGIN-TOP: 15px; HEIGHT: 230px; FONT-SIZE: 14px
+}
+.weimenber DD P {
+	LINE-HEIGHT: 28px; MARGIN-TOP: 10px; FONT-FAMILY: 宋体
+}
+.weicustomer {
+	WIDTH: 100%; BACKGROUND: #fff
+}
+.weicustomer DL {
+	MARGIN: 0px auto; WIDTH: 960px; BACKGROUND: url(/img/weimob3.png) no-repeat right center; HEIGHT: 312px; PADDING-TOP: 45px
+}
+.weicustomer DT {
+	WIDTH: 480px
+}
+DD {
+	WIDTH: 480px
+}
+.weicustomer DT {
+	FONT-FAMILY: Microsoft YaHei; HEIGHT: 35px; COLOR: #ec7400; FONT-SIZE: 24px; FONT-WEIGHT: bold
+}
+.weicustomer DD {
+	MARGIN-TOP: 25px; HEIGHT: 230px; FONT-SIZE: 14px
+}
+.weicustomer DD P {
+	LINE-HEIGHT: 30px; MARGIN-TOP: 10px; TEXT-INDENT: 2em; FONT-FAMILY: 宋体; COLOR: #333
+}
+.weilsp {
+	BACKGROUND: #f3f3f3
+}
+.weilsp DL {
+	MARGIN: 0px auto; PADDING-LEFT: 400px; WIDTH: 620px; BACKGROUND: url(/img/weimob4.png) no-repeat left center; HEIGHT: 355px; PADDING-TOP: 50px
+}
+.weilsp DT {
+	WIDTH: 500px
+}
+DD {
+	WIDTH: 500px
+}
+.weilsp DT {
+	FONT-FAMILY: Microsoft YaHei; HEIGHT: 35px; COLOR: #ec7400; FONT-SIZE: 22px; FONT-WEIGHT: bold
+}
+.weilsp DD {
+	MARGIN-TOP: 20px; WIDTH: 600px; HEIGHT: 230px; FONT-SIZE: 14px
+}
+.weilsp DD P {
+	LINE-HEIGHT: 28px; MARGIN-TOP: 10px; FONT-FAMILY: 宋体; COLOR: #333
+}
+.weiactivity {
+	WIDTH: 100%
+}
+.weiactivity DL {
+	MARGIN: 0px auto; WIDTH: 960px; BACKGROUND: url(/img/weimob5.png) no-repeat right bottom; HEIGHT: 300px; PADDING-TOP: 45px
+}
+.weiactivity DT {
+	WIDTH: 700px; FONT-FAMILY: Microsoft YaHei; HEIGHT: 35px; COLOR: #ec7400; FONT-SIZE: 24px; FONT-WEIGHT: bold
+}
+.weiactivity DD {
+	MARGIN-TOP: 15px; WIDTH: 400px; HEIGHT: 230px; FONT-SIZE: 14px
+}
+.weiactivity DD P {
+	LINE-HEIGHT: 28px; MARGIN-TOP: 10px; FONT-FAMILY: 宋体; COLOR: #333
+}
+.weioffsite {
+	BACKGROUND: #f3f3f3
+}
+.weioffsite DL {
+	MARGIN: 0px auto; PADDING-LEFT: 500px; WIDTH: 500px; BACKGROUND: url(/img/weimob6.png) no-repeat left 40px; HEIGHT: 302px; PADDING-TOP: 50px
+}
+.weioffsite DT {
+	WIDTH: 500px
+}
+DD {
+	WIDTH: 500px
+}
+.weioffsite DT {
+	FONT-FAMILY: Microsoft YaHei; HEIGHT: 35px; COLOR: #ec7400; FONT-SIZE: 22px; FONT-WEIGHT: bold
+}
+.weioffsite DD {
+	MARGIN-TOP: 15px; HEIGHT: 230px; FONT-SIZE: 14px
+}
+.weioffsite DD P {
+	LINE-HEIGHT: 22px; MARGIN-TOP: 5px; FONT-FAMILY: 宋体; COLOR: #333
+}
+.weistatistical {
+	WIDTH: 100%
+}
+.weistatistical DL {
+	MARGIN: 0px auto; WIDTH: 960px; BACKGROUND: url(/img/weimob7.png) no-repeat right center; HEIGHT: 300px; PADDING-TOP: 45px
+}
+.weistatistical DT {
+	WIDTH: 700px; FONT-FAMILY: Microsoft YaHei; HEIGHT: 35px; COLOR: #ec7400; FONT-SIZE: 24px; FONT-WEIGHT: bold
+}
+.weistatistical DD {
+	MARGIN-TOP: 15px; WIDTH: 500px; HEIGHT: 230px; FONT-SIZE: 14px
+}
+.weistatistical DD P {
+	LINE-HEIGHT: 28px; MARGIN-TOP: 10px; FONT-FAMILY: 宋体; COLOR: #333
+}
+.weitj {
+	BACKGROUND: #f3f3f3
+}
+.weitj DL {
+	MARGIN: 0px auto; PADDING-LEFT: 460px; WIDTH: 520px; BACKGROUND: url(/img/weimob8.jpg) no-repeat left 40px; HEIGHT: 302px; PADDING-TOP: 50px
+}
+.weitj DT {
+	WIDTH: 500px
+}
+DD {
+	WIDTH: 500px
+}
+.weitj DT {
+	FONT-FAMILY: Microsoft YaHei; HEIGHT: 35px; COLOR: #ec7400; FONT-SIZE: 22px; FONT-WEIGHT: bold
+}
+.weitj DD {
+	MARGIN-TOP: 15px; HEIGHT: 230px; FONT-SIZE: 14px
+}
+.weitj DD P {
+	LINE-HEIGHT: 28px; MARGIN-TOP: 10px; FONT-FAMILY: 宋体; COLOR: #333
+}
+.weiCase {
+	WIDTH: 100%; BACKGROUND: url(/img/weimob_39.jpg) #f3f3f3 repeat-x
+}
+#case {
+	MARGIN: 0px auto; WIDTH: 1020px
+}
+#case .title_pic {
+	TEXT-ALIGN: left; LINE-HEIGHT: 35px; DISPLAY: block; FONT-FAMILY: Microsoft YaHei; HEIGHT: 35px; COLOR: #ec7400; FONT-SIZE: 24px; FONT-WEIGHT: bold; PADDING-TOP: 30px
+}
+.block_case {
+	PADDING-BOTTOM: 30px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 30px
+}
+.block_case UL {
+	TEXT-ALIGN: center; WIDTH: 100%; OVERFLOW: hidden
+}
+.block_case LI {
+	PADDING-BOTTOM: 10px; MARGIN: 0px 2px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: inline-block; VERTICAL-ALIGN: top; PADDING-TOP: 10px
+}
+.block_case H4 {
+	TEXT-ALIGN: center; FONT-SIZE: 14px; OVERFLOW: hidden
+}
+.block_case .logo {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; WIDTH: 76px; PADDING-RIGHT: 10px; HEIGHT: 76px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+.block_case .logo IMG {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; WIDTH: 66px; PADDING-RIGHT: 5px; HEIGHT: 66px; PADDING-TOP: 5px
+}
+.block_case .circle {
+	Z-INDEX: 10; POSITION: absolute; WIDTH: 76px; HEIGHT: 76px; MARGIN-LEFT: 10px; CURSOR: pointer
+}
+.block_case .circle IMG {
+	WIDTH: 76px; HEIGHT: 76px
+}
+.block_case .code {
+	Z-INDEX: 20; POSITION: absolute; MARGIN: 98px 0px 0px -9px; DISPLAY: none
+}
+.block_case .code IMG {
+	WIDTH: 115px
+}
+.block {
+	PADDING-BOTTOM: 20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; OVERFLOW: hidden; PADDING-TOP: 20px
+}
+.footer {
+	BACKGROUND: #fff; PADDING-TOP: 20px
+}
+.footer DL {
+	MARGIN: 0px auto; WIDTH: 1020px
+}
+.footer DT {
+	FONT-FAMILY: Microsoft YaHei; HEIGHT: 35px; COLOR: #ec7400; FONT-SIZE: 24px; FONT-WEIGHT: bold
+}
+.footer DD {
+	WIDTH: 1020px; MARGIN-BOTTOM: 20px; FONT-SIZE: 14px
+}
+.footer DD P {
+	LINE-HEIGHT: 32px; MARGIN: 10px 0px; DISPLAY: block; FONT-FAMILY: 宋体
+}
+.fbot {
+	MARGIN: 0px auto; WIDTH: 199px; DISPLAY: block; HEIGHT: 55px
+}
+.mk_z_footer {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 16px; LINE-HEIGHT: 20px; MARGIN-TOP: 20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #efefef; COLOR: #999; FONT-SIZE: 12px; BORDER-TOP: #000000 1px dashed; PADDING-TOP: 17px
+}
+.mk_z_footer_link A {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 2px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; COLOR: #666; PADDING-TOP: 0px
+}
+.mk_z_footer_link {
+	PADDING-BOTTOM: 13px; COLOR: #bbb
+}
+.mk_z_footer_link A:hover {
+	COLOR: #005588; TEXT-DECORATION: underline
+}
+#returnTop {
+	Z-INDEX: 999; POSITION: fixed; TEXT-INDENT: -999px; WIDTH: 45px; BOTTOM: 50px; BACKGROUND: url(/img/up-arrow.png) #999999 no-repeat center center; HEIGHT: 45px; OVERFLOW: hidden; RIGHT: 20px; BEHAVIOR: url(/img/PIE.htc); border-radius: 50px 50px 50px 50px; _position: absolute; _display: none; transition: bottom 0.9s; -webkit-transition: bottom 0.9s; -moz-transition: bottom 0.9s; -o-transition: bottom 0.9s; opacity: 0.5
+}
+#returnTop:hover {
+	CURSOR: pointer
+}
+#weimob-wx {
+	Z-INDEX: 99; POSITION: absolute; TEXT-ALIGN: center; PADDING-BOTTOM: 8px; BACKGROUND-COLOR: #eaeaea; PADDING-LEFT: 5px; WIDTH: 146px; PADDING-RIGHT: 5px; HEIGHT: 180px; COLOR: #717375; OVERFLOW: hidden; PADDING-TOP: 8px; LEFT: 5px; border-radius: 5px 5px 5px 5px
+}
+#weimob-wx DD {
+	WIDTH: 146px
+}
+#cooper {
+	MARGIN: 0px auto; WIDTH: 1020px; HEIGHT: 100px
+}
+#cooper DT {
+	LINE-HEIGHT: 40px; COLOR: #60a415; FONT-SIZE: 24px
+}
+#cooper DD A {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #fff 1px solid; MARGIN: 5px; WIDTH: 260px; DISPLAY: inline-block; FLOAT: left; HEIGHT: 60px; OVERFLOW: hidden; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #fff 1px solid
+}
+#cooper DD A:hover {
+	BORDER-BOTTOM: #f30 1px solid; BORDER-LEFT: #f30 1px solid; WIDTH: 260px; HEIGHT: 60px; OVERFLOW: hidden; BORDER-TOP: #f30 1px solid; BORDER-RIGHT: #f30 1px solid
+}
+#cooper DD {
+	
+}
+.Proxy-banner {
+	WIDTH: 100%; BACKGROUND: url(/img/rec.jpg) #445d93 no-repeat center center; HEIGHT: 416px; background-size: 1200px 416px
+}
+.Proxy {
+	MARGIN: 0px auto; WIDTH: 1000px
+}
+.Proxy H2 {
+	TEXT-ALIGN: center; LINE-HEIGHT: 40px; COLOR: #f60; FONT-SIZE: 22px
+}
+.Proxy H4 {
+	LINE-HEIGHT: 30px; COLOR: #000; FONT-SIZE: 14px
+}
+.Proxy P {
+	LINE-HEIGHT: 30px; TEXT-INDENT: 2em; MARGIN: 15px 0px
+}
+.proxy-bus {
+	POSITION: relative; MARGIN: 0px auto; WIDTH: 1000px; BACKGROUND: url(/img/proxy-bus.jpg) no-repeat 450px center
+}
+.proxy-bus H4 {
+	LINE-HEIGHT: 30px; MARGIN: 10px 0px; COLOR: #06c; FONT-SIZE: 18px
+}
+.proxy-bus P {
+	LINE-HEIGHT: 26px; FONT-SIZE: 14px
+}
+.pos {
+	POSITION: absolute; TOP: 351px; LEFT: 458px
+}

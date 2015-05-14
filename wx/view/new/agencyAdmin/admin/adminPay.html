@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="{$CSS}admin/bootstrap.min.css">
+<link rel="stylesheet" href="{$CSS}admin/admin.css">
+</head>
+<body>
+<h3>
+代理账户列表
+</h3>
+	<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>代理用户</th>
+					<th>代理级别</th>
+					<th>账户余额</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+			{loop $res as $r}			 
+			      <tr>
+						<td>{$r->un}</td>
+						<td>{translate_agency_level($r->isadmin)}
+						
+						</td>
+						
+						<td>
+					      {$r->balance} 
+						</td>
+					
+						<td>
+							
+							<a href="adminPayOk-{$r->id}.html">充值</a>
+							
+							</span>
+						</td>
+				  </tr>
+			{/loop}
+			</tbody>
+		</table>
+<div class="pagination">
+  <ul>
+{P}
+  </ul>
+  
+</div>
+</body>
+</html>

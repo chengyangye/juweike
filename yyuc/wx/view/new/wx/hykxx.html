@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="微信">
+<title>{$tit}</title>
+<link type="text/css" rel="stylesheet" href="/res/tg/style/buying.css" />
+<style type="text/css">
+
+</style>
+</head>
+
+<body><form action="" method="post" id="hykform">
+    <section class="Fh_head"></section>
+	<div class="Fh_hbot"></div>
+	<section class="F_home box-shadow marg20">
+		<h1>会员信息</h1>
+		<!-- 商品描述 -->
+		
+		<div class="fhdtl_p">
+			<p>
+				姓名：{$hykrecord->text('un')}
+			</p>
+			<p>
+				电话：{$hykrecord->text('tel')}
+			</p>
+			<p class="rqxz">
+				生日：{$hykrecord->mdate('sr')}
+			</p>
+			<p>
+				地址：{$hykrecord->text('dz')}
+			</p>
+		</div>
+		<div style="margin-bottom:80px;text-align: center;margin-top:50px;">
+            <p class="page-url">
+                <a href="/" target="_blank" class="page-url-link"></a>
+            </p>
+		</div>
+		<div style="text-align: center;">
+		<button type="submit" class="btn">保存信息</button>
+		</div>
+		
+	</section>
+	</form>
+{T /_wf}
+</body>
+</html>

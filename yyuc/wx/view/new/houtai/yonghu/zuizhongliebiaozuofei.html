@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系统首页</title>
+<link rel="stylesheet" href="{$CSS}ht/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="{$CSS}ht/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="{$CSS}ht/invalid.css" type="text/css" media="screen" />	
+</head>
+<BODY>
+<div class="content-box role">
+	<div class="content-box-header">
+		<h3>最终用户管理</h3>
+		<div class="clear"></div>
+	</div>
+	<div class="content-box-content">
+		<div class="default-tab" >
+            <!-- 
+			<div class="top_dep">
+                <a href="xinzengyuangong.html" class="add_dep">新增用户 </a>
+			</div>
+			 -->
+            
+			
+			<div class="searchgrid">
+			<form method="get" action="zuizhongliebiaozuofei.html" name="Form" id="Form1">
+			<label>用户名</label>{$tj->text('un')}
+			<label>用户级别</label>
+			{$tj->select($user_level,'level_id')}
+			<input type="submit" class="button" value="查询" />		
+			<button type="button" class="button"  onclick="tostart('a',this)" id="del">启用</button>
+			<button type="button" class="button"  onclick="todel('a',this)" id="del">删除</button>
+			</form>
+
+		</div>
+		<div class="tab-content default-tab" >
+			<table>
+				<thead>
+					<tr>
+			<th style="padding-left:5px;border-left:1px solid #C1DAD7">序号</th><th>用户名</th><th>开户时间</th><th>用户级别</th><th>到期时间</th><th>手机</th><th>所属员工(代理)</th><th>网络销售</th><th>续费级别</th><th>到期时间</th><th>状态</th><th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+				{loop $res as $r}
+					<TR>
+					<td style='padding-left:5px;'>
+					<input type='checkbox' name='checkbox' value='{$r->id}' />{$r->id}
+					</td>
+					<td>
+					<a href="xinzengzuizhong-{$r->id}.html">{$r->un}</a>
+					</td>
+					<td>
+					{date('Y-m-d',strtotime($r->rtime))}
+					</td>
+					<td>
+					{$user_level[$r->level_id]}
+					</td>
+					<td>
+					{if trim($r->mendtime)!=''}
+					{date('Y-m-d',strtotime($r->mendtime))}
+					{/if}
+					</td>					
+					<td>
+					{$r->telephone}
+					</td>
+					<td>
+					{$agency_arr[$r->agid]}
+					</td>
+					<td>
+					{$agency_arr[$r->ygid]}
+					</td>				
+					<td>
+					{$user_level[$r->next_level_id]}
+					</td>
+					<td>
+					{if trim($r->next_mendtime)!=''}
+					{date('Y-m-d',strtotime($r->next_mendtime))}
+					{/if}
+					</td>
+					<td>
+					
+					<span style="color:red;">作废</span>
+					
+					</td>
+					<td>
+					<a href="{$loginurl}/index.html?uid={$r->id}&upwd={md5($r->pwd)}" target="_blank">登录</a>&nbsp;|&nbsp;
+					<a href="javascript:tochongzhi({$r->id});">充值</a>&nbsp;|&nbsp;
+					<a href="xinzengzuizhong-{$r->id}.html">编辑【查看】</a>
+					</td>
+					</TR>
+				{/loop}
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="13">
+							<div class="pagination">
+								<a>共有 <B>{$p->totalnum}条/{$p->totalpage}页</B> </a>
+								{P houtai}
+							</div>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+			
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+</BODY>
+</html>
+<script type="text/javascript">
+function tostart(id,o){
+	if(id=='a'){
+		var ids = [];
+		$('td').find('input[type="checkbox"]:checked').each(function(){
+			ids[ids.length] = $(this).val();
+		});
+		if(ids.length == 0){
+			tusi('请选择！');
+			return false;
+		}
+		if(confirm('确定启用这些用户吗？')){
+			ajax('zuizhongcaozuo-start.html',{ id:ids.join(',')},function(data){
+				if(data == 'ok'){
+					tusi('操作成功');
+					setTimeout(function(){
+						goto(location.href);
+					},500);
+				}
+			});	
+		}
+	}
+}
+function todel(id,o){
+	if(id=='a'){
+		var ids = [];
+		$('td').find('input[type="checkbox"]:checked').each(function(){
+			ids[ids.length] = $(this).val();
+		});
+		if(ids.length == 0){
+			tusi('请选择！');
+			return false;
+		}
+		if(confirm('确定彻底删除这些用户吗？')){
+			ajax('zuizhongcaozuo-reldel.html',{ id:ids.join(',')},function(data){
+				if(data == 'ok'){
+					tusi('操作成功');
+					setTimeout(function(){
+						goto(location.href);
+					},500);
+				}
+			});	
+		}
+	}
+}
+function tochongzhi(id){
+	pophtml('<iframe id="jd_iframe" src="zuizhongchongzhi-'+id+'.html" scrolling="auto" frameborder="0" width="370" height="185"></iframe>',410,265,null,0,1);
+}
+</script>

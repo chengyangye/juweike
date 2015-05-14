@@ -1,0 +1,110 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>一战到底</title>
+<link type="text/css" rel="stylesheet" href="/res/yzdd/style/war.css" />
+</head>
+<body style="background:#feae05;">
+<div class="wrapper">
+	<img class="bg" src="/res/yzdd/images/bg_exam.jpg">
+	<div class="top">
+		<div class="time"><span id="jsf">19</span>:<span id="jsm">99</span></div>
+		<div class="index">第<strong>{$tms+1}</strong>题</div>
+		<div class="score">积分:<span style="color: red;font-size: 16px;line-height: 30px;">{$mqjf}</span></div>
+	</div>
+	<div class="question">
+		<div class="title">{$m->tm}</div>
+		<div class="options">
+		{if trim($m->d1) !=''}
+		<div class="option" data-value="1">
+				<img class="oimg" src="/res/yzdd/images/option_bg.png">
+				<img class="oimg-sel" src="/res/yzdd/images/option_sel_bg.png">
+				<div class="text">
+					<div class="i">A</div>
+					<div class="otext">{$m->d1}</div>
+				</div>
+		</div>
+		{/if}
+		{if trim($m->d2) !=''}
+		<div class="option" data-value="2">
+				<img class="oimg" src="/res/yzdd/images/option_bg.png">
+				<img class="oimg-sel" src="/res/yzdd/images/option_sel_bg.png">
+				<div class="text">
+					<div class="i">B</div>
+					<div class="otext">{$m->d2}</div>
+				</div>
+		</div>
+		{/if}
+		{if trim($m->d3) !=''}
+		<div class="option" data-value="3">
+				<img class="oimg" src="/res/yzdd/images/option_bg.png">
+				<img class="oimg-sel" src="/res/yzdd/images/option_sel_bg.png">
+				<div class="text">
+					<div class="i">C</div>
+					<div class="otext">{$m->d3}</div>
+				</div>
+		</div>
+		{/if}
+		{if trim($m->d4) !=''}
+		<div class="option" data-value="4">
+				<img class="oimg" src="/res/yzdd/images/option_bg.png">
+				<img class="oimg-sel" src="/res/yzdd/images/option_sel_bg.png">
+				<div class="text">
+					<div class="i">D</div>
+					<div class="otext">{$m->d4}</div>
+				</div>
+		</div>
+		{/if}
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	$('.option').click(function(){
+		clearInterval(window.djs);
+		checkans($(this).attr('data-value'));
+	});
+	window.djs = setInterval(function(){
+		var jsm = parseInt($('#jsm').text());
+		var jsf = parseInt($('#jsf').text());
+		if(jsm>0){
+			jsm-=1;
+			$('#jsm').text(jsm+'');
+		}else if(jsf>0){
+			jsf-=1;
+			$('#jsm').text('99');
+			$('#jsf').text(jsf+'');
+		}else{
+			checkans('0');
+			clearInterval(window.djs);
+		}
+		
+	},10);
+	
+});
+function checkans(ans){
+	ajax('yzddkzcheck-{$yzrec->id}.html',{ zqda:ans},function(m){
+		if(m=='ok'){
+			tusi('恭喜回答正确');
+		}else if(m=='no'){
+			tusi('回答错误');
+		}else if(m=='out'){
+			tusi('答题超时');
+		}
+		setTimeout(function(){
+			location.href='yzddkz-{$yid}.html';
+		},888);
+		
+	});
+}
+</script>
+</body>
+</html>
+
+
+

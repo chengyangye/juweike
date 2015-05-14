@@ -1,0 +1,526 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<!-- Apple devices fullscreen -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<!-- Apple devices fullscreen -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<base target="mainFrame" />
+<link rel="stylesheet" type="text/css" href="<?php echo $CSS; ?>wm/index.css" media="all" />
+<link rel="stylesheet" type="text/css" href="<?php echo $CSS; ?>wm/bootstrap_min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="<?php echo $CSS; ?>wm/bootstrap_responsive_min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="<?php echo $CSS; ?>wm/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="<?php echo $CSS; ?>wm/themes.css" media="all" />
+<title>聚微客（Weimob）—国内领先的微信公众服务平台</title><script type="text/javascript">var yyuc_jspath = "/@system/";</script><script type="text/javascript" src="/@system/js/jquery.js"></script><script type="text/javascript" src="/@system/js/yyucadapter.js"></script>
+<link rel="shortcut icon" href="/favicon.ico" />
+</head>
+<body>
+	<div id="navigation">
+        <div class="container-fluid">
+            <div>
+                <a href="/wechat/index/aid/19516" target="_self" id="brand"></a>
+                <a href="javascript:;" target="_self" class="toggle-nav" rel="tooltip" data-placement="bottom" title="Toggle navigation"><i class="icon-reorder"></i></a>
+            </div>
+            <ul class='main-nav'>
+                <li class='active'>
+                    <a href="/wechat/index/aid/19516" target="_self">
+                        <span>管理平台</span>
+                    </a>
+                </li>
+				<li><a href="/wechat/main" target="_self">公众帐号管理</a></li>
+                <li  style="display:none;"><a href="/webabout/packageintr">套餐介绍</a></li>
+                <li><a href="/webabout/features">功能介绍</a> </li>
+                <li><a href="/webabout/userguide">使用指南</a></li>
+
+                <li style="display:none;">
+                    <a href="javascript:void(0)" data-toggle="dropdown" class='dropdown-toggle' data-hover="dropdown">
+                        <span>个性化服务</span>
+                        <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="/webabout/trusteeship">运营托管</a></li>
+                        <li><a href="/webabout/customdev">定制开发</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="javascript:void(0)" data-toggle="dropdown" class='dropdown-toggle' data-hover="dropdown">
+                    <span>帮助中心</span>
+                    <span class="caret"></span>
+                </a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="http://wpa.qq.com/msgrd?v=3&uin=4006305400&site=qq&menu=yes" target="_blank">在线客服</a></li>
+                        <li><a href="/webabout/about">关于我们</a></li>
+                        <li><a href="/webabout/help">常见问题</a></li>
+
+
+
+                    </ul>
+
+                </li>
+
+
+
+            </ul>
+
+            <div class="user">
+                <ul class="icon-nav">
+                    <li class='dropdown'>
+                        <a href="#" class='dropdown-toggle' data-toggle="dropdown" title="消息" style="display:none;"><i class="icon-envelope"></i><span class="label label-lightred">4</span></a>
+                    </li>
+                    <li class="dropdown sett" style="display:none;">
+                        <a href="#" class='dropdown-toggle' data-toggle="dropdown" title="系统设置"><i class="icon-cog"></i></a>
+                    </li>
+                    <li class='dropdown colo'>
+                        <a href="#" class='dropdown-toggle' data-toggle="dropdown" title="选择颜色"><i class="icon-tint"></i></a>
+                        <ul class="dropdown-menu pull-right theme-colors">
+                            <li class="subtitle">Predefined colors
+                            </li>
+                            <li>
+                                <span class='red'></span>
+                                <span class='orange'></span>
+                                <span class='green'></span>
+                                <span class="brown"></span>
+                                <span class="blue"></span>
+                                <span class='lime'></span>
+                                <span class="teal"></span>
+                                <span class="purple"></span>
+                                <span class="pink"></span>
+                                <span class="magenta"></span>
+                                <span class="grey"></span>
+                                <span class="darkblue"></span>
+                                <span class="lightred"></span>
+                                <span class="lightgrey"></span>
+                                <span class="satblue"></span>
+                                <span class="satgreen"></span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <a href="#" class='dropdown-toggle' data-toggle="dropdown" style="width:127px;"><nobr>dddddddd                        <img src="http://img.weimob.com/static/ff/b5/a9/image/20131118/20131118112439_78075.png" style="width: 27px; height: 27px" alt=""><span class="caret"></span></nobr></a>
+                    <ul class="dropdown-menu pull-right">
+                        <li>
+                            <a  href="/wechat/main" target="_self">管理帐号</a>
+                        </li>
+                        <li>
+                            <a href="/login/logout" target="_self">退出</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="content">
+        <div id="left">
+			<div class="subnav">
+                <div class="subnav-title">
+                    <a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>我的聚微客</span></a>
+                </div>
+                <ul class="subnav-menu" style="display: block">
+                    <li class="active">
+                        <a href="/wechat/home/aid/19516">账户信息</a>
+                    </li>
+                    <li>
+                        <a href="/wechat/stat/aid/19516">运营图表</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="subnav">
+                <div class="subnav-title">
+                    <a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>素材库</span></a>
+                </div>
+                <ul class="subnav-menu">
+                    <li>
+                        <a href="/wechat/replyset/aid/19516">默认设置</a>
+                    </li>
+                    <li>
+                        <a href="/wechat/replysubscribe/aid/19516">关注时回复</a>
+                    </li>
+                    <li>
+                        <a href="/wechat/replytext/aid/19516">文本回复</a>
+                    </li>
+                    <li>
+                        <a href="/wechat/replynews/aid/19516">图文回复</a>
+                    </li>
+                    <li style="display:none;">
+                        <a href="/wechat/replymusic/aid/19516">语音回复</a>
+                    </li>
+                    <li>
+                        <a href="/wechat/replylbs/aid/19516">LBS回复</a>
+                    </li>
+                </ul>
+            </div>
+			<div class="subnav">
+                <div class="subnav-title">
+                    <a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>自定义菜单</span></a>
+                </div>
+                <ul class="subnav-menu">
+                    <li>
+                        <a href="/wechat/menuset/aid/19516">授权设置</a>
+                    </li>
+                    <li>
+                        <a href="/wechat/menu/aid/19516">菜单设置</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="subnav">
+                <div class="subnav-title">
+                    <a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微活动</span></a>
+                </div>
+                <ul class="subnav-menu">
+                    <li>
+                        <a href="/Weactivity/CouponsList/aid/19516">优惠券</a>
+                    </li>
+                    <li>
+                        <a href="/Weactivity/ScratchCard/aid/19516">刮刮卡</a>
+                    </li>
+                    <li>
+                        <a href="/Weactivity/Bigwheel/aid/19516">大转盘</a>
+                    </li>
+                    <li>
+                        <a href="/Weactivity/Vote/aid/19516">微投票</a>
+                    </li>
+                    <li>
+                        <a href="/Exam/Examlist/aid/19516">一战到底</a>
+                    </li>
+                </ul>
+            </div>
+			<div class="subnav">
+                <div class="subnav-title">
+                    <a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微服务</span></a>
+                </div>
+                <ul class="subnav-menu">
+                    <li>
+                        <a href="/wechat/app/aid/19516">应用管理</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="subnav">
+                <div class="subnav-title">
+                    <a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微信会员卡</span></a>
+                </div>
+				<ul class="subnav-menu">
+					<li>
+						<a href="/membercard/setbusiness/aid/19516">商家设置</a>
+					</li>
+					<li>
+						<a href="/membercard/index/aid/19516">会员卡设置</a>
+					</li>
+					<li>
+						<a href="/membercard/GetMembers/aid/19516">会员管理</a>
+					</li>
+					<li>
+						<a href="/membercard/MemberChargeList/aid/19516">充值记录</a>
+					</li>
+					<li>
+						<a href="/shopcard/score/aid/19516">积分策略</a>
+					</li>
+					<li>
+						<a href="/shopcard/announce/aid/19516">通知管理</a>
+					</li>
+					<li>
+						<a href="/membercard/Getprivileges/aid/19516">特权管理</a>
+					</li>
+					<li>
+						<a href="/membercard/MemberCoupon/aid/19516">优惠券管理</a>
+					</li>
+					<li>
+						<a href="/membercard/MemberGift/aid/19516">礼品券管理</a>
+					</li>
+					<li>
+						<a href="/membercard/Statistics/aid/19516">会员统计</a>
+					</li>
+					<li>
+						<a href="/membercard/ConsumptionStatics/aid/19516">消费统计</a>
+					</li>
+					<li>
+						<a href="/membercard/GetStorelist/aid/19516">门店管理</a>
+					</li>
+				</ul>
+        	</div>
+			<div class="subnav">
+                <div class="subnav-title">
+                    <a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微官网</span></a>
+                </div>
+                <ul class="subnav-menu">
+                    <li>
+                        <a href="/microsite/set/aid/19516">微官网设置</a>
+                    </li>
+                    <li>
+                        <a href="/microsite/slide/aid/19516">首页幻灯片</a>
+                    </li>
+                    <li>
+                        <a href="/microsite/class/aid/19516">分类管理</a>
+                    </li>
+                    <li>
+                        <a href="/microsite/template/aid/19516">模板管理</a>
+                    </li>
+                    <li>
+                        <a href="/microsite/plugmenu/aid/19516">快捷与版权</a>
+                    </li>
+					<li>
+						<a href="/microsite/plugin/aid/19516">实用工具</a>
+					</li>
+                </ul>
+            </div>
+            <div class="subnav">
+				<div class="subnav-title">
+					<a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微留言</span></a>
+				</div>
+				<ul class="subnav-menu">
+					<li>
+						<a href="/message/MessageSet/aid/19516">留言板设置</a>
+					</li>
+					<li>
+						<a href="/message/List/aid/19516">留言列表</a>
+					</li>
+					<li>
+						<a href="/message/BackList/aid/19516">黑名单列表</a>
+					</li>
+				</ul>
+            </div>
+            <div class="subnav">
+				<div class="subnav-title">
+					<a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微相册</span></a>
+				</div>
+				<ul class="subnav-menu">
+					<li>
+						<a href="/Wealbums/AlbumsSet/aid/19516">相册设置</a>
+					</li>
+					<li>
+						<a href="/Wealbums/AlbumsList/aid/19516">相册管理</a>
+					</li>
+				</ul>
+            </div>
+            <div class="subnav">
+                <div class="subnav-title">
+                    <a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微预约</span></a>
+                </div>
+                <ul class="subnav-menu">
+					<li>
+                        <a href="/Wereserve/ReserveInfo/aid/19516">预约管理</a>
+                    </li>
+                    <li>
+                        <a href="/Wereserve/Microreserve/aid/19516">预约统计</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="subnav">
+                <div class="subnav-title">
+                    <a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微酒店</span></a>
+                </div>
+                <ul class="subnav-menu">
+					<li>
+                        <a href="/wehotel/HotelList/aid/19516">酒店管理</a>
+					</li>
+                </ul>
+            </div>
+			<div class="subnav">
+				<div class="subnav-title">
+					<a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微调研</span></a>
+				</div>
+				<ul class="subnav-menu">
+					<li>
+						<a href="/Survey/List/aid/19516">调研管理</a>
+					</li>
+				</ul>
+			</div>
+			<div class="subnav">
+				<div class="subnav-title">
+					<a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微喜帖</span></a>
+				</div>
+				<ul class="subnav-menu">
+					<li>
+						<a href="/card/CardManager/aid/19516">功能管理</a>
+					</li>
+				</ul>
+			</div>
+			<div class="subnav">
+				<div class="subnav-title">
+					<a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微汽车</span></a>
+				</div>
+				<ul class="subnav-menu">
+					<li>
+						<a href="/wecar/CarBrandList/aid/19516">品牌管理</a>
+					</li>
+					<li>
+						<a href="/wecar/CarSeriesList/aid/19516">车系管理</a>
+					</li>
+					<li>
+						<a href="/wecar/CarModelList/aid/19516">车型管理</a>
+					</li>
+					<li>
+						<a href="/wecar/CarSellList/aid/19516">销售管理</a>
+					</li>
+					<li>
+						<a href="/wecar/CarreserveInfo/aid/19516">预约保养</a>
+					</li>
+					<li>
+						<a href="/wecar/CarreserveInfo/aid/19516/tp/2">预约试驾</a>
+					</li>
+					<li>
+						<a href="/wecar/CarCase/aid/19516">车主关怀</a>
+					</li>
+					<li>
+						<a href="/wecar/CarTool/aid/19516">实用工具</a>
+					</li>
+				</ul>
+			</div>
+			<div class="subnav">
+                <div class="subnav-title">
+                    <a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微医疗</span></a>
+                </div>
+                <ul class="subnav-menu">
+                	<li>
+                        <a href="/Wemedical/microReg/aid/19516">挂号设置</a>
+                    </li>
+                     <li>
+                        <a href="/Wemedical/InfoCollection/aid/19516">内容设置</a>
+                    </li>
+			        <li>
+                        <a href="/Wemedical/ViewReservation/aid/19516">预约查询</a>
+                    </li>
+                    <li>
+                        <a href="/Wemedical/Micromdical/aid/19516">预约统计</a>
+                    </li>
+                </ul>
+            </div>
+
+			<div class="subnav">
+				<div class="subnav-title">
+					<a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微房产</span></a>
+				</div>
+				<ul class="subnav-menu">
+					<li>
+						<a href="/Estate/Set/aid/19516">楼盘简介</a>
+					</li>
+					<li>
+						<a href="/Estate/CategoryIndex/aid/19516">子楼盘</a>
+					</li>
+					<li>
+						<a href="/Estate/HouseIndex/aid/19516">楼盘户型</a>
+					</li>
+					<li>
+						<a href="/Estate/AlbumIndex/aid/19516">楼盘相册</a>
+					</li>
+					<li>
+						<a href="/Estate/ImpressIndex/aid/19516">印象</a>
+					</li>
+					<li>
+						<a href="/Estate/ExpertIndex/aid/19516">点评</a>
+					</li>
+					<li style="display:none;">
+						<a href="/Estate//aid/19516">楼盘实景</a>
+					</li>
+				</ul>
+			</div>
+            <div class="subnav">
+                <div class="subnav-title">
+                    <a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微生活</span></a>
+                </div>
+                <ul class="subnav-menu">
+                    <li>
+                        <a href="/Market/classList/aid/19516">商户管理</a>
+                    </li>
+                    <li>
+                        <a href="/Market/memberList/aid/19516">会员管理</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="subnav">
+                <div class="subnav-title">
+                    <a href="javascript:alert('没有权限');" class='toggle-subnav'><i class="icon-angle-right"></i><span>微推送</span></a>
+                </div>
+                <ul class="subnav-menu">
+                </ul>
+            </div>
+            <!--
+			<div class="subnav">
+				<div class="subnav-title">
+					<a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微商城</span></a>
+				</div>
+				<ul class="subnav-menu">
+					<li>
+						<a href="http://19516.vshop.weimob.com/_admin" target="_blank">我的微商城</a>
+					</li>
+				</ul>
+			</div>
+                        -->
+            <div class="subnav">
+                <div class="subnav-title">
+                    <a href="javascript:alert('没有权限');" class='toggle-subnav'><i class="icon-angle-right"></i><span>微团购</span></a>
+                </div>
+                <ul class="subnav-menu">
+                </ul>
+            </div>
+            <div class="subnav">
+
+
+                <div class="subnav-title">
+                    <a href="javascript:void(0);" class='toggle-subnav'><i class="icon-angle-right"></i><span>微餐饮</span></a>
+                </div>
+                <ul class="subnav-menu">
+                    <li>
+                        <a href="/spfood/outlet/aid/19516">门店管理</a>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="subnav">
+                <div class="subnav-title">
+                    <a href="javascript:alert('没有权限');" class='toggle-subnav'><i class="icon-angle-right"></i><span>微旅游</span></a>
+                </div>
+                <ul class="subnav-menu">
+                </ul>
+            </div>
+            <div class="subnav bottom">
+                <div class="subnav-title">
+                    <a href="javascript:alert('没有权限');" class='toggle-subnav'><i class="icon-angle-right"></i><span></span></a>
+                </div>
+                <ul class="subnav-menu">
+                </ul>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="main">
+
+                <iframe frameborder="0" id="mainFrame" name="mainFrame" src="/wechat/home/aid/19516" style="background: url('http://wx.zongyangtech.cn/static/wxgjcn/weiqin/loading.gif') center no-repeat"></iframe>
+
+            </div>
+        </div>
+
+    </div>
+    
+    
+    <script type="text/javascript">
+    $('[data-toggle="dropdown"]').each(function(){
+    	$(this).parent().hover(function(){
+    		$(this).find('ul').show();
+    	},function(){
+    		$(this).find('ul').hide();
+    	});
+    });
+    $('div.subnav').click(function(){    	
+    	if($(this).find('ul').is(':hidden')){
+    		$('div.subnav').find('ul').slideUp();
+    		$(this).find('ul').stop().slideDown();
+    	}else{
+    		$('div.subnav').find('ul').slideUp();
+    	}
+    });
+    $('.toggle-nav').click(function(){
+    	$('#left').toggle();
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+<link rel="stylesheet" href="css/admin.css" media="screen">
+<link rel="stylesheet" href="css/tipsy.css" media="screen">
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+
+<title>套餐资费</title>
+<style>
+.table{
+	margin-top: 20px;
+	font-weight: bold;
+	width: 1005px;
+}
+.table th,.table td{
+	text-align: center;
+	vertical-align: middle;
+	font-size: 14px;
+}
+.table thead th{
+	color: #FFF;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 35px;
+	background-color: #808b8d;
+}
+.table th img{
+	position: relative;
+	top: -2px;
+	right: 7px;
+}
+.table-bordered th, .table-bordered td {
+	border-left: 2px solid #dededd;
+	line-height: 25px;
+}
+.table tbody tr.tr-header td{
+	background-color: #cfd6d6;
+	color : #da251d;
+	font-weight: bold;
+	border-top: 0px;
+}
+.table tbody tr td.td0{
+	background-color: #dededd;
+}
+.table tbody tr td.td1{
+	border-left: 0px;
+}
+.table tbody td{
+	background-color: #ecf0f1;
+}
+.table tbody tr.tr-odd td{
+	background-color: #bec3c7;
+}
+a.buy{
+	line-height: 25px;
+	padding: 6px 15px;
+	background-color: #da251c;
+	color: #FFF;
+	font-size: 12px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+a.buy:hover{
+	text-decoration: none;
+}
+.count-tip{
+	font-size: 18px;
+	margin-left: 5px;
+}
+.desc-cont{
+	height: 120px;
+}
+.desc-cont span{
+	margin: 0 12px;
+}
+</style>
+<script type="text/javascript">
+jQuery.cookie=function(e,b,a){if(arguments.length>1&&String(b)!=="[object Object]"){a=jQuery.extend({},a);if(b===null||b===void 0)a.expires=-1;if(typeof a.expires==="number"){var d=a.expires,c=a.expires=new Date;c.setDate(c.getDate()+d)}b=String(b);return document.cookie=[encodeURIComponent(e),"=",a.raw?b:encodeURIComponent(b),a.expires?"; expires="+a.expires.toUTCString():"",a.path?"; path="+a.path:"",a.domain?"; domain="+a.domain:"",a.secure?"; secure":""].join("")}a=b||{};c=a.raw?function(a){return a}:decodeURIComponent;return(d=RegExp("(?:^|; )"+encodeURIComponent(e)+"=([^;]*)").exec(document.cookie))?c(d[1]):null};
+</script>
+
+</head>
+<body>
+<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th colspan="2"><img src="img/zhinengfuwu.png">智能服务</th>
+				<th><img src="img/yonghu.png">普通用户</th>
+				<th><img src="img/putonghuiyuan.png">普通会员</th>
+				<th><img src="img/baijinhuiyuan.png">白金会员</th>
+				<th><img src="img/baijinhuiyuan.png">钻石会员</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr-header">
+				<td colspan="2">价格<br>（价格为非含税价格）</td>
+				<td>免费</td>
+				<td>77元/月&nbsp;
+				</td>
+				<td>170元/月&nbsp;
+				</td>
+				<td>370元/月&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="6" class="td0">基础<br>服务</td>
+				<td class="td1">首次关注</td>
+				<td>自动推送内容：文字、图文</td>
+				<td>自动推送内容：文字、图文、活动</td>
+				<td>自动推送内容：文字、图文、活动、微官网、业务模块</td>
+				<td>自动推送内容：文字、图文、活动、微官网、业务模块</td>
+			</tr>
+			<tr class="tr-odd">
+				<td class="td1">自定义菜单</td>
+				<td>-</td>
+				<td>可触发内容：文字、图文、活动</td>
+				<td>可触发内容：文字、图文、活动、微官网、业务模块</td>
+				<td>可触发内容：文字、图文、活动、微官网、业务模块</td>
+			</tr>
+			<tr>
+				<td class="td1">素材管理</td>
+				<td>素材上限：500条</td>
+				<td>素材上限：1000条</td>
+				<td>素材上限：3000条</td>
+				<td>素材上限：不限</td>
+			</tr>
+			<tr class="tr-odd">
+				<td class="td1">关键词回复</td>
+				<td>关键字上限：500个</td>
+				<td>关键字上限：3000个</td>
+				<td>关键字上限：不限</td>
+				<td>关键字上限：不限</td>
+			</tr>
+			<tr>
+				<td class="td1">智能客服</td>
+				<td>-</td>
+				<td>客服小宝</td>
+				<td>客服小宝<br>可调教系统</td>
+				<td>客服小宝<br>可调教系统</td>
+			</tr>
+			<tr class="tr-odd">
+				<td class="td1">LBS</td>
+				<td>-</td>
+				<td><img src="img/tick.png"></td>
+				<td><img src="img/tick.png"></td>
+				<td><img src="img/tick.png"></td>
+			</tr>
+			
+			<tr>
+				<td rowspan="6" class="td0" style="background-color: #c2c1c1;">营销<br>推广</td>
+				<td class="td1">优惠券</td>
+				<td>-</td>
+				<td>-</td>
+				<td>数量上限：20000张</td>
+				<td>不限数量</td>
+			</tr>
+			<tr class="tr-odd">
+				<td class="td1">刮刮卡</td>
+				<td>-</td>
+				<td>奖项设置3项<br>动态概率设置<br>商家兑换密码设置</td>
+				<td>奖项设置3项<br>动态概率设置<br>商家兑换密码设置</td>
+				<td>奖项设置3项<br>动态概率设置<br>商家兑换密码设置</td>
+			</tr>
+			<tr>
+				<td class="td1">幸运大转盘</td>
+				<td>-</td>
+				<td>-</td>
+				<td>动态概率设置<br>商家兑换密码设置</td>
+				<td>动态概率设置<br>商家兑换密码设置</td>
+			</tr>
+			<tr class="tr-odd">
+				<td class="td1">幸运机</td>
+				<td>-</td>
+				<td>-</td>
+				<td><img src="img/tick.png"></td>
+				<td><img src="img/tick.png"></td>
+			</tr>
+			<tr>
+				<td class="td1">一战到底</td>
+				<td>-</td>
+				<td>-</td>
+				<td>自定义商家题目 50题/人<br>战前阅读设置</td>
+				<td>自定义商家题目不限制<br>战前阅读设置</td>
+			</tr>
+			<tr class="tr-odd">
+				<td class="td1">微吧</td>
+				<td>-</td>
+				<td>-</td>
+				<td><img src="img/tick.png"></td>
+				<td><img src="img/tick.png"></td>
+			</tr>
+			
+			<tr>
+				<td rowspan="7" class="td0">业务<br>模块</td>
+				<td class="td1">微官网</td>
+				<td>-</td>
+				<td><img src="img/tick.png"></td>
+				<td><img src="img/tick.png"></td>
+				<td><img src="img/tick.png"></td>
+			</tr>
+			<tr class="tr-odd">
+				<td class="td1">微会员卡</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td><img src="img/tick.png"></td>
+			</tr>
+			<tr>
+				<td class="td1">微团购</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td><img src="img/tick.png"></td>
+			</tr>
+			<tr class="tr-odd">
+				<td class="td1">微调研</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td><img src="img/tick.png"></td>
+			</tr>
+			<tr>
+				<td class="td1">微投票</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td><img src="img/tick.png"></td>
+			</tr>
+			<tr class="tr-odd">
+				<td class="td1">微门店</td>
+				<td>-</td>
+				<td>-</td>
+				<td>门店数量：10家</td>
+				<td>门店数量：无限</td>
+			</tr>
+			<tr>
+				<td class="td1">在线预订</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td><img src="img/tick.png"></td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	
+	
+<script type="text/javascript">
+	$(function(){
+		window.setInterval(function(){
+			$(".notice").slideUp();
+		},20000);
+		$("a.count-tip").tipsy({delayIn:300,delayOut:300,gravity: "s"});
+	});
+	
+</script>
+
+</body>
+</html>

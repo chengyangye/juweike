@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>网页右侧QQ悬浮滚动在线客服 - 站长素材</title>
+<link rel="stylesheet" href="style/cs_q.css" type="text/css"/>
+<script type="text/javascript" src="js/cs_q.js"></script>
+<div id= 'qq_icon'></div>
+<div id='cs_online'>
+	<ul class='qq_context'>
+		<li>
+			<span class='span_t'>在线客服01：</span>
+			<span class='qq_num'></span>
+		</li>
+		<li>
+			<span class='span_t'>在线客服02：</span>
+			<span class='qq_num'></span>
+		</li>
+		<li>
+			<span class='span_t'>在线客服03：</span>
+			<span class='qq_num'></span>
+		</li>
+		<li>
+			<span class='span_t'>在线客服04：</span>
+			<span class='qq_num'></span>
+		</li>
+		<li>
+			<span class='span_t'>在线客服05：</span>
+			<span class='qq_num'></span>
+		</li>
+
+	</div>
+</div>
+<script type="text/javascript">
+	myEvent(window,'load',function(){
+		dealy('qq_icon',2);						//2秒后显示QQ图标，默认为2秒，可自行设置
+		settop('qq_icon','cs_online',150);		//设置在线客服的高度，默认150，可自行设置
+		var span_q = getbyClass('cs_online','qq_num');
+		setqq(span_q,['800020304','800020304','800020304','800020304','800020304']);		//填写5个QQ号码
+		click_fn('qq_icon','cs_online');
+	});
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>
