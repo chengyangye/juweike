@@ -1,1 +1,0 @@
-var DTPath = "http://www.weixinbs.com/";var SKPath = "http://www.weixinbs.com/skin/weixin/";var MEPath = "http://www.weixinbs.com/member/";var EXPath = "http://www.weixinbs.com/extend/";var CKDomain = "";var CKPath = "/";var CKPrex = "czx_";
