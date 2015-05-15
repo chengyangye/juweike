@@ -44,7 +44,7 @@
 <?php }else{ ?>
 <a class="btn" href="/admin/baseService/customPubImpower-<?php echo $u->id; ?>.html"><i class="icon-plus"></i>添加公众帐号</a>
 <?php } ?>
-<a href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $_SERVER['CHAT_JS']; ?>&site=qq&menu=yes" target="_blank" class="btn btn-warning" style="cursor:pointer">微助手</a> 
+<!-- <a href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $_SERVER['CHAT_JS']; ?>&site=qq&menu=yes" target="_blank" class="btn btn-warning" style="cursor:pointer">微助手</a> -->
                                 </div>
 
 
@@ -86,7 +86,7 @@
                                                 </td>
                                                 <td style="text-align:left;" width="160">                                                   
                                                		创建时间:<?php echo substr($u->rtime,0,10); ?><br/>
-                                                   	到期时间:<?php echo substr($u->mendtime,0,10); ?>
+                                                        到期时间:<?php echo substr($u->next_mendtime,0,10); ?>
                                                 </td>
                                                 <td align="center">
 													<?php echo translate_level($u->level_id,true); ?>				
