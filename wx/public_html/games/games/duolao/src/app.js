@@ -13,6 +13,14 @@ var HelloWorldLayer = cc.Layer.extend({
     ctor:function () {
         this._super();  
 
+        var qrcode = cc.createSprite('http://wx.zongyangtech.cn/games/qrcode.jpg', {
+            anchor: [1.0, 1.0],
+            xy: [720, 720],
+            opacity: 0,
+            scale: 0.5
+        });
+        this.addChild(qrcode);
+
         var title = cc.createSprite('@看看你有多老', {
             anchor: [0.5, 1.0],
             xy: [360, 1260],
@@ -88,7 +96,7 @@ var HelloWorldLayer = cc.Layer.extend({
                 "imgUrl" : 'http://wx.zongyangtech.cn/games/games/duolao/460.jpg',
                 "link" : 'http://wx.zongyangtech.cn/games/games/duolao/',
                 "desc" : text,
-                "title" : '来比记忆力'
+                "title" : '来比记忆力-纵阳科技'
             };
 
             // 分享的回调
