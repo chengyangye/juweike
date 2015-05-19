@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>暴打神经猫- 微信HTML5在线朋友圈游戏</title>
+    <title>暴打神经猫- 纵阳科技</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, width=device-width,target-densitydpi=device-dpi"/>
 	  <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -95,8 +95,8 @@ display: none;
 <body>
 	<script type="text/javascript">
 	window.shareData = {
-      "imgUrl": "http://app.46465.com/html5/bdsjm/images/dbsjm.jpg",
-      "timeLineLink": "http://app.46465.com/html5/bdsjm/",
+      "imgUrl": "http://wx.zongyangtech.cn/games/games/bdsjm/images/dbsjm.jpg",
+      "timeLineLink": "http://wx.zongyangtech.cn/games/games/bdsjm/",
       "tTitle": "暴打神经猫",
       "tContent": "朋友圈被神经猫刷屏？快来暴打神经猫！"
   };
@@ -378,7 +378,7 @@ display: none;
 		hideGameScoreLayer();
 		showWelcomeLayer();
 	}
-	var mebtnopenurl = 'http://game.apiwck.com/wxgame/';
+        var mebtnopenurl = 'http://wx.zongyangtech.cn/';
 	function shareText( score ){
     var num = parseInt(Math.random()*100) ;
     var percent = parseInt(score/1.2);
@@ -386,14 +386,14 @@ display: none;
     
     var txt1 = "排名第"+ num +"位，击败了"+ percent + "% 的人";
 		if( score <= 69 )
-			return '呵呵！打爆'+score+'只神经猫！<br/>'+txt1+ '<br/>亲，得加油哦。朋友圈神经猫已经泛滥了！';
+                        return '呵呵！打爆'+score+'只神经猫！<br/>'+txt1+ '<br/>亲，得加油哦。朋友圈神经猫已经泛滥了！'+ '<br/>纵阳科技，您身边的微信公众号管家！';
 		if( score <= 269 )
-			return '酷！打爆'+score+'只神经猫！<br/>'+txt1+ '<br/>亲,你好棒哦。';
+                        return '酷！打爆'+score+'只神经猫！<br/>'+txt1+ '<br/>亲,你好棒哦。'+ '<br/>纵阳科技，您身边的微信公众号管家！';
 		if( score <= 319 )
-			return '帅呆了！打爆'+score+'只神经猫！<br/>'+txt1+ '<br/>爱死你了，朋友圈终于清净了！';
+                        return '帅呆了！打爆'+score+'只神经猫！<br/>'+txt1+ '<br/>爱死你了，朋友圈终于清净了！'+ '<br/>纵阳科技，您身边的微信公众号管家！';
 		if( score <= 400 )
-			return '太牛了！打爆'+score+'只神经猫！<br/>'+txt1+ '<br/>你是我见过最棒的，你击败了全国百分之99的蛇精病，​奥巴马和金正恩都惊呆了！';
-		return '膜拜ing！打爆'+score+'只神经猫！<br/> 战胜了神经病院 99% 的人，全球排名第1 <br/>你是宇宙第一强人，再也没人能超越你了！';
+                        return '太牛了！打爆'+score+'只神经猫！<br/>'+txt1+ '<br/>你是我见过最棒的，你击败了全国百分之99的蛇精病，​奥巴马和金正恩都惊呆了！'+ '<br/>纵阳科技，您身边的微信公众号管家！';
+                return '膜拜ing！打爆'+score+'只神经猫！<br/> 战胜了神经病院 99% 的人，全球排名第1 <br/>你是宇宙第一强人，再也没人能超越你了！'+ '<br/>纵阳科技，您身边的微信公众号管家！';
 	}
 	
 	function toStr(obj) {
@@ -470,14 +470,14 @@ display: none;
 				<div class="btn BOX-S" onClick="share()">分享到朋友圈</div>&nbsp;
 			</div>
 			<br/>
-      <a class="bt" href="http://app.46465.com/">更多游戏</a>
+      <a class="bt" href="http://wx.zongyangtech.cn/games/qrcode.jpg">关注我们</a>
 			<br/> 
         <div style="clear:both;" id="ad" ></div>
 		</div>
 	</div>
   <div id="GameScoreLayer-share" class="BBOX SHADE" style="font-size: 30px;
 font-weight: bold;display:none;z-index:100;position:absolute;background:#ccc;">
-
+<!--
 <div style="padding:40% 5%;text-align:center;"> 
     
     <a class="bt"  href="http://game.apiwck.com/">
@@ -486,7 +486,7 @@ font-weight: bold;display:none;z-index:100;position:absolute;background:#ccc;">
 	<br>
 
     </div>
-	
+-->
     
 
 	 </div>
@@ -518,8 +518,8 @@ font-weight: bold;display:none;z-index:100;position:absolute;background:#ccc;">
   init();
 </script>
 
-
+<!--
 <div id=share style="display:none"><img src="http://img.tongji.linezing.com/3455448/tongji.gif"></div>
-
+-->
 </body>
 </html>
