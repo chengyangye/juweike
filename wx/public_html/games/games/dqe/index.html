@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-<title>火爆朋友圈</title>
+<title>火爆朋友圈-纵阳科技</title>
 <!--jQuery-->
 <script type="text/javascript" src="js/createjs.min.js"></script>
 <script type="text/javascript" src="js/zepto.min.js"></script>
@@ -31,10 +31,10 @@
 <script src="js/index.js"></script>
 <script src="js/flyline.js"></script>
 <script language=javascript>
-		var mebtnopenurl = 'http://wx.zongyangtech.cn/';
+                var mebtnopenurl = 'http://wx.zongyangtech.cn/games/qrcode.jpg';
 		window.shareData = {
-		        "imgUrl": "http://wx.zongyangtech.cn/games/dqe/img/icon.png",
-		        "timeLineLink": "http://wx.zongyangtech.cn/games/dqe",
+                        "imgUrl": "http://wx.zongyangtech.cn/games/games/dqe/img/icon.png",
+                        "timeLineLink": "http://wx.zongyangtech.cn/games/games/dqe",
 		        "tTitle": "打企鹅-火爆朋友圈",
 		        "tContent": "打企鹅-火爆朋友圈"
 		};
@@ -44,7 +44,7 @@
 		}
 		function clickMore(){
 			if((window.location+"").indexOf("zf",1)>0){
-				window.location = "http://wx.zongyangtech.cn/";
+                                window.location = "http://wx.zongyangtech.cn/games/qrcode.jpg";
 			 }
 			 else{
 				goHome();
@@ -87,14 +87,14 @@
 		}, false);
 		</script>
 		<div id=share style="display: none">
-			<img width=100% src="http://wx.zongyangtech.cn/games/dqe/share.png"
+                        <img width=100% src="http://wx.zongyangtech.cn/games/games/dqe/share.png"
 				style="position: fixed; z-index: 9999; top: 0; left: 0; display: "
 				ontouchstart="document.getElementById('share').style.display='none';" />
 		</div>
 		<div style="display: none;">
 			<script type="text/javascript">
             var myData = { gameid: "dqe" };
-			window.shareData.timeLineLink = "http://wx.zongyangtech.cn/games/dqe/index.html?gameid=" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
+                        window.shareData.timeLineLink = "http://wx.zongyangtech.cn/games/games/dqe/index.html?gameid=" + myData.gameid + (localStorage.myuid ? "&uid=" + localStorage.myuid : "");
 			function dp_submitScore(score){
 				myData.score = score*10;
 				myData.scoreName = score+"米";
@@ -108,7 +108,7 @@
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
                         if (confirm("要将成绩提交到火爆朋友圈排行榜吗？")) {
-                            window.location = "http://wx.zongyangtech.cn/games/dqe/index.html?gameid=" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
+                            window.location = "http://wx.zongyangtech.cn/games/games/dqe/index.html?gameid=" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
                         }
                         else {
                             document.location.href = mebtnopenurl;
