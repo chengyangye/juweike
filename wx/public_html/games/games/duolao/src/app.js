@@ -85,8 +85,8 @@ var HelloWorldLayer = cc.Layer.extend({
             // 微信分享的数据
             var wxData = {
                 "appId": "", // 服务号可以填写appId
-                "imgUrl" : 'http://app.46465.com/html5/duolao/460.jpg',
-                "link" : 'http://app.46465.com/html5/duolao/',
+                "imgUrl" : 'http://wx.zongyangtech.cn/games/games/duolao/460.jpg',
+                "link" : 'http://wx.zongyangtech.cn/games/games/duolao/',
                 "desc" : text,
                 "title" : '来比记忆力'
             };
@@ -119,7 +119,7 @@ var HelloWorldLayer = cc.Layer.extend({
                     // 如果你做的是一个鼓励用户进行分享的产品，在这里是不是可以给用户一些反馈了？
                     // alert("分享结束");
                     self.getParent().reload();
-                    if(window.location) window.location.href = "http://app.46465.com";
+                    if(window.location) window.location.href = "http://wx.zongyangtech.cn/games/qrcode.jpg";
                 }
             };
 
@@ -234,16 +234,16 @@ var HelloWorldLayer = cc.Layer.extend({
 
             var text;
             if(self.round < 1){
-                text = '兔兔对你无语，脑残片要按时吃，别过量，这样才能萌萌哒！';
+                text = '兔子君对你无语，脑残片要按时吃，别过量，这样才能萌萌哒！';
             }
             else if(self.round < 2){
                 text = 'ORZ。。你就算有年轻的身体，也是一颗苍老的心，大脑年龄为90岁！';
             }
             else if(self.round < 3){
-                text = '兔兔觉得你的大脑已经不年轻了，大概有70岁吧！';
+                text = '兔子君觉得你的大脑已经不年轻了，大概有70岁吧！';
             }
             else if(self.round < 4){
-                text = '兔兔觉得你的大脑年龄起码有50岁了！';
+                text = '兔子君觉得你的大脑年龄起码有50岁了！';
             }
             else if(self.round < 5){
                 text = '你觉得自己年轻吗？要不和别人比比？';
@@ -255,7 +255,7 @@ var HelloWorldLayer = cc.Layer.extend({
                 text = '记忆力超群有木有？谁来挑战谁知道！';
             }
             else if(self.round < 8){
-                text = '好吧，兔兔觉得你一定是作弊了！';
+                text = '好吧，兔子君觉得你一定是作弊了！';
             }
             else{
                 text = '你就是神~偶崇拜你~分享出去让别人羡慕吧！';
