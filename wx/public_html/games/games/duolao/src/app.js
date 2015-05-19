@@ -217,13 +217,13 @@ var HelloWorldLayer = cc.Layer.extend({
         self.addChild(layerMask);  
         layerMask.delay(0.5).then(function(){
             layerMask.attr('opacity', 128);
-            var share = cc.createSprite('http://wx.zongyangtech.cn/games/qrcode.jpg', {
+            var share = cc.createSprite('http://wx.zongyangtech.cn/games/games/duolao/src/share.png', {
                 anchor: [1.0, 1.0],
                 xy: [720, 1280],
                 opacity: 0,
                 scale: 0.5
             });
-            layerMask.addChild(share);     
+            layerMask.addChild(share);
 
             share.fadeIn(0.5).act();
             self.delegate(layerMask, 'click', function(){
@@ -268,7 +268,6 @@ var HelloWorldLayer = cc.Layer.extend({
                 textAlign: 'center'
             });
             layerMask.addChild(result);            
-
         }).act();
     },
     backClicked: function(){
