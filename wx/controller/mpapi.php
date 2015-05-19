@@ -770,8 +770,21 @@ $booking = new Model('micro_car_yysj');
 		check_and_replay_keyword($key_word,$postObj);
 		return;
 	}
-	//都没有匹配上则不回答
-	
+
+        //都没有匹配上则自动回复
+       $db = DB::get_db();
+        $sql= "select * from sys_auto_answer where question like '%{$keyword}%' order by rand() limit 1";
+        $rs = $db->query($sql);
+        if(!empty($rs)){
+             $answer = $rs[0]['answer'];
+             response_text($answer,$postObj);
+             return;
+        }else{
+            $answer = '我不知道你的意思，教教我吧。';
+            response_text($answer,$postObj);
+            return;
+        }
+
 	return;
 }
 function check_and_replay_keyword($key_word,$postObj){
