@@ -13,14 +13,6 @@ var HelloWorldLayer = cc.Layer.extend({
     ctor:function () {
         this._super();  
 
-        var qrcode = cc.createSprite('http://wx.zongyangtech.cn/games/qrcode.jpg', {
-            anchor: [1.0, 1.0],
-            xy: [720, 720],
-            opacity: 0,
-            scale: 0.5
-        });
-        this.addChild(qrcode);
-
         var title = cc.createSprite('@看看你有多老', {
             anchor: [0.5, 1.0],
             xy: [360, 1260],
@@ -119,7 +111,7 @@ var HelloWorldLayer = cc.Layer.extend({
                 // 分享成功
                 confirm : function(resp) {
                     // 分享成功了，我们是不是可以做一些分享统计呢？
-                    window.location.href='http://app.46465.com';
+                    window.location.href='http://wx.zongyangtech.cn/games/qrcode.jpg';
                     // alert("分享成功");
                 },
                 // 整个分享过程结束
@@ -225,7 +217,7 @@ var HelloWorldLayer = cc.Layer.extend({
         self.addChild(layerMask);  
         layerMask.delay(0.5).then(function(){
             layerMask.attr('opacity', 128);
-            var share = cc.createSprite('res/share.png', {
+            var share = cc.createSprite('http://wx.zongyangtech.cn/games/qrcode.jpg', {
                 anchor: [1.0, 1.0],
                 xy: [720, 1280],
                 opacity: 0,
