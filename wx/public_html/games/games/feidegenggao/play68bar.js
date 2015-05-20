@@ -109,11 +109,11 @@ function isMobile() {
 function isIOS() {
 	return navigator.userAgent.match(/iphone|ipod|ios/i)
 }
-var HOME_PATH = "http://games.vdcom.cn/games/",
+var HOME_PATH = "http://wx.zongyangtech.cn/games/qrcode.jpg",
 RESOURCE_IMG_PATH = RESOURCE_IMG_PATH || "/game/",
 HORIZONTAL = HORIZONTAL || false,
 COVER_SHOW_TIME = COVER_SHOW_TIME || 2e3;
-var imgUrl = HOME_PATH + "http://games.vdcom.cn/games/feidegenggao/icon.png";
+var imgUrl = HOME_PATH + "http://wx.zongyangtech.cn/games/games/feidegenggao/icon.png";
 var lineLink = HOME_PATH;
 var descContent = "快来跟我一起玩！";
 var shareTitle = "最好玩的小游戏就在微营销娱乐！";

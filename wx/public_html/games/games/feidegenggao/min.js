@@ -21,7 +21,7 @@ function lcir(e, t) {
 	1 > ldri && (ldri = 12)
 }
 function lding() {
-	ctx.clearRect(0, 0, 320, 416);
+    ctx.clearRect(0, 0, 320, 416);
 	lcir(160, 292)
 }
 function ralp2() {
@@ -34,7 +34,7 @@ function ralp() {
 }
 function gst() {
 	clearInterval(ldlp);
-	ctx.clearRect(0, 0, 320, 416);
+    ctx.clearRect(0, 0, 320, 416);
 	s = 0;
 	rlok = 1;
 	spt(64, 59, 266);
@@ -61,7 +61,7 @@ function init() {
 	var e = navigator.userAgent;
 	dvid = 0; - 1 < e.indexOf("Android") && (dvid = 1, 4 <= Math.floor(navigator.userAgent.substr(e.indexOf("Android") + 8, 1)) && (dvid = 2)); - 1 < e.indexOf("iPad") && (dvid = 3); - 1 < e.indexOf("iPhone") && (dvid = 4, 2 <= window.devicePixelRatio && (dvid = 5, 568 == window.screen.height && (dvid = 5)));
 	wdpr = 1;
-	chf2.innerHTML = '<canvas id="gcvs" width="320" height="416"></canvas>';
+    chf2.innerHTML = '<canvas id="gcvs" width="320" height="416"></canvas>';
 	canvas = document.getElementById("gcvs");
 	ctx = canvas.getContext("2d");
 	canvas.addEventListener("touchstart", tev1, !1);
@@ -111,7 +111,7 @@ function init() {
 	cbx = [0, 0, 49, 98];
 	e = document.createElement("canvas");
 	e.width = 320;
-	e.height = 416;
+    e.height = 416;
 	bcv2 = e.getContext("2d");
 	fani1 = [89, 205, 1, 191, 200, 1, 89, 192, 1, 191, 200, 1, 89, 181, 1, 191, 200, 1, 89, 174, 1, 191, 200, 1, 120, 166, 1, 89, 170, 1, 191, 200, 1, 120, 161, 1, 89, 168, 1, 191, 200, 1, 120, 158, 1, 89, 177, 1, 191, 200, 1, 120, 155, 1, 89, 182, 1, 191, 197, 1, 120, 154, 1, 89, 184, 1, 191, 194, 1, 120, 153, 1, 89, 177, 1, 191, 192, 1, 120, 159, 1, 89, 175, 1, 191, 190, 1, 120, 162, 1, 89, 177, 1, 191, 190, 1, 120, 164, 1, 89, 178, 1, 191, 196, 1, 120, 161, 1, 89, 178, 1, 191, 199, 1, 120, 160, 1, 89, 178, 1, 191, 200, 1, 120, 162, 1, 89, 178, 1, 191, 198, 1, 120, 163, 1, 89, 178, 1, 191, 197, 1, 120, 163, 1, 89, 178, 1, 191, 199, 1, 120, 163, 1, 89, 178, 1, 191, 200, 1, 120, 163, 1, 89, 178, 1, 191, 200, 1, 120, 163, 1, 89, 178, 1, 191, 200, 1, 120, 163, 1, 89, 178, 1, 191, 200, 1, 120, 163, 1, 89, 178, 1, 191, 200, 1, 120, 163, 1, 89, 178, 1, 191, 200, 1, 120, 163, 1, 89, 178, 1, 191, 200, 1, 120, 163, 1, 89, 178, 1, 191, 200, 1, 120, 163, 1, 89, 178, 1, 191, 200, 1, 120, 163, 1, 86, 180, .99, 186, 201, .99, 116, 164, .99, 77, 186, .96, 173, 203, .96, 105, 169, .96, 64, 199, .9, 152, 207, .9, 87, 177, .9, 50, 220, .82, 122, 216, .82, 63, 193, .82, 37, 250, .73, 86, 235, .73, 37, 219, .73, 26, 288, .61, 49, 268, .61, 14, 258, .61, 18, 334, .46, 20, 320, .46, -3, 309, .46, 14, 387, .3, 8, 388, .3, -10, 370, .3];
 	fanf1 = [39, 37, 38];
@@ -148,7 +148,7 @@ function stini() {
 	blchk(e),
 	10 < 100 * Math.random() ? bc[e] = 1 : bc[e] = 2;
 	mx = tx = 146;
-	my = 416;
+    my = 416;
 	mj = -18;
 	twy = 56;
 	wj = wy = 0;
@@ -193,7 +193,7 @@ function stini() {
 	scf = 41
 }
 function gmovs() {
-	bcv2.drawImage(ctx.canvas, 0, 0, 320, 416, 0, 0, 320, 416);
+    bcv2.drawImage(ctx.canvas, 0, 0, 320, 416, 0, 0, 320, 416);
 	s = 2;
 	tcd = fac = 0;
 	scr_m |= 0;
@@ -370,7 +370,7 @@ function lp() {
 		wj = (100 - my) * askb;
 		1 > wj ? wj = 0 : scr_m += wj / 5;
 		37 < wj && (wj = 37);
-		1 < stti1 ? ctx.clearRect(19, 0, 301, 416) : ctx.drawImage(img2, 0, wbgy | 0, 286, 399, 17, 0, 286, 399);
+        1 < stti1 ? ctx.clearRect(19, 0, 301, 416) : ctx.drawImage(img2, 0, wbgy | 0, 286, 399, 17, 0, 286, 399);
 		wbgy -= wj / 23;
 		0 > wbgy && (wbgy = 0);
 		ctx.drawImage(img7, 626, twy | 0, 22, 399, 0, 0, 22, 399);
@@ -379,7 +379,7 @@ function lp() {
 		0 > twy && (twy += 104);
 		for (e = m - 1; 0 <= e; e--) by[e] += wj,
 		spt2(bc[e] + 4, bx[e], by[e]),
-		390 < by[e] && rblk(e, 1); - 1 != sfcy && (sfcy += wj * (0 == scc), spt(scf, 0, sfcy), 323 < my && 0 < mj ? (sfcy = my + 42, 374 < my && (mj = -18, 0 < scc && (scc = 0, sfct = 416))) : (sfcy += (sfct - sfcy) / 5, 416 == sfct && 415 < sfcy && (sfcy = -1)), 0 < scc && scc--);
+        390 < by[e] && rblk(e, 1); - 1 != sfcy && (sfcy += wj * (0 == scc), spt(scf, 0, sfcy), 323 < my && 0 < mj ? (sfcy = my + 42, 374 < my && (mj = -18, 0 < scc && (scc = 0, sfct = 416))) : (sfcy += (sfct - sfcy) / 5, 416 == sfct && 415 < sfcy && (sfcy = -1)), 0 < scc && scc--);
 		if (1 < brd && 4 > brd) switch ( - 99 == spjpj && bdy < my && (bdy += wj), spt(bdi, bdx, bdy), brd) {
 		case 2:
 			my + 2 * mj < bdy + 50 && (bdx -= 32 == bdi ? 20 : 15, bdy -= 3, brd = 3, bdi = 33, bds = bdx > mx ? 1 : -1);
@@ -481,7 +481,7 @@ function lp() {
 		scs(1, 4, scr_m | 0);
 		scs(2, 3, scr_p);
 		0 < spafwt && spafwt--;
-		scr_m > brdc && 0 == brd && 0 == spafwt && (brdc += 1700, 2500 < brdc && (brdc = 9999), brd = 2, bdx = 160 < mx ? 20 : 236, bdy = 416, bds = 1, bdj = 12);
+        scr_m > brdc && 0 == brd && 0 == spafwt && (brdc += 1700, 2500 < brdc && (brdc = 9999), brd = 2, bdx = 160 < mx ? 20 : 236, bdy = 416, bds = 1, bdj = 12);
 		switch (fvan) {
 		case 0:
 			ctx.drawImage(img7, 240, 40, 58, 17, 260, 3, 58, 17);
@@ -545,7 +545,7 @@ function lp() {
 		case 2:
 			ctx.globalAlpha = fbg;
 			ctx.fillStyle = "#FFF";
-			ctx.fillRect(0, 0, 320, 416);
+            ctx.fillRect(0, 0, 320, 416);
 			for (e = 0; 3 > e; e++) o = 9 * fac + 3 * e,
 			ctx.globalAlpha = fani2[o + 2],
 			spt(fanf2[e], fani2[o], fani2[o + 1]);
@@ -559,7 +559,7 @@ function lp() {
 			fac = 15 < fac && 50 > fac ? fac + .5 : fac + 1,
 			53 < fac && 61 < fac && (fac = fak = -1)
 		}
-		374 < my && (1 < stti3 && -1 == sfcy && 62 != scf ? (mj = -18, scf = 62, sfcy = 415, sfct = 365, scc = 30) : 416 < my && (200 > scr_m ? mj = -18 : 4 != fak && (gmovs(), my = 417, fanf4 = 60)));
+        374 < my && (1 < stti3 && -1 == sfcy && 62 != scf ? (mj = -18, scf = 62, sfcy = 415, sfct = 365, scc = 30) : 416 < my && (200 > scr_m ? mj = -18 : 4 != fak && (gmovs(), my = 417, fanf4 = 60)));
 		tm = Math.floor(( + (new Date) - sttm) / 1e3);
 		if (tm != mt && 0 < tm) {
 			gmtm -= tcd;
@@ -570,7 +570,7 @@ function lp() {
 				fvac = fvan = 0
 			}
 			flt = 0;
-			200 < scr_m && 0 == scc && (mc = 2, sfct = 416, 400 < scr_m && (mc = 3, 1e3 < scr_m && (mc = 4)));
+            200 < scr_m && 0 == scc && (mc = 2, sfct = 416, 400 < scr_m && (mc = 3, 1e3 < scr_m && (mc = 4)));
 			0 > gmtm && (gmtm = 0, -99 == spjpj && 0 == fvbs && -1 == fak && (gmovs(), fanf4 = 57))
 		}
 		flt++;
@@ -578,14 +578,14 @@ function lp() {
 		rlok = 1;
 		break;
 	case 2:
-		ctx.drawImage(bcv2.canvas, 0, 0, 320, 416, 0, 0, 320, 416),
+        ctx.drawImage(bcv2.canvas, 0, 0, 320, 416, 0, 0, 320, 416),
 		o = 3 * fac,
 		102 < o && (o = 102),
 		ctx.globalAlpha = fani4[o + 2],
 		spt(fanf4, fani4[o], fani4[o + 1]),
 		ctx.globalAlpha = 1,
 		fac++,
-		35 < fac && (45 > fac ? e = .1 * (fac - 35) : (0 == gmovcl && (gmovcl = 1), ctx.drawImage(img2, 0, wbgy | 0, 286, 399, 17, 0, 286, 399), ctx.drawImage(img7, 626, twy | 0, 22, 399, 0, 0, 22, 399), ctx.drawImage(img7, 648, twy | 0, 22, 399, 298, 0, 22, 399), ctx.globalAlpha = .5, ctx.fillStyle = "#000;", ctx.fillRect(0, 0, 320, 416), ctx.globalAlpha = 1, null, null, null, spt(93, 7, 67), spt(94, 0, 371), scs(99, String(scr_m).length, scr_m), scs(98, String(bstscr).length, bstscr), bstscr == scr_m && spt(87, 20, 145), 1 == gtips && spt(90, 75, 296), 1 < gmsts && (spt(90, 185, 296), 2 < gmsts && spt(90, 271, 296)), 1 == tipon && spt(92, 14, 6), e = .1 * (55 - fac), 0 > e && (e = 0)), ctx.globalAlpha = e, ctx.fillStyle = "#000;", ctx.fillRect(0, 0, 320, 416), ctx.globalAlpha = 1)
+        35 < fac && (45 > fac ? e = .1 * (fac - 35) : (0 == gmovcl && (gmovcl = 1), ctx.drawImage(img2, 0, wbgy | 0, 286, 399, 17, 0, 286, 399), ctx.drawImage(img7, 626, twy | 0, 22, 399, 0, 0, 22, 399), ctx.drawImage(img7, 648, twy | 0, 22, 399, 298, 0, 22, 399), ctx.globalAlpha = .5, ctx.fillStyle = "#000;", ctx.fillRect(0, 0, 320, 416), ctx.globalAlpha = 1, null, null, null, spt(93, 7, 67), spt(94, 0, 371), scs(99, String(scr_m).length, scr_m), scs(98, String(bstscr).length, bstscr), bstscr == scr_m && spt(87, 20, 145), 1 == gtips && spt(90, 75, 296), 1 < gmsts && (spt(90, 185, 296), 2 < gmsts && spt(90, 271, 296)), 1 == tipon && spt(92, 14, 6), e = .1 * (55 - fac), 0 > e && (e = 0)), ctx.globalAlpha = e, ctx.fillStyle = "#000;", ctx.fillRect(0, 0, 320, 416), ctx.globalAlpha = 1)
 	}
 }
 onload = function() {
