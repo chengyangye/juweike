@@ -4,7 +4,7 @@ $p_ind = 1;
 $p_sub = array(
 	array(
 			'name'=>'新增客户',
-			'file'=>'xinzengzuizhong'
+                        'file'=>'xinzengkehu'
 	),
 	array(
 		'name'=>'直接客户',
