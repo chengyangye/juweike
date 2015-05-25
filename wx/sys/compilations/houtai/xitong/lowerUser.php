@@ -50,7 +50,7 @@
 					<input type='checkbox' name='checkbox' value='<?php echo $r->id; ?>' /><?php echo $r->id; ?>
 					</td>
 					<td>
-					<a href="xinzengkehu-<?php echo $r->id; ?>.html"><?php echo $r->un; ?></a>
+					<a href="xinzengzuizhong-<?php echo $r->id; ?>.html"><?php echo $r->un; ?></a>
 					</td>
 					<td>
 					<?php echo date('Y-m-d',strtotime($r->rtime)); ?>

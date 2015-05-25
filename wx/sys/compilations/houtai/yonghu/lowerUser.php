@@ -50,7 +50,7 @@
 					<input type='checkbox' name='checkbox' value='<?php echo $r->id; ?>' /><?php echo $r->id; ?>
 					</td>
 					<td>
-					<a href="xinzengkehu-<?php echo $r->id; ?>.html"><?php echo $r->un; ?></a>
+					<a href="xinzengzuizhong-<?php echo $r->id; ?>.html"><?php echo $r->un; ?></a>
 					</td>
 					<td>
 					<?php echo date('Y-m-d',strtotime($r->rtime)); ?>
@@ -88,7 +88,7 @@
 					<td>
 					<a href="<?php echo $loginurl; ?>/index.html?uid=<?php echo $r->id; ?>&upwd=<?php echo md5($r->pwd); ?>" target="_blank">登录</a>&nbsp;|&nbsp;
 					<a href="javascript:tochongzhi(<?php echo $r->id; ?>);">充值</a>&nbsp;|&nbsp;
-					<a href="xinzengkehu-<?php echo $r->id; ?>.html">编辑【查看】</a>
+					<a href="xinzengzuizhong-<?php echo $r->id; ?>.html">编辑【查看】</a>
 					</td>
 					</TR>
 				<?php } ?>

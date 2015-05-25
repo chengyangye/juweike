@@ -50,7 +50,7 @@
 					<input type='checkbox' name='checkbox' value='{$r->id}' />{$r->id}
 					</td>
 					<td>
-					<a href="xinzengkehu-{$r->id}.html">{$r->un}</a>
+					<a href="xinzengzuizhong-{$r->id}.html">{$r->un}</a>
 					</td>
 					<td>
 					{date('Y-m-d',strtotime($r->rtime))}
@@ -88,7 +88,7 @@
 					<td>
 					<a href="{$loginurl}/index.html?uid={$r->id}&upwd={md5($r->pwd)}" target="_blank">登录</a>&nbsp;|&nbsp;
 					<a href="javascript:tochongzhi({$r->id});">充值</a>&nbsp;|&nbsp;
-					<a href="xinzengkehu-{$r->id}.html">编辑【查看】</a>
+					<a href="xinzengzuizhong-{$r->id}.html">编辑【查看】</a>
 					</td>
 					</TR>
 				{/loop}
