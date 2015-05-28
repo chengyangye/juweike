@@ -13,8 +13,8 @@ function play68_submitScore(score) {
 }
 
 function updateShare(bestScore) {
-	imgUrl = 'http://app.46465.com/html5/zuqiu/soccermoveicon.png';
-	lineLink = 'http://app.46465.com/html5/zuqiu';
+	imgUrl = 'http://wx.zongyangtech.cn/games/games/zuqiu/soccermoveicon.png';
+	lineLink = 'http://wx.zongyangtech.cn/games/games/zuqiu';
 	descContent = "快跟我一起用手指指点足球！";
 	updateShareScore(bestScore);
 	appid = '';

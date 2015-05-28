@@ -67,8 +67,8 @@ var HelloWorldLayer = cc.Layer.extend({
         // 微信分享的数据
         self.wxData = {
             "appId": "", // 服务号可以填写appId
-            "imgUrl" : 'http://app.46465.com/html5/diaoyu/logo.png',
-            "link" : 'http://app.46465.com/html5/diaoyu/',
+            "imgUrl" : 'http://wx.zongyangtech.cn/games/games/diaoyu/logo.png',
+            "link" : 'http://wx.zongyangtech.cn/games/games/diaoyu/',
             "desc" : '史上最寂寞的游戏：我钓的不是鱼，是寂寞',
             "title" : '钓鱼'
         };
@@ -108,7 +108,7 @@ var HelloWorldLayer = cc.Layer.extend({
                     // 如果你做的是一个鼓励用户进行分享的产品，在这里是不是可以给用户一些反馈了？
                     // alert("分享结束");
                     if(self.isGameOver){
-                        if(window.location) window.location.href = "http://app.46465.com/html5/diaoyu/";
+                        if(window.location) window.location.href = "http://wx.zongyangtech.cn/games/games/diaoyu/";
                     }
                 }
             };
@@ -146,7 +146,7 @@ var HelloWorldLayer = cc.Layer.extend({
 
         layerMask.delay(0.5).then(function(){
             layerMask.attr('opacity', 128);
-            var share = cc.createSprite('http://app.46465.com/html5/diaoyu/share.png', {
+            var share = cc.createSprite('http://wx.zongyangtech.cn/games/games/diaoyu/share.png', {
                 anchor: [1.0, 1.0],
                 xy: [720, 1280],
                 opacity: 0,

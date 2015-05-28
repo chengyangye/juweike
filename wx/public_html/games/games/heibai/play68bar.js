@@ -81,7 +81,7 @@ function addShareWX() {
 	t.style.cssText = "text-align:right;padding-left:10px;";
 	e.appendChild(t);
 	var n = document.createElement("img");
-	n.src = "http://app.46465.com/html5/heibai/py.png";
+	n.src = "http://wx.zongyangtech.cn/games/games/heibai/py.png";
 	n.id = "share-wx-img";
 	n.style.cssText = "max-width:280px;padding-right:25px;";
 	t.appendChild(n);

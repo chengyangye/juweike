@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <!-- saved from url=(0052)http://www.spacemonsters.co.uk/games/mobile/dragons/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Dragon dry adulterer</title>
+        <title>守财龙-纵阳科技</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=320, height=440, user-scalable=no, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<script type="text/javascript" src="http://app.46465.com/html5/qw/jquery.min.js"></script>
+                <script type="text/javascript" src="http://wx.zongyangtech.cn/games/games/qw/jquery.min.js"></script>
       <script type="text/javascript">
 	  
         var dataForWeixin = {
               appId: "gh_385276302a88",
-              TLImg: "http://app.46465.com/html5/hl/logo.jpg",
-              url: "http://app.46465.com/html5/hl/",
-              title: "Classic  game <Fiery dragon>, please share your friends!  Circle  friends wechat!",
-              desc: "please share your friends!  Circle  friends wechat!"
+              TLImg: "http://wx.zongyangtech.cn/games/games/hl/logo.jpg",
+              url: "http://wx.zongyangtech.cn/games/games/hl/",
+              title: "将“守财龙”分享到朋友圈",
+              desc: "将“守财龙”分享到朋友圈，比比谁更守财。"
         };
 
         var onBridgeReady = function(){
@@ -30,7 +30,7 @@
                     "title": infos + dataForWeixin.title,
                     "desc": dataForWeixin.desc 
                 });
-         setTimeout(function () {location.href = "http://app.46465.com/html5/hl/";}, 1500); 
+         setTimeout(function () {location.href = "http://wx.zongyangtech.cn/games/games/hl/";}, 1500);
             });
             WeixinJSBridge.on('menu:share:timeline', function(argv){
                 var infos = $("#infos").text();             
@@ -43,7 +43,7 @@
                     "title": infos + dataForWeixin.title,
                     "desc": dataForWeixin.desc
                 });
-		setTimeout(function () {location.href = "http://app.46465.com/html5/hl/";}, 1500);  
+                setTimeout(function () {location.href = "http://wx.zongyangtech.cn/games/games/hl/";}, 1500);
             });
         };
         if(document.addEventListener){
@@ -72,7 +72,12 @@
 </head>
 <body onLoad="init();" onkeydown="scanInput(event);" onkeyup="stopMove(event);">
 
-	<div id="container">
+
+        <div style="position: absolute;margin-top: 0px;margin-left: 0px;width:100%;">
+          <a href="http://wx.zongyangtech.cn/games/qrcode.jpg">
+        <img src="http://wx.zongyangtech.cn/games/banner.jpg" style="position: absolute;margin-top: 0px;width:100%;height:50px;"></a>
+        </div>
+        <div style="position: absolute;margin-top: 60px;margin-left: 0px;width:100%;" id="container">
 		<canvas width="320" height="480" class="canvas" style="background-color: rgb(0, 0, 0); background-image: url(./library/gameback3.gif); "></canvas>
 		<div id="banad" style="display: none; "><iframe src="./Dragons_files/adsense.htm" width="319" height="50" frameborder="0" scrolling="no">i</iframe></div>
 		<div id="console" style="display: none; text-align: left; "></div>

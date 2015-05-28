@@ -3,10 +3,10 @@
 }
 
 function updateShare(bestScore) {
-	imgUrl = 'http://app.46465.com/html5/heibai/logo.png';
+	imgUrl = 'http://wx.zongyangtech.cn/games/games/heibai/logo.png';
 	var domains = ['app.46465.com','app.46465.com','app.46465.com','app.46465.com'];
 	var domain = domains[new Date().getTime()%4];
-	lineLink = 'http://app.46465.com/html5/heibai/';
+	lineLink = 'http://wx.zongyangtech.cn/games/games/heibai/';
 	descContent = "史上导致最多手指和眼珠抽筋的游戏（别踩白块儿）！";
 	updateShareScore(bestScore);
 	appid = '';
