@@ -87,7 +87,7 @@ function addShareWX() {
 	t.style.cssText = "text-align:right;padding-left:10px;";
 	e.appendChild(t);
 	var n = document.createElement("img");
-	n.src = "http://games.vdcom.cn/games/jgfx/static/share.jpg";
+    n.src = "http://wx.zongyangtech.cn/games/games/jg/static/share.jpg";
 	n.id = "share-wx-img";
 	n.style.cssText = "max-width:280px;padding-right:25px;";
 	t.appendChild(n);
@@ -161,14 +161,14 @@ function isMobile() {
 function isIOS() {
 	return navigator.userAgent.match(/iphone|ipod|ios/i)
 }
-var HOME_PATH = HOME_PATH || "http://games.vdcom.cn/games/",
+var HOME_PATH = HOME_PATH || "http://wx.zongyangtech.cn/games/qrcode.jpg",
 RESOURCE_IMG_PATH = RESOURCE_IMG_PATH || "../resources/images/",
 HORIZONTAL = HORIZONTAL || false,
 COVER_SHOW_TIME = COVER_SHOW_TIME || 2e3;
-var imgUrl = "http://games.vdcom.cn/games/jgfx/static/icon.png";
-var lineLink = "http://games.vdcom.cn/games/jgfx/";
+var imgUrl = "http://wx.zongyangtech.cn/games/games/jg/static/icon.png";
+var lineLink = "wx.zongyangtech.cn/games/games/jg/";
 var descContent = "快来跟我一起玩！";
-var shareTitle = "最好玩的小游戏就在菜鸟游戏！";
+var shareTitle = "纵阳科技，关注微信公众号增值与推广！";
 var appid = "";
 document.addEventListener("WeixinJSBridgeReady",
 function() {

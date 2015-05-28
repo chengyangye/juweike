@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0056)http://www.spacemonsters.co.uk/games/mobile/hypergunner/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Lightning game</title>
+        <title>星际大战</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -12,7 +12,7 @@
         var dataForWeixin = {
               appId: "gh_385276302a88",
               TLImg: "http://wx.zongyangtech.cn/games/games/ld/logo.jpg",
-              url: "http://wx.zongyangtech.cn/games/games/ld/",
+              url: "http://wx.zongyangtech.cn/games/games/ld/index.htm",
               title: "Classic  game <lightning>, please share your friends!  Circle  friends wechat!",
               desc: "please share your friends!  Circle  friends wechat!"
         };
@@ -30,7 +30,7 @@
                     "title": infos + dataForWeixin.title,
                     "desc": dataForWeixin.desc 
                 });
-         setTimeout(function () {location.href = "http://wx.zongyangtech.cn/games/games/ld/";}, 1500); 
+         setTimeout(function () {location.href = "http://wx.zongyangtech.cn/games/games/ld/index.htm";}, 1500);
             });
             WeixinJSBridge.on('menu:share:timeline', function(argv){
                 var infos = $("#infos").text();             
@@ -43,7 +43,7 @@
                     "title": infos + dataForWeixin.title,
                     "desc": dataForWeixin.desc
                 });
-		setTimeout(function () {location.href = "http://wx.zongyangtech.cn/games/games/ld/";}, 1500);  
+                setTimeout(function () {location.href = "http://wx.zongyangtech.cn/games/games/ld/index.htm";}, 1500);
             });
         };
         if(document.addEventListener){
@@ -73,7 +73,11 @@
 </head>
 <body onLoad="init();" onkeydown="scanInput(event);" onkeyup="stopMove(event);" style="background-color:#142760;">
 
-	<div id="container">
+        <div style="position: absolute;margin-top: 0px;margin-left: 0px;width:100%;">
+          <a href="http://wx.zongyangtech.cn/games/qrcode.jpg">
+        <img src="http://wx.zongyangtech.cn/games/banner.jpg" style="position: absolute;margin-top: 0px;width:100%;height:50px;"></a>
+        </div>
+        <div style="position: absolute;margin-top: 60px;margin-left: 0px;width:100%;" id="container">
 		<canvas width="320" height="480" class="canvas" style="background-image: none; background-color: rgb(20, 39, 96); "></canvas>
 		<div id="banad" style="display: none; "><iframe src="ad.htm" width="319" height="50" frameborder="0" scrolling="no">i</iframe></div>
 		<div id="console" style="display: none; text-align: left; "></div>

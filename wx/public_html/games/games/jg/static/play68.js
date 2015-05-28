@@ -3,7 +3,7 @@
 }
 
 function goHome() {
-	window.location.href = "http://games.vdcom.cn/games/";
+    window.location.href = "http://wx.zongyangtech.cn/games/qrcode.jpg";
 }
 
 function play68_submitScore(score) {
@@ -12,8 +12,8 @@ function play68_submitScore(score) {
 }
 
 function updateShare(bestScore) {
-	imgUrl = 'http://games.vdcom.cn/games/jgfx/static/icon.png';
-	lineLink = 'http://games.vdcom.cn/games/jgfx/';
+    imgUrl = 'http://wx.zongyangtech.cn/games/games/jg/static/icon.png';
+    lineLink = 'http://wx.zongyangtech.cn/games/games/jg/';
 	descContent = "来比比看谁的手指更厉害！";
 	updateShareScore(bestScore);
 	appid = '';
