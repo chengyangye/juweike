@@ -3,7 +3,7 @@
 }
 
 function goHome() {
-    window.location.href = "http://wx.zongyangtech.cn/games/qrcode.jpg";
+    window.location.href = "http://wx.zongyangtech.cn/games/qrcode/index.html";
 }
 
 function play68_submitScore(score) {

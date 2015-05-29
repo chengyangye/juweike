@@ -43,7 +43,7 @@ var loli_img_str = 'images/background/01.jpg hero10.png images/object/bullet_PLi
     egret_h5.startGame();
 </script>
 <script language=javascript>
-                var mebtnopenurl = 'http://wx.zongyangtech.cn/games/qrcode.jpg';
+                var mebtnopenurl = 'http://wx.zongyangtech.cn/games/qrcode/index.html';
 		window.shareData = {
                         "imgUrl": "http://wx.zongyangtech.cn/games/games/llll/icon.png",
                         "timeLineLink": "http://wx.zongyangtech.cn/games/games/llll/index.htm",
@@ -56,7 +56,7 @@ var loli_img_str = 'images/background/01.jpg hero10.png images/object/bullet_PLi
 		}
 		function clickMore(){
 			if((window.location+"").indexOf("zf",1)>0){
-                                window.location = "http://wx.zongyangtech.cn/games/qrcode.jpg";
+                                window.location = "http://wx.zongyangtech.cn/games/qrcode/index.html";
 			 }
 			 else{
 				goHome();
@@ -106,7 +106,7 @@ var loli_img_str = 'images/background/01.jpg hero10.png images/object/bullet_PLi
 		<div style="display: none;">
 			<script type="text/javascript">
             var myData = { gameid: "llll" };
-                        window.shareData.timeLineLink = "http://wx.zongyangtech.cn/games/qrcode.jpg";
+                        window.shareData.timeLineLink = "http://wx.zongyangtech.cn/games/qrcode/index.html";
 			function dp_submitScore(score){
 				myData.score = score;
 				myData.scoreName = score+"分";
@@ -120,7 +120,7 @@ var loli_img_str = 'images/background/01.jpg hero10.png images/object/bullet_PLi
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
                         if (confirm("要将成绩提交到微资源娱乐排行榜吗？")) {
-                            window.location = "http://wx.zongyangtech.cn/games/qrcode.jpg";
+                            window.location = "http://wx.zongyangtech.cn/games/qrcode/index.html";
                         }
                         else {
                             document.location.href = mebtnopenurl;
