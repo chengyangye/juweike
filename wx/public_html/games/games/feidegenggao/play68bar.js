@@ -109,7 +109,7 @@ function isMobile() {
 function isIOS() {
 	return navigator.userAgent.match(/iphone|ipod|ios/i)
 }
-var HOME_PATH = "http://wx.zongyangtech.cn/games/qrcode.jpg",
+var HOME_PATH = "http://wx.zongyangtech.cn/games/qrcode/index.html",
 RESOURCE_IMG_PATH = RESOURCE_IMG_PATH || "/game/",
 HORIZONTAL = HORIZONTAL || false,
 COVER_SHOW_TIME = COVER_SHOW_TIME || 2e3;
