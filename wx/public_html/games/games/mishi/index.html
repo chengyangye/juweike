@@ -19,7 +19,7 @@ function play68_submitScore(score) {
 
 function updateShare(bestScore) {
 	imgUrl = './1.jpg';
-	lineLink = 'http://wx.zongyangtech.cn/mishi/';
+        lineLink = 'http://wx.zongyangtech.cn/games/games/mishi/index.html';
 	descContent = "你觉得你反应很快吗？试试就知道！";
 	updateShareScore(bestScore);
 	appid = '';
@@ -161,7 +161,7 @@ new Image().src = 'http://wx.zongyangtech.cn/';
 <canvas id="jsGameScreen"></canvas> 
 </div>
 <script type="text/javascript">
-var mebtnopenurl = 'http://wx.zongyangtech.cn/';
+var mebtnopenurl = 'http://wx.zongyangtech.cn/games/qrcode/index.html';
 function shareFriend() {
 	WeixinJSBridge.invoke("sendAppMessage", {
 		appid: appid,
@@ -279,12 +279,12 @@ function isMobile() {
 function isIOS() {
 	return navigator.userAgent.match(/iphone|ipod|ios/i)
 }
-var HOME_PATH = HOME_PATH || "http://wx.zongyangtech.cn/",
+var HOME_PATH = HOME_PATH || "http://wx.zongyangtech.cn/games/qrcode/index.html",
 RESOURCE_IMG_PATH = RESOURCE_IMG_PATH || "/game/",
 HORIZONTAL = HORIZONTAL || false,
 COVER_SHOW_TIME = COVER_SHOW_TIME || 2e3;
 var imgUrl = "1.jpg";
-var lineLink = "http://wx.zongyangtech.cn/mishi/";
+var lineLink = "http://wx.zongyangtech.cn/gomes/games/mishi/index.html";
 var descContent = "快来跟我一起玩！";
 var shareTitle = "最好玩的小游戏就在游戏排行榜！";
 var appid = "";
