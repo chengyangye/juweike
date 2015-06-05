@@ -18668,7 +18668,7 @@ function(c, e) {
 			this.replay_btn.y = a.height - 5;
 			this.replay_btn.touchEnabled = !0;
 			this.replay_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.doRepaly, this);
-			this.addChild(this.share_btn);
+//			this.addChild(this.share_btn);
 			this.addChild(this.replay_btn);
 			this.addChild(a)
 		}
@@ -18961,7 +18961,7 @@ function(c, e) {
 			this.addChild(a);
 			this.addChild(this.tap_textfeild);
 			this.addChild(this.rank_textfeild);
-			this.addChild(this.share_btn);
+//			this.addChild(this.share_btn);
 			this.addChild(this.replay_btn);
 			this.addChild(this.rank_sp);
 			this.addChild(this.allrank_btn)
