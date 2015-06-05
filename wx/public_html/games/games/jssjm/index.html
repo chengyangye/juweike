@@ -109,14 +109,14 @@
 		}
 		function clickMore(){
 			if((window.location+"").indexOf("zf",1)>0){
-                                wx.zongyangtech.cn/games/qrcode/index.html";
+                                window.location = "wx.zongyangtech.cn/games/qrcode/index.html";
 			 }
 			 else{
 				goHome();
 			 }
 		}
 		function dp_share(){
-                        document.title ="我把神经猫也来参合了，一下射出"+myData.score+"米小伙伴一起来爽！";
+                        document.title ="我把神经猫一下射出"+myData.score+"米小伙伴一起来爽！";
 			document.getElementById("share").style.display="";
 			window.shareData.tTitle = document.title;
 		}
@@ -172,7 +172,7 @@
 			function onShareComplete(res) {
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
-                        if (confirm("要将成绩提交到娱乐排行榜吗？")) {
+                        if (confirm("要将成绩提交到微资源娱乐排行榜吗？")) {
                             window.location = "http://wx.9g.com/rank/submit2.jsp?gameid=" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
                         }
                         else {
