@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>微资源游戏</title>
+    <title>激射神经猫-纵阳科技</title>
     <meta name="viewport"
           content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -96,12 +96,12 @@
 
 </script>
 <script language=javascript>
-                var mebtnopenurl = 'http://wx.zongyangtech.cn/games/games/qrcode.jpg';
+                var mebtnopenurl = 'wx.zongyangtech.cn/games/qrcode/index.html';
 		window.shareData = {
                         "imgUrl": "http://wx.zongyangtech.cn/games/games/jssjm/icon.png",
-                        "timeLineLink": "http://wx.zongyangtech.cn/games/games/jssjm/game.html?f=zf",
-		        "tTitle": "激射神经猫-微资源娱乐",
-		        "tContent": "激射神经猫-微资源娱乐"
+                        "timeLineLink": "http://wx.zongyangtech.cn/games/games/jssjm/index.html",
+                        "tTitle": "激射神经猫-纵阳科技",
+                        "tContent": "激射神经猫-纵阳科技"
 		};
 				
 		function goHome(){
@@ -109,14 +109,14 @@
 		}
 		function clickMore(){
 			if((window.location+"").indexOf("zf",1)>0){
-				window.location = "http://wx.zongyangtech.cn/games/goto9g.html?f=jssjm";
+                                wx.zongyangtech.cn/games/qrcode/index.html";
 			 }
 			 else{
 				goHome();
 			 }
 		}
 		function dp_share(){
-			document.title ="企鹅和笨熊互打后，神经猫也来参合了，一下射出"+myData.score+"米小伙伴一起来爽！";
+                        document.title ="我把神经猫也来参合了，一下射出"+myData.score+"米小伙伴一起来爽！";
 			document.getElementById("share").style.display="";
 			window.shareData.tTitle = document.title;
 		}
@@ -152,7 +152,7 @@
 		}, false);
 		</script>
 		<div id=share style="display: none">
-			<img width=100% src="http://wx.zongyangtech.cn/games/share.png"
+                        <img width=100% src="http://wx.zongyangtech.cn/games/games/jssjm/share.png"
 				style="position: fixed; z-index: 9999; top: 0; left: 0; display: "
 				ontouchstart="document.getElementById('share').style.display='none';" />
 		</div>
@@ -172,7 +172,7 @@
 			function onShareComplete(res) {
                 if (localStorage.myuid && myData.score != undefined) {
                     setTimeout(function(){
-                        if (confirm("要将成绩提交到微资源娱乐排行榜吗？")) {
+                        if (confirm("要将成绩提交到娱乐排行榜吗？")) {
                             window.location = "http://wx.9g.com/rank/submit2.jsp?gameid=" + myData.gameid + "&uid=" + localStorage.myuid + "&score=" + myData.score + "&scorename=" + encodeURIComponent(myData.scoreName);
                         }
                         else {
