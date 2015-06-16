@@ -13,7 +13,7 @@ function play68_submitScore(score) {
 
 function updateShare(bestScore) {
     imgUrl = 'http://wx.zongyangtech.cn/games/games/jg/static/icon.png';
-    lineLink = 'http://wx.zongyangtech.cn/games/games/jg/';
+    lineLink = 'http://wx.zongyangtech.cn/games/games/jg/index.html';
 	descContent = "来比比看谁的手指更厉害！";
 	updateShareScore(bestScore);
 	appid = '';
