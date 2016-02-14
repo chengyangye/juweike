@@ -191,18 +191,17 @@
                                         </ul>
 				</div>
 				<div class="des">
-					<h3  class="align_center">想说的话</h3>
+                                        <!--<h3  class="align_center">想说的话</h3>-->
 					<p>
 						<?php echo $set->word; ?>					</p>
 				</div>
 				<div>
 					<ul class="list_font">
 					       <li>
-								<a href="wxt_inputpwd-1.html" class="tbox">查看赴宴名单</a>
-							  <!--   <a href="wxt_inputpwd-2.html" class="tbox">查看我的祝福</a> -->
+                                                                <a href="wxt_inputpwd-1.html" class="tbox">查看赴宴名单,密码：<?php echo $set->pwd; ?></a>
 						   </li>
 						   <li>
-						       <a href="wxt_inputpwd-2.html" class="tbox">查看我的祝福</a>
+                                                       <a href="wxt_inputpwd-2.html" class="tbox">查看我的祝福,密码：<?php echo $set->pwd; ?></a>
 						   </li>
 						<li>
 							<a href="javascript:;" class="tbox">
@@ -281,7 +280,7 @@
 			<section>
 						</div>
 				<div class="mfooter" id="wxgjfooter" style="text-align: center;width: 100%;height: 20px;line-height: 20px;margin-top:10px;">
-<span class="sp2"><a href="http://<?php echo $_SERVER['WEI_URL']; ?>" style="color: #5e5e5e;font-size: 12px;">@<?php echo $_SERVER['WEB_NAME']; ?>提供技术支持</a></span>
+<span class="sp2"><a href="http://<?php echo $_SERVER['WEI_URL']; ?>" style="color: #5e5e5e;font-size: 12px;">@纵阳科技提供技术支持</a></span>
 </div>
 <!--
 <div style="width: 0px;height: 0px;overflow: hidden;">
